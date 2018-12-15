@@ -1,0 +1,170 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "forge-app": {
+      "root": "projects/forge-app/",
+      "sourceRoot": "projects/forge-app/src",
+      "projectType": "application",
+      "prefix": "lcu",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/forge-app",
+            "index": "projects/forge-app/src/index.html",
+            "main": "projects/forge-app/src/main.ts",
+            "polyfills": "projects/forge-app/src/polyfills.ts",
+            "tsConfig": "projects/forge-app/tsconfig.app.json",
+            "assets": [
+              "projects/forge-app/src/favicon.ico",
+              "projects/forge-app/src/assets"
+            ],
+            "styles": [
+              "projects/forge-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/forge-app/src/environments/environment.ts",
+                  "with": "projects/forge-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "forge-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "forge-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "forge-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/forge-app/src/test.ts",
+            "polyfills": "projects/forge-app/src/polyfills.ts",
+            "tsConfig": "projects/forge-app/tsconfig.spec.json",
+            "karmaConfig": "projects/forge-app/karma.conf.js",
+            "styles": [
+              "projects/forge-app/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/forge-app/src/favicon.ico",
+              "projects/forge-app/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/forge-app/tsconfig.app.json",
+              "projects/forge-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "forge-app-e2e": {
+      "root": "projects/forge-app-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/forge-app-e2e/protractor.conf.js",
+            "devServerTarget": "forge-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "forge-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/forge-app-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "forge": {
+      "root": "projects/forge",
+      "sourceRoot": "projects/forge/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/forge/tsconfig.lib.json",
+            "project": "projects/forge/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/forge/src/test.ts",
+            "tsConfig": "projects/forge/tsconfig.spec.json",
+            "karmaConfig": "projects/forge/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/forge/tsconfig.lib.json",
+              "projects/forge/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "forge-app"
+}
