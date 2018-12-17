@@ -1,0 +1,39 @@
+<h2>To use the Reporting solution, you must be signed into a PowerBI Pro account.</h2>
+
+<div *ngIf="ReportingConfig">
+    <form [formGroup]="PowerBIFormGroup">
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="PowerBI Username" formControlName="username" [value]="CurrentPowerBIConfig?.Username">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput type="password" placeholder="PowerBI Password" formControlName="password" [value]="CurrentPowerBIConfig?.Password">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="API URL" formControlName="apiUrl" [value]="CurrentPowerBIConfig?.ApiUrl">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="Authority URL" formControlName="authorityUrl" [value]="CurrentPowerBIConfig?.AuthorityUrl">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="ClientID" formControlName="clientId" [value]="CurrentPowerBIConfig?.ClientID">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="GroupID" formControlName="groupId" [value]="CurrentPowerBIConfig?.GroupID">
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field-flex">
+            <input matInput placeholder="Resource URL" formControlName="resourceUrl" [value]="CurrentPowerBIConfig?.ResourceUrl">
+        </mat-form-field>
+
+        <div>
+            <button mat-raised-button color="primary" class="mat-button-lg" (click)="Save()" *ngIf="!Loading.Value">Save</button>
+        </div>
+    </form>
+</div> 
+
+<mat-spinner *ngIf="Loading.Value"></mat-spinner>

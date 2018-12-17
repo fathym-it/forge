@@ -1,0 +1,51 @@
+<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="2rem" *ngIf="!Loading.Value && AssetsConfig">
+	<div fxFlex="20%">
+		<mat-nav-list>
+			<ng-container>
+				<mat-list-item *ngFor="let type of AssetsConfig.DataTypes" (click)="ManageData(type)">
+					<a matLine>{{ type }}</a>
+				</mat-list-item>
+			</ng-container>
+
+			<a mat-list-item (click)="CreateNewDataType()">
+				Create New Data Type
+
+				<span class="filler"></span>
+
+				<mat-icon>add</mat-icon>
+			</a>
+		</mat-nav-list>
+	</div>
+
+	<div fxFlex="80%">
+		<div>
+			<h3 class="push-out" *ngIf="!ManageDataType">
+				Select or Create a Data Type to get started man
+			</h3>
+
+			<div *ngIf="ManageDataType">
+				<mat-toolbar>
+					<h3>Manage Data for {{ManageDataType}}</h3>
+
+					<a mat-icon-button (click)="CreateData()">
+						<mat-icon>add</mat-icon>
+					</a>
+
+					<span class="filler"></span>
+
+					<a mat-icon-button (click)="ManageDataTypeSettings(ManageDataType)">
+						<mat-icon>settings</mat-icon>
+					</a>
+				</mat-toolbar>
+
+				<div class="push-out" *ngIf="AssetTypeConfig">
+					<forge-generic-domain-list [items]="Flow.Data | async" [columns-to-display]="AssetTypeConfig.ListingColumnsToDisplay"
+											   (manage)="EditData($event)" (delete)="DeleteData($event)">
+					</forge-generic-domain-list>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<mat-spinner *ngIf="Loading.Value"></mat-spinner>

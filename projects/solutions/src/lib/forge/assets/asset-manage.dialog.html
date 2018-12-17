@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Create New {{Config.AssetTypeConfig.DataType}}</h2>
+
+<div mat-dialog-content>
+	<ng-container *ngIf="!Loading.Value">
+		<json-schema-form [schema]="SchemaMap.Schema"
+						[data]="Data"
+						framework="material-design"
+						(onSubmit)="Save($event)">
+		</json-schema-form>
+	</ng-container>
+
+	<mat-spinner *ngIf="Loading.Value"></mat-spinner>
+</div>

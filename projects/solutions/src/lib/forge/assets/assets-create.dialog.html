@@ -1,0 +1,19 @@
+<form #form="ngForm">
+	<h2 mat-dialog-title>Create Asset</h2>
+	
+	<div mat-dialog-content>
+		<mat-form-field class="mat-full-width">
+			<input matInput placeholder="Asset Type Name" [(ngModel)]="Name" name="name" required />
+		</mat-form-field>
+	</div>
+
+	<div mat-dialog-actions>
+		<button mat-raised-button type="submit" color="primary" (click)="Save()" [disabled]="!form.form.valid">
+			Save Control
+		</button>
+
+		<button mat-button color="warn" (click)="Cancel()">
+			Cancel
+		</button>
+	</div>
+</form>

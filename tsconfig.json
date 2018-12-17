@@ -19,11 +19,29 @@
       "dom"
     ],
     "paths": {
-      "forge": [
-        "dist/forge"
+      "@fathym-forge/common": [
+        "dist/common"
       ],
-      "forge/*": [
-        "dist/forge/*"
+      "@fathym-forge/common/*": [
+        "dist/common/*"
+      ],
+      "@lcu/solutions": [
+        "dist/solutions"
+      ],
+      "@lcu/solutions/*": [
+        "dist/solutions/*"
+      ],
+      "@lcu/elements": [
+        "dist/elements"
+      ],
+      "@lcu/elements/*": [
+        "dist/elements/*"
+      ],
+      "ui": [
+        "dist/ui"
+      ],
+      "ui/*": [
+        "dist/ui/*"
       ]
     }
   }

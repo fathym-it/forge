@@ -1,0 +1,27 @@
+<h2>Enter Azure Subscription Information</h2>
+
+<div *ngIf="ProvisioningConfig">
+	<form (ngSubmit)="Save()">
+		<mat-form-field class="mat-form-field-flex">
+			<input matInput placeholder="Client ID" name="clientId" [(ngModel)]="ProvisioningConfig.ClientID">
+		</mat-form-field>
+
+		<mat-form-field class="mat-form-field-flex">
+			<input matInput placeholder="Client Secret" name="clientSecret" [(ngModel)]="ProvisioningConfig.ClientSecret">
+		</mat-form-field>
+
+		<mat-form-field class="mat-form-field-flex">
+			<input matInput placeholder="Subscription ID" name="subId" [(ngModel)]="ProvisioningConfig.SubscriptionID">
+		</mat-form-field>
+
+		<mat-form-field class="mat-form-field-flex">
+			<input matInput placeholder="Tenant ID" name="tenantId" [(ngModel)]="ProvisioningConfig.TenantID">
+		</mat-form-field>
+
+		<div>
+			<button mat-raised-button color="primary" class="mat-button-lg" (click)="Save()" *ngIf="!Loading.Value">Save</button>
+		</div>
+	</form>
+</div> 
+
+<mat-spinner *ngIf="Loading.Value"></mat-spinner>
