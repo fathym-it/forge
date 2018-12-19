@@ -1,5 +1,10 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Router, UrlTree } from '@angular/router';
+import { } from '@lcu/solutions';
+import { SolutionsSetup } from '@lcu/elements';
+import { SolutionsSetupContext } from '@lcu/daf-common';
+import { IdentityService } from '@lcu/identity';
+import { isResultSuccess } from '@lcu/core';
 
 @Component({
 	selector: 'forge-side-nav',
