@@ -9,7 +9,7 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { ForgeBuildersModule, ForgeSolutionsModule, ForgeBuildersService, ForgeSolutionsService } from '@fathym-forge/common';
 import { ForgeSideNavModule } from '@fathym-forge/ui';
 import { FathymSharedModule } from '@lcu/hosting';
-import { DAFUIModule, PageViewModule } from '@lcu/daf-ui';
+import { DAFUIModule } from '@lcu/daf-ui';
 
 var thirdPartyModules = [
 	AngularFontAwesomeModule,

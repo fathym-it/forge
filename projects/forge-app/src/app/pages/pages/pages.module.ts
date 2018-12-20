@@ -16,7 +16,7 @@ var comps = [
 @NgModule({
 	imports: [
 		FathymSharedModule,
-		PageViewModule,
+		// PageViewModule,
 		UIModule,
 		PagesRouterModule,
 		DndModule,
