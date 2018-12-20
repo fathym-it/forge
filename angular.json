@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/forge-app",
+            "outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\forge",
             "index": "projects/forge-app/src/index.html",
             "main": "projects/forge-app/src/main.ts",
             "polyfills": "projects/forge-app/src/polyfills.ts",
@@ -23,7 +23,7 @@
               "projects/forge-app/src/assets"
             ],
             "styles": [
-              "projects/forge-app/src/styles.css"
+              "projects/forge-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -79,7 +79,7 @@
             "tsConfig": "projects/forge-app/tsconfig.spec.json",
             "karmaConfig": "projects/forge-app/karma.conf.js",
             "styles": [
-              "projects/forge-app/src/styles.css"
+              "projects/forge-app/src/styles.scss"
             ],
             "scripts": [],
             "assets": [

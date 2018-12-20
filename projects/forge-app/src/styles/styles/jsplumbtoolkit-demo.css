@@ -1,0 +1,673 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* --- page structure --------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+body {
+    background-color: #FFF;
+    color: #434343;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    padding: 0;
+}
+
+.jtk-bootstrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+    .jtk-bootstrap .jtk-page-container {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .jtk-bootstrap .jtk-container {
+        width: 60%;
+        max-width: 800px;
+    }
+
+.jtk-bootstrap-wide .jtk-container {
+    width: 80%;
+    max-width: 1187px;
+}
+
+.jtk-demo-main {
+    position: relative;
+    margin-top: 98px;
+}
+
+    .jtk-demo-main .description {
+        font-size: 13px;
+        margin-top: 25px;
+        padding: 13px;
+        margin-bottom: 22px;
+        background-color: #f4f5ef;
+    }
+
+        .jtk-demo-main .description li {
+            list-style-type: disc !important;
+        }
+
+.jtk-demo-canvas {
+    height: 550px;
+    max-height: 700px;
+}
+
+.canvas-wide {
+    margin-left: 0;
+}
+
+.miniview {
+    position: absolute;
+    top: 468px;
+    right: 25px;
+    z-index: 100;
+}
+
+
+.jtk-demo-dataset {
+    text-align: left;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.demo-title {
+    float: left;
+    font-size: 18px;
+}
+
+.controls {
+    top: 25px;
+    color: #FFF;
+    margin-right: 10px;
+    position: absolute;
+    left: 25px;
+    z-index: 1;
+}
+
+    .controls i {
+        background-color: #3E7E9C;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 0;
+        padding: 4px;
+    }
+
+li {
+    list-style-type: none;
+}
+
+/* ------------------------ node palette -------------------- */
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+    padding-right: 10px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    background-color: #84acb3;
+}
+
+    .sidebar ul li {
+        float: left;
+        border-radius: 11px;
+        color: #f7ebca;
+        cursor: move;
+        margin-bottom: 10px;
+        margin-left: 6px;
+        padding: 8px;
+    }
+
+    .sidebar ul {
+        width: 100%;
+        padding: 0;
+    }
+
+        .sidebar ul li:hover {
+        }
+
+    .sidebar i {
+        float: left;
+    }
+
+@media (max-width: 600px) {
+    .sidebar {
+        float: none;
+        height: 55px;
+        width: 100%;
+        padding-top: 0;
+    }
+
+        .sidebar ul li {
+            display: inline-block;
+            margin-top: 7px;
+            width: 67px;
+        }
+
+    .jtk-demo-canvas {
+        margin-left: 0;
+        margin-top: 10px;
+        height: 364px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --- jsPlumb setup ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+
+.jtk-connector {
+    z-index: 9;
+}
+
+.jtk-endpoint {
+    z-index: 12;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.jtk-overlay {
+    background-color: transparent;
+    color: #f7ebca;
+    font-weight: 400;
+    padding: 4px;
+    z-index: 10;
+}
+
+    .jtk-overlay.jtk-hover {
+        color: #434343;
+    }
+
+path {
+    cursor: pointer;
+}
+
+.delete {
+    padding: 2px;
+    cursor: pointer;
+    float: left;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.configure-schema, .edit, .configure-relationships, .configure-filters, .configure-error, .configure-groups {
+    cursor: pointer;
+    float: right;
+    font-size: 10px;
+    line-height: 20px;
+    margin-right: 2px;
+    padding: 2px;
+}
+
+.configure-relationships {
+    padding-right: 5px;
+}
+
+.edit:hover {
+    color: #ff8000;
+}
+
+.selected-mode {
+    color: #E4F013;
+}
+
+.connect {
+    width: 10px;
+    height: 10px;
+    background-color: #f76258;
+    position: absolute;
+    bottom: 13px;
+    right: 5px;
+}
+
+/* header styles */
+
+.demo-links {
+    position: fixed;
+    right: 0;
+    top: 57px;
+    font-size: 11px;
+    background-color: white;
+    opacity: 0.8;
+    padding-right: 10px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    z-index: 100001;
+}
+
+    .demo-links div {
+        display: inline;
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+
+    .demo-links i {
+        padding: 4px;
+    }
+
+/*
+.navbar-top {
+    background-color: #3c565d;
+    border:none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar-nav > li > a {
+    border: none;
+    color: #FFF;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.social-nav {
+    color: #FFF;
+    float: right;
+    font-size: 22px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+    color: #cdcc73;
+    text-decoration: none;
+}
+*/
+
+
+
+/* ------------------------ dialogs ----------------------------*/
+
+/* ----------------------- drag/drop interactions -------------- */
+.drop-hover {
+    background-color: #FCCCCC !important;
+}
+
+/* ----------------------- node styles ------------------------- */
+
+.flowchart-object {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    z-index: 10;
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    min-width: 0;
+    min-height: 0;
+}
+
+.node-status {
+    right: 40%;
+    top: 25% !important;
+    display: block !important;
+}
+
+.node-config-status {
+    right: 42%;
+    top: 55% !important;
+    display: block !important;
+}
+
+.flowchart-object svg {
+    position: absolute;
+    stroke: none;
+    fill: #234b5e;
+    left: 0px;
+    top: 0px;
+}
+
+    .flowchart-object svg .outer, .flowchart-object svg .inner {
+        min-height: 100px;
+        min-width: 100px;
+    }
+
+.flowchart-object text {
+    stroke: none;
+    fill: #f7ebca;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.flowchart-object .node-action {
+    display: none;
+    position: absolute;
+    top: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 10000;
+}
+
+.node-action-hidden {
+    display: none !important;
+}
+
+.flowchart-object .drag-start {
+    cursor: pointer;
+}
+
+.flowchart-object .node-action:hover {
+    color: #ff8000;
+}
+
+.flowchart-object .node-configure {
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -20px;
+}
+
+.flowchart-object .node-edit {
+    left: 50%;
+    margin-left: 0px;
+    margin-top: -20px;
+}
+
+.flowchart-object .node-delete {
+    left: 50%;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+.flowchart-object.jtk-surface-selected-element .node-action {
+    display: block;
+}
+
+.outer {
+    fill: gray;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.flowchart-object:hover .outer {
+    opacity: 0.7;
+}
+
+.inner {
+    cursor: move !important;
+}
+
+.connection-drop svg {
+    fill: #CCC;
+}
+
+.connection-drop-disabled svg .outer {
+    fill: #f76258;
+    opacity: .4;
+}
+
+.connection-drop-enabled svg .outer {
+    fill: #7de65c;
+    opacity: .4;
+}
+
+.connection-drop text {
+    fill: black;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* --- Node common -------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+
+.table, .view {
+    background-color: #3E7E9C;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    z-index: 11;
+    overflow: hidden;
+    min-width: 80px;
+    min-height: 30px;
+    width: auto;
+    border: 1px solid #ccc;
+}
+
+    .table .name, .view .name, .table li.jtk-draggable, .view li.jtk-draggable {
+        background-color: #3E7E9C;
+        color: #f7ebca;
+        cursor: move;
+        font-size: 13px;
+        line-height: 24px;
+        padding: 6px;
+        text-align: center;
+    }
+
+    .table .mapping {
+        height: 50px;
+        background-color: #b2dfdb;
+        opacity: .7;
+        text-align: center;
+    }
+
+        .table .mapping .select-mapping {
+            float: left;
+            width: 90%;
+        }
+
+        .table .mapping .configure-filters {
+            padding-top: 28px;
+        }
+
+        .table .mapping .mat-select {
+            padding: 0;
+            margin: 0;
+            height: 30px;
+            width: 90%;
+        }
+
+            .table .mapping .mat-select.pad-top {
+                margin-top: 20px;
+            }
+
+            .table .mapping .mat-select .mat-select-trigger {
+                font-size: 12px;
+                color: #000000;
+                height: 20px;
+                padding-top: 10px;
+            }
+
+                .table .mapping .mat-select .mat-select-trigger .mat-select-underline {
+                    display: none;
+                }
+
+    .table li.jtk-draggable, .view li.jtk-draggable {
+        min-width: 100px;
+        border-radius: 14px;
+    }
+
+    .table .name span, .view .name span {
+        cursor: pointer;
+    }
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* --- Table nodes -------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+.table {
+    margin-bottom: 0;
+    min-width: 200px;
+}
+
+.table-columns {
+    background-color: #b2dfdb;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+.table-column {
+    list-style-type: none;
+    padding: 4px 6px 20px 6px;
+}
+
+
+.table-column-delete, .view-delete {
+    color: #407364;
+    padding: 2px;
+    cursor: pointer;
+    float: left;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+.common-edge path {
+    stroke-width: 3;
+    stroke: #f76258;
+}
+
+.common-edge.jtk-hover path {
+    stroke: #434343;
+}
+
+.table-column-edit {
+    color: #407364;
+    float: right;
+    cursor: pointer;
+}
+
+.configure-schema, .delete, .table-column-delete, .configure-relationships, .configure-filters, .configure-error, .configure-groups {
+    -webkit-transition: background-color 0.15s ease-in;
+    -moz-transition: background-color 0.15s ease-in;
+    -o-transition: background-color 0.15s ease-in;
+    transition: background-color 0.15s ease-in;
+}
+
+    .configure-schema:hover, .delete:hover, .configure-relationships:hover, .configure-filters:hover, .configure-error:hover, .configure-groups:hover {
+        color: #ff8000;
+    }
+
+    .table-column-delete:hover {
+        color: #434343;
+    }
+
+.table-column-type-varchar {
+    background-color: #cbeae1;
+}
+
+.table-column-type-integer {
+    background-color: #cbe6de;
+}
+
+.table-column-type-date {
+    background-color: #e5f5f0;
+}
+
+.table-column[primary-key='true'] {
+    background-color: #83b8a8;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* --- View nodes -------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+
+.view {
+    margin-bottom: 0;
+    width: 200px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.view-details {
+    font-size: 10px;
+    font-family: Courier;
+    padding: 10px;
+}
+
+.view .view-delete {
+    color: #f7ebca;
+    padding: 2px;
+    cursor: pointer;
+    float: left;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+    .view .view-delete:hover {
+        color: #ff8000;
+    }
+
+.txtViewQuery {
+    width: 272px;
+    height: 132px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* --- Drag/drop interactions ------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
+.drop-hover {
+    background-color: #629f72 !important;
+    color: #FFF !important;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* --- Edge styles ------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+
+.delete-relationship {
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #000000 !important;
+    z-index: 300;
+    padding-right: 2px;
+}
+
+
+.common-edge path {
+    stroke-width: 3;
+    stroke: #f76258;
+    display: none;
+}
+
+.common-edge.jtk-hover path {
+    stroke: #434343;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* --- dialogs ------------------------- */
+/* ----------------------------------------------------------------------------------------------------- */
+
+.form-labels-float {
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 6px;
+    padding-top: 6px;
+    font-size: 14px;
+}
+
+.form-labels {
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    font-size: 14px;
+}
+
+.checkbox-id {
+    margin-top: 6px;
+    margin-left: 22px;
+}
+
+.btn-icon-margin {
+    line-height: 18px;
+    margin-left: 10px;
+}
+
+
+.pull-left {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}

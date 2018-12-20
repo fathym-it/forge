@@ -1,0 +1,48 @@
+@import './styles/theme';
+
+@mixin forge-pages($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+
+    .grid {
+        width: 50%;
+    }
+
+    .hero .mat-raised-button.mat-accent {
+        margin-right: 10px;
+    }
+
+    .container {
+        /*width: 350px;*/
+        position: relative;
+
+        .forge-packery {
+            .forge-packery-item, .forge-packery-grid-sizer {
+                width: 20%;
+                height: 150px;
+            }
+
+            .forge-packery-gutter-sizer {
+                width: 10px;
+            }
+
+            .forge-packery-gutter-sizer, .forge-packery-grid-sizer {
+                display: none;
+            }
+
+            .forge-packery-item {
+                .forge-packery-item-content {
+                    border: solid 1px black;
+                    background-color: aqua;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include forge-theme($forge-app-theme);
+
+@include forge-pages($forge-app-theme);

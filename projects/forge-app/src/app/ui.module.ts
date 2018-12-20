@@ -64,7 +64,7 @@ var fathymServices = [
 	{
 		provide: DAFServiceSettings,
 		useValue: <DAFServiceSettings>{
-            APIRoot: `http://intel.fathym.com`
+            APIRoot: ``//http://intel.fathym.com`
 		}
 	},
 	RouterHelpersService,

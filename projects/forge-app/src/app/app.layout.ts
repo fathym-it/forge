@@ -6,7 +6,7 @@ import { PageUIService, SolutionsSetupContext } from '@lcu/daf-common';
 import { IdentityService } from '@lcu/identity';
 
 @Component({
-	selector: 'lcu-root',
+	selector: 'app-root',
 	templateUrl: './app.layout.html'
 })
 export class AppLayoutComponent {
