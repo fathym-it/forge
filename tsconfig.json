@@ -24,6 +24,12 @@
       ],
       "@fathym-forge/ui/*": [
         "dist/ui/*"
+      ],
+      "common": [
+        "dist/common"
+      ],
+      "common/*": [
+        "dist/common/*"
       ]
     }
   }
