@@ -7,7 +7,6 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { DndModule } from '@beyerleinf/ngx-dnd';
 
 import { Angulartics2Module } from 'angulartics2';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 import { AppRouterModule, RoutingComponents } from './app.router';
 
@@ -30,7 +29,7 @@ export var modules: any[] = [
 		DndModule.forRoot(),
 		MonacoEditorModule.forRoot(),
 		ForgeBuildersModule.forRoot(),
-		// Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+		Angulartics2Module.forRoot(),
 		...modules,
 	],
 	declarations: [

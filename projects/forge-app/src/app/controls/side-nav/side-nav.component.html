@@ -3,24 +3,6 @@
 </div>
 
 <div class="secured" *ngIf="IsAuthenticated">
-	<!--<mat-card class="profile">
-		<mat-card-content>
-			<img mat-card-avatar src="/img/ghost_person.png" *ngIf="ShowProfileDetails" />
-
-			<h4>
-				Michael Gearhardt
-
-				<button mat-icon-button (click)="ShowProfileDetails = !ShowProfileDetails">
-					<mat-icon fontSet="fa" fontIcon="fa-chevron-down" *ngIf="!ShowProfileDetails"></mat-icon>
-
-					<mat-icon fontSet="fa" fontIcon="fa-chevron-up" *ngIf="ShowProfileDetails"></mat-icon>
-				</button>
-			</h4>
-
-			<div *ngIf="ShowProfileDetails">Profile Details</div>
-		</mat-card-content>
-	</mat-card>-->
-
 	<div class="nav pre-actions">
 		<mat-nav-list>
 			<a mat-list-item class="main" routerLink="/overview" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -35,7 +17,8 @@
 
 	<div class="nav actions">
 		<mat-nav-list *ngIf="!Loading && Setup">
-			<a mat-list-item class="main" [routerLink]="['/solutions', sln.Control.Base, sln.Control.Type, 'overview']" [class.active]="IsRouteActive(['/solutions', sln.Control.Base, sln.Control.Type].join('/'), false)" *ngFor="let sln of Setup.Configs">
+			<a mat-list-item class="main" [routerLink]="['/solutions', sln.Control.Base, sln.Control.Type, 'overview']"
+			 [class.active]="IsRouteActive(['/solutions', sln.Control.Base, sln.Control.Type].join('/'), false)" *ngFor="let sln of Setup.Configs">
 				{{sln.Title}}
 			</a>
 
@@ -69,3 +52,21 @@
 		</mat-nav-list>
 	</div>
 </div>
+
+<!--<mat-card class="profile">
+		<mat-card-content>
+			<img mat-card-avatar src="/img/ghost_person.png" *ngIf="ShowProfileDetails" />
+
+			<h4>
+				Michael Gearhardt
+
+				<button mat-icon-button (click)="ShowProfileDetails = !ShowProfileDetails">
+					<mat-icon fontSet="fa" fontIcon="fa-chevron-down" *ngIf="!ShowProfileDetails"></mat-icon>
+
+					<mat-icon fontSet="fa" fontIcon="fa-chevron-up" *ngIf="ShowProfileDetails"></mat-icon>
+				</button>
+			</h4>
+
+			<div *ngIf="ShowProfileDetails">Profile Details</div>
+		</mat-card-content>
+	</mat-card>-->

@@ -6,7 +6,7 @@ import { PageUIService, SolutionsSetupContext } from '@lcu/daf-common';
 import { IdentityService } from '@lcu/identity';
 
 @Component({
-	selector: 'app-root',
+	selector: 'lcu-root',
 	templateUrl: './app.layout.html'
 })
 export class AppLayoutComponent {
@@ -17,9 +17,9 @@ export class AppLayoutComponent {
 	public SideNav: MatSidenav;
 
 	//	Constructors
-	constructor(protected idSvc: IdentityService, protected uiSvc: PageUIService, angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics, 
+	constructor(protected idSvc: IdentityService, protected uiSvc: PageUIService, angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
 		solutionsSetup: SolutionsSetupContext) {
-
+		angulartics2GoogleAnalytics.startTracking();
 	}
 
 	//	Life Cycle

@@ -19,12 +19,6 @@
       "dom"
     ],
     "paths": {
-      "@fathym-forge/ui": [
-        "dist/ui"
-      ],
-      "@fathym-forge/ui/*": [
-        "dist/ui/*"
-      ],
       "@fathym-forge/common": [
         "dist/common"
       ],

@@ -11,7 +11,7 @@ import { isResultSuccess } from '@lcu/core';
 	templateUrl: './side-nav.component.html',
 	styleUrls: ['./side-nav.component.scss']
 })
-export class ForgeSideNavComponent implements OnChanges, OnInit {
+export class ForgeSideNavComponent {//implements OnChanges, OnInit {
 	//  Fields
 
 	//  Properties
