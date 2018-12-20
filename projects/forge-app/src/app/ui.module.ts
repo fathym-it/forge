@@ -12,6 +12,7 @@ import { DAFUIModule } from '@lcu/daf-ui';
 import { ForgeSideNavModule } from './controls/side-nav/side-nav.module';
 import { RouterHelpersService } from '@lcu/routing';
 import { IdentityOptions } from '@lcu/identity';
+import { DAFServiceSettings } from '@lcu/api';
 
 var thirdPartyModules = [
 	AngularFontAwesomeModule,
@@ -48,7 +49,7 @@ var fathymModules = [
 var fathymServices = [
 	{
 		provide: IdentityOptions,
-		useValue: {
+		useValue: <IdentityOptions>{
             ConfirmPasswordRecoveryURL: `/daf-identity/recover/confirm`,
             IsAuthenticatedURL: `/daf-identity/authenticated`,
             IsRegisteredPasswordQueryParamName: `password`,
@@ -58,6 +59,12 @@ var fathymServices = [
 			RegisterURL: `/daf-identity/register`,
 			SignInURL: `/daf-identity/signin`,
 			SignOutURL: `/daf-identity/signout`
+		}
+	},
+	{
+		provide: DAFServiceSettings,
+		useValue: <DAFServiceSettings>{
+            APIRoot: `http://intel.fathym.com`
 		}
 	},
 	RouterHelpersService,
