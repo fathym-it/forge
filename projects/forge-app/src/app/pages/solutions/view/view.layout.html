@@ -4,19 +4,19 @@
 
 <div class="push-out">
 	<nav mat-tab-nav-bar>
-		<a mat-tab-link routerLink="../overview" routerLinkActive #orla="routerLinkActive" [active]="orla.isActive">
+		<a mat-tab-link routerLink="../overview" routerLinkActive #orla="routerLinkActive" [class.active]="orla.isActive">
 			<mat-icon class="example-tab-icon">info</mat-icon>
 
 			Overview
 		</a>
 
-		<a mat-tab-link routerLink="../manage" routerLinkActive #mrla="routerLinkActive" [active]="mrla.isActive">
+		<a mat-tab-link routerLink="../manage" routerLinkActive #mrla="routerLinkActive" [class.active]="mrla.isActive">
 			<mat-icon class="example-tab-icon">settings</mat-icon>
 
 			Manage
 		</a>
 
-		<a mat-tab-link routerLink="../documentation" routerLinkActive #drla="routerLinkActive" [active]="drla.isActive">
+		<a mat-tab-link routerLink="../documentation" routerLinkActive #drla="routerLinkActive" [class.active]="drla.isActive">
 			<mat-icon class="example-tab-icon">attach_file</mat-icon>
 
 			Documentation

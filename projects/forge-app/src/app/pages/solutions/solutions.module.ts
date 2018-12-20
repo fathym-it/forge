@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressBarModule } from '@angular/material';
+import { MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressBarModule, MatTabsModule, MatListModule } from '@angular/material';
 import { DndModule } from '@beyerleinf/ngx-dnd';
 
 import { FathymSharedModule } from '@lcu/hosting';
@@ -7,7 +7,7 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { UIModule } from '../../ui.module';
 
 import { SolutionsRouterModule, SolutionsRoutingComponents } from './solutions.router';
-import { ForgeSolutionsModule } from '@fathym-forge/common/lcu.api';
+import { ForgeSolutionsModule } from '@fathym-forge/common';
 
 var comps = [
 ];
@@ -24,8 +24,10 @@ var comps = [
 		MatGridListModule,
 		MatIconModule,
 		MatInputModule,
+		MatListModule,
 		MatMenuModule,
 		MatProgressBarModule,
+		MatTabsModule,
 		MatToolbarModule,
 	],
 	declarations: [

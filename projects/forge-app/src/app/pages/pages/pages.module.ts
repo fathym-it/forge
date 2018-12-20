@@ -8,7 +8,7 @@ import { UIModule } from '../../ui.module';
 
 import { PagesRouterModule, RoutingComponents } from './pages.router';
 import { ComponentSelectorModule } from '@lcu/daf-ui';
-import { ForgeBuildersModule } from '@fathym-forge/common/lcu.api';
+import { ForgeBuildersModule } from '@fathym-forge/common';
 
 var comps = [
 ];
