@@ -1,4 +1,4 @@
-import { ForgeDisplayActionDisplayModule, ForgeDisplayContentDisplayModule, ForgeDisplayJSONViewDisplayModule, ForgeDisplayPointerDisplayModule, ForgeLayoutFlexDisplayModule, ForgeLayoutStackedDisplayModule, ForgeLayoutSwitchStateDisplayModule, ForgeIdentityRecoverPasswordDisplayModule, ForgeIdentitySignInDisplayModule, ForgeReportingChartsDisplayModule, ForgeMaterialLayoutCardDisplayModule, ForgeMaterialLayoutGridListDisplayModule, ForgeMaterialNavMenuDisplayModule, ForgeMaterialNavToolbarDisplayModule } from "@lowcodeunit/elements";
+import { ForgeDisplayContentDisplayModule } from '@lowcodeunit/lcu-el-display-content';
 
 export const CoreForgeBuilderDisplayModules = [
 	{
@@ -6,13 +6,13 @@ export const CoreForgeBuilderDisplayModules = [
 		Icon: 'fullscreen',
 		BaseKey: 'forge-display',
 		Modules: [
-			{
-				Name: 'Action',
-				Control: { Base: 'forge-display', Details: { Context: 'Internal', Insight: {}, Type: 'AnchorMaterial' }, Type: 'action' },
-				Display: ForgeDisplayActionDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
+			// {
+			// 	Name: 'Action',
+			// 	Control: { Base: 'forge-display', Details: { Context: 'Internal', Insight: {}, Type: 'AnchorMaterial' }, Type: 'action' },
+			// 	Display: ForgeDisplayActionDisplayModule,
+			// 	HideDrag: false,
+			// 	BuilderState: 'Render',
+			// },
 			{
 				Name: 'Content',
 				Control: { Base: 'forge-display', Details: { Type: 'h3' }, Type: 'content' },
@@ -20,20 +20,20 @@ export const CoreForgeBuilderDisplayModules = [
 				HideDrag: false,
 				BuilderState: 'Render',
 			},
-			{
-				Name: 'JSON View',
-				Control: { Base: 'forge-display', Details: {}, Type: 'json-view' },
-				Display: ForgeDisplayJSONViewDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-			{
-				Name: 'Pointer',
-				Control: { Base: 'forge-display', Details: {}, Type: 'pointer' },
-				Display: ForgeDisplayPointerDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
+			// {
+			// 	Name: 'JSON View',
+			// 	Control: { Base: 'forge-display', Details: {}, Type: 'json-view' },
+			// 	Display: ForgeDisplayJSONViewDisplayModule,
+			// 	HideDrag: false,
+			// 	BuilderState: 'Render',
+			// },
+			// {
+			// 	Name: 'Pointer',
+			// 	Control: { Base: 'forge-display', Details: {}, Type: 'pointer' },
+			// 	Display: ForgeDisplayPointerDisplayModule,
+			// 	HideDrag: false,
+			// 	BuilderState: 'Render',
+			// },
 			//{
 			//	Name: 'Raw View',
 			//	Control: { Base: 'forge', Details: {}, Type: 'display-raw' },
@@ -43,110 +43,110 @@ export const CoreForgeBuilderDisplayModules = [
 			//},
 		]
 	},
-	{
-		Name: 'Layout',
-		Icon: 'settings_overscan',
-		BaseKey: 'forge-layout',
-		Modules: [
-			{
-				Name: 'Flex',
-				Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'flex' },
-				Display: ForgeLayoutFlexDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-			{
-				Name: 'Stacked',
-				Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'stacked' },
-				Display: ForgeLayoutStackedDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-			{
-				Name: 'Switch State',
-				Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'switch-state' },
-				Display: ForgeLayoutSwitchStateDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-		]
-	},
-	{
-		Name: 'Identity',
-		Icon: 'person',
-		BaseKey: 'forge-identity',
-		Modules: [
-			{
-				Name: 'Sign In',
-				Control: { Base: 'forge-identity', Details: {}, Type: 'sign-in' },
-				Display: ForgeIdentitySignInDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-            },
-            {
-                Name: 'Forgot Password',
-                Control: { Base: 'forge-identity', Details: {}, Type: 'recover-password' },
-                Display: ForgeIdentityRecoverPasswordDisplayModule,
-                HideDrag: false,
-                BuilderState: 'Render',
-            },
-		]
-	},
-	{
-		Name: 'Reporting',
-		Icon: 'insert_chart',
-		BaseKey: 'forge-reporting',
-		Modules: [
-			{
-				Name: 'Charts',
-				Control: { Base: 'forge-reporting', Details: { Elements: [], Configs: [] }, Type: 'charts' },
-				Display: ForgeReportingChartsDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-		]
-	},
-	{
-		Name: 'Material Layout',
-		Icon: 'settings_overscan',
-		BaseKey: 'forge-material-layout',
-		Modules: [
-			{
-				Name: 'Card',
-				Control: { Base: 'forge-material-layout', Details: { Elements: [], Configs: [] }, Type: 'card' },
-				Display: ForgeMaterialLayoutCardDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-			{
-				Name: 'Grid List',
-				Control: { Base: 'forge-material-layout', Details: { Columns: 8, RowHeight: '1:1', GutterSize: '1rem', Elements: [], Configs: [] }, Type: 'grid-list' },
-				Display: ForgeMaterialLayoutGridListDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-		]
-	},
-	{
-		Name: 'Material Navigation',
-		Icon: 'navigation',
-		BaseKey: 'forge-material-nav',
-		Modules: [
-			{
-				Name: 'Menu',
-				Control: { Base: 'forge-material-nav', Details: { Elements: [], Configs: [] }, Type: 'menu' },
-				Display: ForgeMaterialNavMenuDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-			{
-				Name: 'Toolbar',
-				Control: { Base: 'forge-material-nav', Details: { Elements: [], Configs: [] }, Type: 'toolbar' },
-				Display: ForgeMaterialNavToolbarDisplayModule,
-				HideDrag: false,
-				BuilderState: 'Render',
-			},
-		]
-	},
+	// {
+	// 	Name: 'Layout',
+	// 	Icon: 'settings_overscan',
+	// 	BaseKey: 'forge-layout',
+	// 	Modules: [
+	// 		{
+	// 			Name: 'Flex',
+	// 			Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'flex' },
+	// 			Display: ForgeLayoutFlexDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 		{
+	// 			Name: 'Stacked',
+	// 			Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'stacked' },
+	// 			Display: ForgeLayoutStackedDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 		{
+	// 			Name: 'Switch State',
+	// 			Control: { Base: 'forge-layout', Details: { Elements: [], Configs: [] }, Type: 'switch-state' },
+	// 			Display: ForgeLayoutSwitchStateDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	Name: 'Identity',
+	// 	Icon: 'person',
+	// 	BaseKey: 'forge-identity',
+	// 	Modules: [
+	// 		{
+	// 			Name: 'Sign In',
+	// 			Control: { Base: 'forge-identity', Details: {}, Type: 'sign-in' },
+	// 			Display: ForgeIdentitySignInDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+    //         },
+    //         {
+    //             Name: 'Forgot Password',
+    //             Control: { Base: 'forge-identity', Details: {}, Type: 'recover-password' },
+    //             Display: ForgeIdentityRecoverPasswordDisplayModule,
+    //             HideDrag: false,
+    //             BuilderState: 'Render',
+    //         },
+	// 	]
+	// },
+	// {
+	// 	Name: 'Reporting',
+	// 	Icon: 'insert_chart',
+	// 	BaseKey: 'forge-reporting',
+	// 	Modules: [
+	// 		{
+	// 			Name: 'Charts',
+	// 			Control: { Base: 'forge-reporting', Details: { Elements: [], Configs: [] }, Type: 'charts' },
+	// 			Display: ForgeReportingChartsDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	Name: 'Material Layout',
+	// 	Icon: 'settings_overscan',
+	// 	BaseKey: 'forge-material-layout',
+	// 	Modules: [
+	// 		{
+	// 			Name: 'Card',
+	// 			Control: { Base: 'forge-material-layout', Details: { Elements: [], Configs: [] }, Type: 'card' },
+	// 			Display: ForgeMaterialLayoutCardDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 		{
+	// 			Name: 'Grid List',
+	// 			Control: { Base: 'forge-material-layout', Details: { Columns: 8, RowHeight: '1:1', GutterSize: '1rem', Elements: [], Configs: [] }, Type: 'grid-list' },
+	// 			Display: ForgeMaterialLayoutGridListDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	Name: 'Material Navigation',
+	// 	Icon: 'navigation',
+	// 	BaseKey: 'forge-material-nav',
+	// 	Modules: [
+	// 		{
+	// 			Name: 'Menu',
+	// 			Control: { Base: 'forge-material-nav', Details: { Elements: [], Configs: [] }, Type: 'menu' },
+	// 			Display: ForgeMaterialNavMenuDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 		{
+	// 			Name: 'Toolbar',
+	// 			Control: { Base: 'forge-material-nav', Details: { Elements: [], Configs: [] }, Type: 'toolbar' },
+	// 			Display: ForgeMaterialNavToolbarDisplayModule,
+	// 			HideDrag: false,
+	// 			BuilderState: 'Render',
+	// 		},
+	// 	]
+	// },
    
 ];

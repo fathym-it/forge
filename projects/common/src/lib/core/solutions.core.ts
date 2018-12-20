@@ -1,4 +1,5 @@
 import { SolutionModuleConfig } from '@lcu/elements';
+import { ForgeApplicationsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-applications';
 
 export const CoreForgeSolutionModules = [
 	{
