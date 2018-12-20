@@ -1,0 +1,79 @@
+<div class="push-out">
+	<h1>Fathym Forge Settings</h1>
+
+	<p class="mat-body-3">
+		Configure and manage the high level settings of your Forge.
+	</p>
+
+	<mat-tab-group #tabs="matTabGroup" *ngIf="Settings">
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<mat-icon>settings_system_daydream</mat-icon>
+
+				Platform
+			</ng-template>
+
+			<div class="push-out">
+				<h2>Manage Azure Platform Configuration</h2>
+
+				<div>
+					<mat-button-toggle-group #azureGroup="matButtonToggleGroup" [(ngModel)]="Settings.Platforms[0].Details.AzureType" name="azureType">
+						<mat-button-toggle value="Shared">
+							Shared
+						</mat-button-toggle>
+
+						<mat-button-toggle value="Hosted">
+							Hosted
+						</mat-button-toggle>
+
+						<mat-button-toggle value="Enterprise">
+							Enterprise
+						</mat-button-toggle>
+					</mat-button-toggle-group>
+				</div>
+
+				<ng-container [ngSwitch]="azureGroup.value">
+					<div class="simple-flex" *ngSwitchCase="'Shared'">
+						<h3>When saving, your forge Platform will be updated with shared credentials</h3>
+					</div>
+
+					<div class="simple-flex" *ngSwitchCase="'Hosted'">
+						<mat-form-field fxFlex="30%">
+							<input matInput placeholder="Subscription" [(ngModel)]="Settings.Platforms[0].Details.Subscription" name="subscription" required />
+						</mat-form-field>
+					</div>
+
+					<div *ngSwitchCase="'Enterprise'">
+						<h3>Coming soon, the ability to connect your own Azure Subscriptions</h3>
+
+						<h4>Contact us to setup today</h4>
+					</div>
+				</ng-container>
+			</div>
+		</mat-tab>
+
+		<mat-tab *ngIf="Settings.Theme">
+			<ng-template mat-tab-label>
+				<mat-icon>style</mat-icon> Theme
+			</ng-template>
+
+			<div class="push-out">
+				<h2>Custom Styling (scss)</h2>
+
+				<ngx-monaco-editor [options]="StyleEditorOptions" [(ngModel)]="Settings.Theme.Style" name="style" *ngIf="tabs.selectedIndex == 1"></ngx-monaco-editor>
+
+				<h2>Coming Soon, a simple forge theme editor</h2>
+			</div>
+		</mat-tab>
+	</mat-tab-group>
+
+	<div>
+		<button mat-raised-button color="primary" *ngIf="!Loading" (click)="Save()">
+			<mat-icon>save</mat-icon>
+
+			Save Settings
+		</button>
+
+		<mat-spinner *ngIf="Loading"></mat-spinner>
+	</div>
+</div>

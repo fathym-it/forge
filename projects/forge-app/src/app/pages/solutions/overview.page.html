@@ -1,0 +1,59 @@
+<div class="push-out">
+	<h1>Welcome to the Fathym Forge - Solution Marketplace</h1>
+
+	<div *ngIf="!HasSolutions">
+		<p class="mat-body-3">
+			To get started, Add a New Solution.
+		</p>
+	</div>
+
+	<mat-tab-group #tabs="matTabGroup">
+		<mat-tab>
+			<ng-template mat-tab-label>
+				<mat-icon>add</mat-icon>
+
+				New Solutions
+			</ng-template>
+
+			<div class="push-out">
+				<h3>Browse Available Solutions for your Enterprise</h3>
+
+				<mat-tab-group>
+					<ng-container *ngFor="let option of SolutionOptions">
+						<mat-tab *ngIf="HasAnyAvailable(option)">
+							<ng-template mat-tab-label>
+								<mat-icon>{{option.Icon}}</mat-icon>
+
+								{{option.Name}}
+							</ng-template>
+
+							<mat-nav-list>
+								<ng-container *ngFor="let module of option.Modules">
+									<mat-list-item *ngIf="!IsExisting(module)" (click)="Save(module)">
+										<a matLine>
+											Select - {{module.Name}}
+										</a>
+
+										<p matLine class="mat-body-1">Future description</p>
+									</mat-list-item>
+								</ng-container>
+							</mat-nav-list>
+						</mat-tab>
+					</ng-container>
+				</mat-tab-group>
+			</div>
+		</mat-tab>
+
+		<mat-tab *ngIf="HasSolutions">
+			<ng-template mat-tab-label>
+				<mat-icon>edit</mat-icon>
+
+				Solutions
+			</ng-template>
+
+			<div class="push-out">
+				A listing of solutions....  <pre>{{Setup.Configs | json}}</pre>
+			</div>
+		</mat-tab>
+	</mat-tab-group>
+</div>
