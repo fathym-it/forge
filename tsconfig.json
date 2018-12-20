@@ -25,10 +25,10 @@
       "@fathym-forge/ui/*": [
         "dist/ui/*"
       ],
-      "common": [
+      "@fathym-forge/common": [
         "dist/common"
       ],
-      "common/*": [
+      "@fathym-forge/common/*": [
         "dist/common/*"
       ]
     }
