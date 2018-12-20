@@ -7,7 +7,7 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { UIModule } from '../../ui.module';
 
 import { PagesRouterModule, RoutingComponents } from './pages.router';
-import { ComponentSelectorModule } from '@lcu/daf-ui';
+import { ComponentSelectorModule, PageViewModule } from '@lcu/daf-ui';
 import { ForgeBuildersModule } from '@fathym-forge/common';
 
 var comps = [
@@ -16,6 +16,7 @@ var comps = [
 @NgModule({
 	imports: [
 		FathymSharedModule,
+		PageViewModule,
 		UIModule,
 		PagesRouterModule,
 		DndModule,

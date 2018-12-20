@@ -1,7 +1,7 @@
 import { IBuildersService, ISolutionsService } from '@lcu/elements';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { MatIconRegistry, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatDialogModule, MatCardModule } from '@angular/material';
+import { MatIconRegistry, MatSidenavModule, MatIconModule, MatButtonModule, MatToolbarModule, MatDialogModule, MatCardModule, MatTabsModule, MatFormFieldModule, MatButtonToggleModule, MatProgressSpinnerModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialDesignFrameworkModule } from 'angular6-json-schema-form';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -19,8 +19,12 @@ var thirdPartyModules = [
 	ReactiveFormsModule,
 	MaterialDesignFrameworkModule,
 	MatButtonModule,
+	MatButtonToggleModule,
+	MatFormFieldModule,
+	MatTabsModule,
 	MatDialogModule,
 	MatIconModule,
+	MatProgressSpinnerModule,
 	MatSidenavModule,
     MatToolbarModule,
     MatCardModule
@@ -33,7 +37,6 @@ var fathymModules = [
 	ForgeSideNavModule,
 	ForgeBuildersModule,
 	ForgeSolutionsModule,
-	PageViewModule,
 	DAFUIModule,
 	// ForgeWeatherCloudSolutionModule,
 	// ForgeFlowSolutionModule,
