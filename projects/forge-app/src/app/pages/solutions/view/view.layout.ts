@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Loading } from '@lcu/core';
 import { RouterHelpersService } from '@lcu/routing';
 import { SolutionElement } from '@lcu/elements';
 import { SolutionsSetupContext } from '@lcu/daf-common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
 	selector: 'solutions-view-layout',
 	templateUrl: './view.layout.html',
-	host: {}
+	host: {},
+	providers: [
+		RouterHelpersService
+	],
 })
 export class SolutionsViewLayoutComponent implements OnInit {
 	//	Fields

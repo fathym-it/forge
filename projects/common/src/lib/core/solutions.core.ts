@@ -1,5 +1,7 @@
 import { SolutionModuleConfig } from '@lcu/elements';
 import { ForgeApplicationsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-applications';
+import { ForgeWeatherCloudSolutionSolutionDisplayModule } from '@weather-cloud/lcu-sln-weather-cloud';
+import { ForgeDepartureTableDisplayModule } from '@weather-cloud/lcu-el-departure-table';
 
 export const CoreForgeSolutionModules = [
 	{
@@ -98,13 +100,27 @@ export const CoreForgeSolutionModules = [
 			// 	DisplaySetups: [
 			// 	],
 			// },
-			// {
-			// 	Name: 'WeatherCloud',
-			// 	Control: { Base: 'forge-solution', Details: {}, Type: 'weathercloud' },
-			// 	Solution: ForgeWeatherCloudSolutionDisplayModule,
-			// 	DisplaySetups: [
-			// 	],
-			// },
+			{
+				Name: 'WeatherCloud',
+				Control: { Base: 'forge-solution', Details: {}, Type: 'weather-cloud' },
+				Solution: ForgeWeatherCloudSolutionSolutionDisplayModule,
+				DisplaySetups: [
+					{
+						Name: 'Weather Cloud',
+						Icon: 'insert_chart',
+						BaseKey: 'forge-weather-cloud',
+						Modules: [
+							{
+								Name: 'Departure Table',
+								Control: { Base: 'forge-weather-cloud', Details: { Elements: [], Configs: [] }, Type: 'departure-table' },
+								Display: ForgeDepartureTableDisplayModule,
+								HideDrag: false,
+								BuilderState: 'Render',
+							},
+						]
+					},
+				],
+			},
 			// {
 			// 	Name: 'Reporting',
 			// 	Control: { Base: 'forge-solution', Details: {}, Type: 'reporting' },

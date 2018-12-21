@@ -13,9 +13,13 @@ import { ForgeSideNavModule } from './controls/side-nav/side-nav.module';
 import { RouterHelpersService } from '@lcu/routing';
 import { IdentityOptions } from '@lcu/identity';
 import { DAFServiceSettings } from '@lcu/api';
+import { SolutionsSetupContext } from '@lcu/daf-common';
+import { WeatherCloudService } from '@weather-cloud/common';
+import { HttpClientModule } from '@angular/common/http'; 
 
 var thirdPartyModules = [
 	AngularFontAwesomeModule,
+	HttpClientModule,
 	FlexLayoutModule,
 	MonacoEditorModule,
 	FormsModule,
@@ -90,8 +94,8 @@ var fathymServices = [
 	// PagesSetupContext,
 	// PointersConfigContext,
 	// ProvisioningService,
-	// SolutionsSetupContext,
-	// WeatherCloudService
+	SolutionsSetupContext,
+	WeatherCloudService,
 	{ provide: IBuildersService, useClass: ForgeBuildersService },
 	{ provide: ISolutionsService, useClass: ForgeSolutionsService },
 ];
