@@ -46,8 +46,6 @@ var fathymModules = [
 	ForgeBuildersModule,
 	ForgeSolutionsModule,
 	DAFUIModule,
-	// ForgeWeatherCloudSolutionModule,
-	// ForgeFlowSolutionModule,
 ];
 
 var fathymServices = [
