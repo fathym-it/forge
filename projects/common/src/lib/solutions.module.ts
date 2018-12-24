@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FathymSharedModule } from '@lcu/hosting';
 import { ForgeSolutionsService } from './svc/solutions.service';
-import { ForgeWeatherCloudSolutionSolutionModule } from '@weather-cloud/lcu-sln-weather-cloud';
+import { ForgeWeatherCloudSolutionModule } from '@weather-cloud/lcu-sln-weather-cloud';
 import { ForgeApplicationsSolutionModule } from '@lowcodeunit/lcu-sln-applications';
 import { ForgeAssetsSolutionModule } from '@lowcodeunit/lcu-sln-assets';
 import { ForgeDevicesSolutionModule } from '@lowcodeunit/lcu-sln-devices';
@@ -18,7 +18,7 @@ const modules = [
 	ForgeIdentitySolutionModule,
 	ForgeInfrastructureSolutionModule,
 	ForgeReportingSolutionModule,
-	ForgeWeatherCloudSolutionSolutionModule,
+	ForgeWeatherCloudSolutionModule,
 ];
 
 @NgModule({

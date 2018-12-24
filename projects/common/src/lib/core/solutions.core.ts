@@ -1,6 +1,6 @@
 import { SolutionModuleConfig } from '@lcu/elements';
 import { ForgeApplicationsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-applications';
-import { ForgeWeatherCloudSolutionSolutionDisplayModule } from '@weather-cloud/lcu-sln-weather-cloud';
+import { ForgeWeatherCloudSolutionDisplayModule } from '@weather-cloud/lcu-sln-weather-cloud';
 import { ForgeDepartureTableDisplayModule } from '@weather-cloud/lcu-el-departure-table';
 import { ForgeAssetsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-assets';
 import { ForgeAssetsConfigManagerDisplayModule } from '@lowcodeunit/lcu-el-assets-config-manager';
@@ -159,7 +159,7 @@ export const CoreForgeSolutionModules = [
 			{
 				Name: 'WeatherCloud',
 				Control: { Base: 'forge-solution', Details: {}, Type: 'weather-cloud' },
-				Solution: ForgeWeatherCloudSolutionSolutionDisplayModule,
+				Solution: ForgeWeatherCloudSolutionDisplayModule,
 				DisplaySetups: [
 					{
 						Name: 'Weather Cloud',

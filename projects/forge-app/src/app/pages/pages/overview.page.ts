@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { PagesSetup, SolutionsSetup, SolutionElement } from '@lcu/elements';
 import { PagesSetupContext, SolutionsSetupContext } from '@lcu/daf-common';
 import { CoreForgeSolutionModules } from '@fathym-forge/common';
+import { Loading } from '@lcu/core';
 
 @Component({
 	selector: 'pages-overview-pages',
@@ -19,6 +20,8 @@ export class OverviewPage {
 		return this.SolutionsSetup && this.SolutionsSetup.Configs && this.SolutionsSetup.Configs.length > 0;
 	}
 
+	public Loading: Loading;
+
 	public PagesSetup: PagesSetup;
 
 	public SolutionsSetup: SolutionsSetup;
@@ -26,13 +29,18 @@ export class OverviewPage {
 	//	Constructors
 	constructor(protected pagesSetup: PagesSetupContext, protected solutionsSetup: SolutionsSetupContext,
 		protected router: Router) {
+		this.Loading = new Loading();
 	}
 
 	//	Life Cycle
 	public ngOnInit() {
+		this.pagesSetup.Loading.subscribe(loading => this.Loading.Set(loading));
+
 		this.pagesSetup.Context.subscribe(setup => {
 			this.PagesSetup = setup;
 		});
+
+		this.solutionsSetup.Loading.subscribe(loading => this.Loading.Set(loading));
 		
 		this.solutionsSetup.Context.subscribe(setup => {
 			this.SolutionsSetup = setup;
