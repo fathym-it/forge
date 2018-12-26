@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { PagesSetup, SolutionsSetup, SolutionElement } from '@lcu/elements';
 import { PagesSetupContext, SolutionsSetupContext } from '@lcu/daf-common';
-import { CoreForgeSolutionModules } from '@fathym-forge/common';
 import { Loading } from '@lcu/core';
+import { CoreForgeSolutionModules } from '../../common/core/solutions.core';
 
 @Component({
 	selector: 'pages-overview-pages',
@@ -41,7 +41,7 @@ export class OverviewPage {
 		});
 
 		this.solutionsSetup.Loading.subscribe(loading => this.Loading.Set(loading));
-		
+
 		this.solutionsSetup.Context.subscribe(setup => {
 			this.SolutionsSetup = setup;
 		});

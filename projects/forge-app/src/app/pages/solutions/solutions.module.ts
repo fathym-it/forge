@@ -7,7 +7,7 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { UIModule } from '../../ui.module';
 
 import { SolutionsRouterModule, SolutionsRoutingComponents } from './solutions.router';
-import { ForgeSolutionsModule } from '@fathym-forge/common';
+import { ForgeSolutionsModule } from '../../common/solutions.module';
 
 var comps = [
 ];

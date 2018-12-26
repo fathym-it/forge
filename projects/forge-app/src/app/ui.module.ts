@@ -6,7 +6,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialDesignFrameworkModule } from 'angular6-json-schema-form';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
-import { ForgeBuildersModule, ForgeSolutionsModule, ForgeBuildersService, ForgeSolutionsService } from '@fathym-forge/common';
 import { FathymSharedModule } from '@lcu/hosting';
 import { DAFUIModule } from '@lcu/daf-ui';
 import { ForgeSideNavModule } from './controls/side-nav/side-nav.module';
@@ -15,7 +14,11 @@ import { IdentityOptions } from '@lcu/identity';
 import { DAFServiceSettings } from '@lcu/api';
 import { SolutionsSetupContext } from '@lcu/daf-common';
 import { WeatherCloudService } from '@weather-cloud/common';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { ForgeBuildersModule } from './common/builders.module';
+import { ForgeSolutionsModule } from './common/solutions.module';
+import { ForgeBuildersService } from './common/svc/builders.service';
+import { ForgeSolutionsService } from './common/svc/solutions.service';
 
 var thirdPartyModules = [
 	AngularFontAwesomeModule,

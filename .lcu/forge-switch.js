@@ -3,11 +3,7 @@
 
   const args = require("minimist")(argsV);
 
-  console.log(args);
-
   const env = args["env"];
-
-  console.log(env);
 
   const devPath =
     "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\forge";
