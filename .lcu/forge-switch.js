@@ -1,8 +1,6 @@
-(async argsV => {
-  const fs = require("fs-extra");
+const fs = require("fs-extra");
 
-  const args = require("minimist")(argsV);
-
+(async args => {
   const env = args["env"];
 
   const devPath =
@@ -28,4 +26,4 @@
   // angular.projects["forge-app"].architect.build.options = buildOptions;
 
   await fs.writeJSON("angular.json", angular, { spaces: "\t" });
-})(process.argv.slice(2));
+})(require("minimist")(process.argv.slice(2)));
