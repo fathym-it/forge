@@ -4,10 +4,7 @@
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
 		"deploy:all": "npm run deploy:app",
-		"deploy:app": "ng build forge-app --prod && npm publish ./dist/forge-app --access public",
-		"switch": "node .lcu/forge-switch.js",
-		"switch:prod": "node .lcu/forge-switch.js --env prod",
-		"switch:dev": "node .lcu/forge-switch.js --env dev",
+		"deploy:app": "ng build forge --prod && npm publish ./dist/forge --access public",
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
