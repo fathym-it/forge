@@ -29,10 +29,7 @@ import { DAFServiceSettings } from "@lcu/api";
 import { SolutionsSetupContext } from "@lcu/daf-common";
 import { WeatherCloudService } from "@weather-cloud/common";
 import { HttpClientModule } from "@angular/common/http";
-import { ForgeBuildersModule } from "./common/builders.module";
-import { ForgeSolutionsModule } from "./common/solutions.module";
-import { ForgeBuildersService } from "./common/svc/builders.service";
-import { ForgeSolutionsService } from "./common/svc/solutions.service";
+import { ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,

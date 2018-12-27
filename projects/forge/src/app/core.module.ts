@@ -15,7 +15,7 @@ import { UIModule } from './ui.module';
 import { AppLayoutComponent } from './app.layout';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { HttpClientModule } from '@angular/common/http';
-import { ForgeBuildersModule } from './common/builders.module';
+import { ForgeBuildersModule } from '@fathym-forge/common';
 
 export var modules: any[] = [
 	FathymSharedModule,

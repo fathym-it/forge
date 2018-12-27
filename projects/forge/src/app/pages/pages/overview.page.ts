@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { PagesSetup, SolutionsSetup, SolutionElement } from '@lcu/elements';
 import { PagesSetupContext, SolutionsSetupContext } from '@lcu/daf-common';
 import { Loading } from '@lcu/core';
-import { CoreForgeSolutionModules } from '../../common/core/solutions.core';
+import { CoreForgeSolutionModules } from '@fathym-forge/common';
 
 @Component({
 	selector: 'pages-overview-pages',
