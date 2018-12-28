@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+	<div class="filler"></div>
+
+	<div fxFlex="40%" fxFlex.lt-md="70%" fxFlex.lt-sm="90%">
+		<form [formGroup]="ConfigureFormGroup" (ngSubmit)="HandleConfigure()">
+			<h1 class="mat-display-3">Configure Organization</h1>
+
+			<mat-form-field class="mat-full-width">
+				<input matInput placeholder="Host" formControlName="host" />
+			</mat-form-field>
+
+			<div *ngIf="Error">{{Error}}</div>
+
+			<button mat-raised-button *ngIf="!Loading" color="primary" class="mat-button-lg" type="submit" [disabled]="!ConfigureFormGroup.valid">
+				Configure Organization
+			</button>
+
+			<mat-spinner *ngIf="Loading"></mat-spinner>
+		</form>
+	</div>
+
+	<div class="filler"></div>
+</div>

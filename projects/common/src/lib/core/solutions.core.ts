@@ -1,21 +1,21 @@
 import { SolutionModuleConfig } from '@lcu/elements';
-import { ForgeApplicationsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-applications';
+import { ForgeApplicationsSolutionDisplayModule } from '@lcu/lcu-sln-applications';
 import { ForgeWeatherCloudSolutionDisplayModule } from '@weather-cloud/lcu-sln-weather-cloud';
 import { ForgeDepartureTableDisplayModule } from '@weather-cloud/lcu-el-departure-table';
-import { ForgeAssetsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-assets';
-import { ForgeAssetsConfigManagerDisplayModule } from '@lowcodeunit/lcu-el-assets-config-manager';
-import { ForgeAssetsDomainInputDisplayModule } from '@lowcodeunit/lcu-el-assets-domain-input';
-import { ForgeAssetsDomainViewDisplayModule } from '@lowcodeunit/lcu-el-assets-domain-view';
-import { ForgeDevicesSolutionDisplayModule } from '@lowcodeunit/lcu-sln-devices';
-import { ForgeDashboardsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-dashboards';
-import { ForgeIdentitySolutionDisplayModule } from '@lowcodeunit/lcu-sln-identity';
-import { ForgeIdentityRecoverPasswordDisplayModule } from '@lowcodeunit/lcu-el-identity-recover-password';
-import { ForgeIdentityRegisterDisplayModule } from '@lowcodeunit/lcu-el-identity-register';
-import { ForgeIdentitySignInDisplayModule } from '@lowcodeunit/lcu-el-identity-sign-in';
-import { ForgeInfrastructureSolutionDisplayModule } from '@lowcodeunit/lcu-sln-infrastructure';
-import { ForgeReportingSolutionDisplayModule } from '@lowcodeunit/lcu-sln-reporting';
-import { ForgeReportingEditDisplayModule } from '@lowcodeunit/lcu-el-reporting-edit';
-import { ForgeReportingViewDisplayModule } from '@lowcodeunit/lcu-el-reporting-view';
+import { ForgeAssetsSolutionDisplayModule } from '@lcu/lcu-sln-assets';
+import { ForgeAssetsConfigManagerDisplayModule } from '@lcu/lcu-el-assets-config-manager';
+import { ForgeAssetsDomainInputDisplayModule } from '@lcu/lcu-el-assets-domain-input';
+import { ForgeAssetsDomainViewDisplayModule } from '@lcu/lcu-el-assets-domain-view';
+import { ForgeDevicesSolutionDisplayModule } from '@lcu/lcu-sln-devices';
+import { ForgeDashboardsSolutionDisplayModule } from '@lcu/lcu-sln-dashboards';
+import { ForgeIdentitySolutionDisplayModule } from '@lcu/lcu-sln-identity';
+import { ForgeIdentityRecoverPasswordDisplayModule } from '@lcu/lcu-el-identity-recover-password';
+import { ForgeIdentityRegisterDisplayModule } from '@lcu/lcu-el-identity-register';
+import { ForgeIdentitySignInDisplayModule } from '@lcu/lcu-el-identity-sign-in';
+import { ForgeInfrastructureSolutionDisplayModule } from '@lcu/lcu-sln-infrastructure';
+import { ForgeReportingSolutionDisplayModule } from '@lcu/lcu-sln-reporting';
+import { ForgeReportingEditDisplayModule } from '@lcu/lcu-el-reporting-edit';
+import { ForgeReportingViewDisplayModule } from '@lcu/lcu-el-reporting-view';
 
 export const CoreForgeSolutionModules = [
 	{

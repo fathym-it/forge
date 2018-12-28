@@ -1,15 +1,15 @@
-import { ForgeDisplayActionDisplayModule } from '@lowcodeunit/lcu-el-display-action';
-import { ForgeDisplayChartsDisplayModule } from '@lowcodeunit/lcu-el-display-charts';
-import { ForgeDisplayContentDisplayModule } from '@lowcodeunit/lcu-el-display-content';
-import { ForgeDisplayJsonViewDisplayModule } from '@lowcodeunit/lcu-el-display-json-view';
-import { ForgeDisplayPointerDisplayModule } from '@lowcodeunit/lcu-el-display-pointer';
-import { ForgeLayoutFlexDisplayModule } from '@lowcodeunit/lcu-el-layout-flex';
-import { ForgeLayoutStackedDisplayModule } from '@lowcodeunit/lcu-el-layout-stacked';
-import { ForgeLayoutSwitchStateDisplayModule } from '@lowcodeunit/lcu-el-layout-switch-state';
-import { ForgeMaterialLayoutCardDisplayModule } from '@lowcodeunit/lcu-el-material-layout-card';
-import { ForgeMaterialLayoutGridListDisplayModule } from '@lowcodeunit/lcu-el-material-layout-grid-list';
-import { ForgeMaterialNavMenuDisplayModule } from '@lowcodeunit/lcu-el-material-nav-menu';
-import { ForgeMaterialNavToolbarDisplayModule } from '@lowcodeunit/lcu-el-material-nav-toolbar';
+import { ForgeDisplayActionDisplayModule } from '@lcu/lcu-el-display-action';
+import { ForgeDisplayChartsDisplayModule } from '@lcu/lcu-el-display-charts';
+import { ForgeDisplayContentDisplayModule } from '@lcu/lcu-el-display-content';
+import { ForgeDisplayJsonViewDisplayModule } from '@lcu/lcu-el-display-json-view';
+import { ForgeDisplayPointerDisplayModule } from '@lcu/lcu-el-display-pointer';
+import { ForgeLayoutFlexDisplayModule } from '@lcu/lcu-el-layout-flex';
+import { ForgeLayoutStackedDisplayModule } from '@lcu/lcu-el-layout-stacked';
+import { ForgeLayoutSwitchStateDisplayModule } from '@lcu/lcu-el-layout-switch-state';
+import { ForgeMaterialLayoutCardDisplayModule } from '@lcu/lcu-el-material-layout-card';
+import { ForgeMaterialLayoutGridListDisplayModule } from '@lcu/lcu-el-material-layout-grid-list';
+import { ForgeMaterialNavMenuDisplayModule } from '@lcu/lcu-el-material-nav-menu';
+import { ForgeMaterialNavToolbarDisplayModule } from '@lcu/lcu-el-material-nav-toolbar';
 
 
 export const CoreForgeBuilderDisplayModules = [

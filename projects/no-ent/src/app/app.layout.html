@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+	<a mat-button routerLink="/"><img src="/forge/assets/img/logo.png" /></a>
+
+	<span class="filler"></span>
+
+	<a mat-button color="accent" (click)="SignOut()">Sign Out</a>
+</mat-toolbar>
+
+<div class="pull-in">
+	<router-outlet></router-outlet>
+</div>
