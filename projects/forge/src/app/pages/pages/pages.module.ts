@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressBarModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatGridListModule, MatMenuModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatProgressBarModule, MatProgressSpinnerModule, MatListModule } from '@angular/material';
 import { DndModule } from '@beyerleinf/ngx-dnd';
 
 import { FathymSharedModule } from '@lcu/hosting';
@@ -26,7 +26,8 @@ var comps = [
 		MatFormFieldModule,
 		MatGridListModule,
 		MatIconModule,
-		MatInputModule,
+    MatInputModule,
+    MatListModule,
 		MatMenuModule,
 		MatProgressBarModule,
 		MatProgressSpinnerModule,

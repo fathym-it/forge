@@ -1,118 +1,170 @@
 <div class="push-out">
-	<h1>Welcome to the Fathym Forge</h1>
+  <div>
+    <h1>Welcome to the Fathym Forge</h1>
 
-	<p class="mat-body-3">
-		As technology continues to shift and grow, a gap has emerged in how Enterprises can leverage a community of
-		experienced and skilled developers. More important, is how to leverage this community in a scalable and secure way
-		that enables both sides to thrive in the delivery of business-critical solutions and products.
-	</p>
+    <p class="mat-body-3">
+      As technology continues to shift and grow, a gap has emerged in how
+      Enterprises can leverage a community of experienced and skilled
+      developers. More important, is how to leverage this community in a
+      scalable and secure way that enables both sides to thrive in the delivery
+      of business-critical solutions and products.
+    </p>
 
-	<p class="mat-body-3">
-		The Fathym Forge supports a configuration driven development experience that separates developers from the
-		technology infrastructure configured by enterprise engineers. This enables developers to create solutions against an
-		application spec that enterprise managers can configure to their platform.
-	</p>
-</div>
+    <p class="mat-body-3">
+      The Fathym Forge supports a configuration driven development experience
+      that separates developers from the technology infrastructure configured by
+      enterprise engineers. This enables developers to create solutions against
+      an application spec that enterprise managers can configure to their
+      platform.
+    </p>
+  </div>
 
-<ng-container *ngIf="!Loading.Value">
-	<div class="push-out" *ngIf="!HasSolutions">
-		<div>
-			<h2>Let's Get Started</h2>
+  <ng-container *ngIf="!Loading.Value">
+    <div *ngIf="!HasSolutions">
+      <div>
+        <h2>Let's Get Started</h2>
 
-			<p class="mat-body-2">
-				The Forge is a collection of Low Code development workflows for building rich Data Applications in a distributed,
-				secure, and scalable architecture. As we continue to roll out our Low Code tool sets, we will also be adding
-				additional infrastructure providers. For now, we have partnered with Microsoft Azure to deliver a best-in-class
-				architecture for applications built with the Forge.
-			</p>
+        <p class="mat-body-2">
+          The Forge is a collection of Low Code development workflows for
+          building rich Data Applications in a distributed, secure, and scalable
+          architecture. As we continue to roll out our Low Code tool sets, we
+          will also be adding additional infrastructure providers. For now, we
+          have partnered with Microsoft Azure to deliver a best-in-class
+          architecture for applications built with the Forge.
+        </p>
 
-			<p class="mat-body-2">
-				Before digging in to the features of the Forge, you'll need to make your first infrastructure decision. Are you
-				just Exploring the features, looking for support with a managed Azure Subscription, or do you have your own Azure
-				accounts setup?
-			</p>
+        <p class="mat-body-2">
+          Before digging in to the features of the Forge, you'll need to make
+          your first infrastructure decision. Are you just Exploring the
+          features, looking for support with a managed Azure Subscription, or do
+          you have your own Azure accounts setup?
+        </p>
 
-			<p class="mat-body-2">
-				The best and easiest way to get started is with your own Azure Subscriptions. There are great cost saving
-				opportunities for new users and you only ever pay for what you need. To get started with a new Azure Account,
-				<a target="_blank" href="https://azure.microsoft.com/en-us/free/search/?&OCID=AID719825_SEM_5BJph9OZ&lnkd=Google_Azure_Brand&gclid=EAIaIQobChMIkez2r-ia3wIVEKvsCh0_wAgGEAAYASAAEgIxZfD_BwE">head
-					over here!</a>
-			</p>
+        <p class="mat-body-2">
+          The best and easiest way to get started is with your own Azure
+          Subscriptions. There are great cost saving opportunities for new users
+          and you only ever pay for what you need. To get started with a new
+          Azure Account,
+          <a
+            target="_blank"
+            href="https://azure.microsoft.com/en-us/free/search/?&OCID=AID719825_SEM_5BJph9OZ&lnkd=Google_Azure_Brand&gclid=EAIaIQobChMIkez2r-ia3wIVEKvsCh0_wAgGEAAYASAAEgIxZfD_BwE"
+            >head over here!</a
+          >
+        </p>
 
-			<div fxLayout="row wrap" fxLayoutAlign="start start">
-				<div fxFlex="30%">
-					<div class="push-out">
-						<h2>Forge Explorer</h2>
+        <div fxLayout="row wrap" fxLayoutAlign="start start">
+          <div fxFlex="30%">
+            <div class="push-out">
+              <h2>Forge Explorer</h2>
 
-						<p class="mat-body-1">
-							Not ready to dive in, no worries you can start poking around and doing whatever you want. Just know that
-							there is no guarantee at the length of time your setup will be available and that it may be shut off at
-							any time. The most logical place to get started in this context would be at the Application Forge. Here
-							you can learn how to begin building Data Applications on your domain.
-						</p>
+              <p class="mat-body-1">
+                Not ready to dive in, no worries you can start poking around and
+                doing whatever you want. Just know that there is no guarantee at
+                the length of time your setup will be available and that it may
+                be shut off at any time. The most logical place to get started
+                in this context would be at the Application Forge. Here you can
+                learn how to begin building Data Applications on your domain.
+              </p>
 
-						<a mat-raised-button color="primary">
-							Get Started with the Application Forge
-						</a>
-					</div>
-				</div>
+              <a mat-raised-button color="primary">
+                Get Started with the Application Forge
+              </a>
+            </div>
+          </div>
 
-				<div fxFlex="30%">
-					<div class="push-out">
-						<h2>Managed Subscription</h2>
+          <div fxFlex="30%">
+            <div class="push-out">
+              <h2>Managed Subscription</h2>
 
-						<p class="mat-body-1">
-							If you don't have a team to manage and support your efforts in Azure, we can help you with it all. Reach
-							out to us and we'll get you setup with a subscription of your own that we help manage on your behalf.
-						</p>
+              <p class="mat-body-1">
+                If you don't have a team to manage and support your efforts in
+                Azure, we can help you with it all. Reach out to us and we'll
+                get you setup with a subscription of your own that we help
+                manage on your behalf.
+              </p>
 
-						<a mat-raised-button color="primary">
-							Contact Us for Managed Subscription Options
-						</a>
-					</div>
-				</div>
+              <a mat-raised-button color="primary">
+                Contact Us for Managed Subscription Options
+              </a>
+            </div>
+          </div>
 
-				<div fxFlex="30%">
-					<div class="push-out">
-						<h2>Enterprise Subscription</h2>
+          <div fxFlex="30%">
+            <div class="push-out">
+              <h2>Enterprise Subscription</h2>
 
-						<p class="mat-body-1">
-							Don't worry, we are still going to help manage your infrastructure with our Low Code tools, we'll just
-							do it all in your Enterprise Infrastructure. To get started, use the link below to enable the Forge
-							Provisioning Solution, and then we'll take you to the documentation for setting up and configuring
-							your Enterprise Forge Subscription.
-						</p>
+              <p class="mat-body-1">
+                Don't worry, we are still going to help manage your
+                infrastructure with our Low Code tools, we'll just do it all in
+                your Enterprise Infrastructure. To get started, use the link
+                below to enable the Forge Provisioning Solution, and then we'll
+                take you to the documentation for setting up and configuring
+                your Enterprise Forge Subscription.
+              </p>
 
-						<a mat-raised-button color="accent" (click)="EnableEnterpriseSubscriptions()">
-							Enable Your Enterprise Infrastructure
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              <a
+                mat-raised-button
+                color="accent"
+                (click)="EnableEnterpriseSubscriptions()"
+              >
+                Enable Your Enterprise Infrastructure
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div *ngIf="HasPages">
-		A listing of pages...
+    <div class="push-down" *ngIf="HasPages">
+      <h2>Your Pages</h2>
 
-		<pre>{{PagesSetup.Configs | json}}</pre>
-	</div>
+      <mat-nav-list>
+        <a
+          mat-list-item
+          [routerLink]="['/page', pageConfig.Lookup]"
+          *ngFor="let pageConfig of PagesSetup.Configs"
+        >
+          {{ pageConfig.Name }}
+        </a>
 
-	<div class="push-out" *ngIf="!HasPages && HasSolutions">
-		<button mat-raised-button color="primary" class="push-left" routerLink="/page/create">
-			<mat-icon>add</mat-icon>
+        <a mat-list-item routerLink="/page/create">
+          <mat-icon>add</mat-icon>
 
-			Create New Page
-		</button>
+          Create New Page
+        </a>
 
-		<a mat-raised-button color="accent" class="push-left" routerLink="/page/_tutorial">
-			<mat-icon>apps</mat-icon>
+        <a mat-list-item routerLink="/page/_tutorial">
+          <mat-icon>apps</mat-icon>
 
-			View Tutorial Page
-		</a>
-	</div>
-</ng-container>
+          View Tutorial Page
+        </a>
+      </mat-nav-list>
+    </div>
 
-<div *ngIf="Loading.Value">
-	<mat-spinner></mat-spinner>
+    <div *ngIf="!HasPages && HasSolutions">
+      <button
+        mat-raised-button
+        color="primary"
+        class="push-left"
+        routerLink="/page/create"
+      >
+        <mat-icon>add</mat-icon>
+
+        Create New Page
+      </button>
+
+      <a
+        mat-raised-button
+        color="accent"
+        class="push-left"
+        routerLink="/page/_tutorial"
+      >
+        <mat-icon>apps</mat-icon>
+
+        View Tutorial Page
+      </a>
+    </div>
+  </ng-container>
+
+  <div *ngIf="Loading.Value"><mat-spinner></mat-spinner></div>
 </div>
