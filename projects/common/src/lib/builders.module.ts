@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FathymSharedModule } from '@lcu/hosting';
 import { ForgeBuildersService } from './svc/builders.service';
 import { ForgeDepartureTableModule } from '@weather-cloud/lcu-el-departure-table';
+import { ForgeWcSearchFormModule } from '@weather-cloud/lcu-el-wc-search-form';
 import { ForgeAssetsConfigManagerModule } from '@lowcodeunit/lcu-el-assets-config-manager';
 import { ForgeAssetsDomainInputModule } from '@lowcodeunit/lcu-el-assets-domain-input';
 import { ForgeAssetsDomainViewModule } from '@lowcodeunit/lcu-el-assets-domain-view';
@@ -24,7 +25,8 @@ import { ForgeLayoutSwitchStateModule } from '@lowcodeunit/lcu-el-layout-switch-
 import { ForgeLayoutStackedModule } from '@lowcodeunit/lcu-el-layout-stacked';
 
 const modules = [
-	ForgeDepartureTableModule,
+  ForgeDepartureTableModule,
+  ForgeWcSearchFormModule,
 	ForgeAssetsConfigManagerModule,
 	ForgeAssetsDomainInputModule,
 	ForgeAssetsDomainViewModule,
