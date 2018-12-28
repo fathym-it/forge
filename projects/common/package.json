@@ -33,7 +33,7 @@
 				"@lowcodeunit/lcu-sln-infrastructure": "0.0.8",
 				"@lowcodeunit/lcu-sln-reporting": "0.0.6",
 				"@lowcodeunit/ngx-markdown-docs": "0.0.25",
-				"@weather-cAloud/common": "0.0.25",
+				"@weather-cloud/common": "0.0.25",
 				"@weather-cloud/lcu-el-departure-table": "0.0.25",
 				"@weather-cloud/lcu-sln-weather-cloud": "0.0.25"
 		}
