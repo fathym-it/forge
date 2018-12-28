@@ -1,4 +1,4 @@
-@import './styles/theme';
+@import '../../common/src/styles/theme';
 
 @mixin forge-pages($theme) {
     $primary: map-get($theme, primary);
