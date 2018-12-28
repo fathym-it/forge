@@ -1,111 +1,98 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ModuleWithProviders, NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import {
-	MatButtonModule,
-	MatFormFieldModule,
-	MatIconModule,
-	MatIconRegistry,
-	MatInputModule,
-	MatProgressSpinnerModule,
-	MatToolbarModule,
-	MatDialogModule,
-} from '@angular/material';
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatIconRegistry,
+  MatInputModule,
+  MatProgressSpinnerModule,
+  MatToolbarModule,
+  MatDialogModule,
+  MatSnackBarModule
+} from "@angular/material";
 
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
-import { FathymSharedModule } from '@lcu/hosting';
-import { IdentityService, IdentityOptions } from '@lcu/identity';
+import { FathymSharedModule } from "@lcu/hosting";
+import { IdentityService, IdentityOptions } from "@lcu/identity";
 
-import { DndModule } from '@beyerleinf/ngx-dnd';
+import { DndModule } from "@beyerleinf/ngx-dnd";
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AngularFontAwesomeModule } from "angular-font-awesome";
 
-import { MaterialDesignFrameworkModule } from 'angular6-json-schema-form';
-import { ForgeSignInModule } from '@lcu/daf-ui';
+import { MaterialDesignFrameworkModule } from "angular6-json-schema-form";
+import { ForgeSignInModule } from "@lcu/daf-ui";
 
 var materialModules = [
-	MaterialDesignFrameworkModule,
-	MatButtonModule,
-	MatDialogModule,
-	MatFormFieldModule,
-	MatIconModule,
-	MatInputModule,
-	MatProgressSpinnerModule,
-	MatToolbarModule,
+  MaterialDesignFrameworkModule,
+  MatButtonModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatProgressSpinnerModule,
+  MatSnackBarModule,
+  MatToolbarModule
 ];
 
-var materialServices = [
-	MatIconRegistry
-];
+var materialServices = [MatIconRegistry];
 
-var fathymModules = [
-	ForgeSignInModule
-];
+var fathymModules = [ForgeSignInModule];
 
 var fathymServices = [
-	{
-		provide: IdentityOptions,
-		useValue: {
-            ConfirmPasswordRecoveryURL: `/daf-identity/recover/confirm`,
-            IsAuthenticatedURL: `/daf-identity/authenticated`,
-            IsRegisteredPasswordQueryParamName: `password`,
-            IsRegisteredUserQueryParamName: `email`,
-            IsRegisteredURL: `/daf-identity/registered`,
-			RecoverPasswordURL: `/daf-identity/recover/init`,
-			RegisterURL: `/daf-identity/register`,
-			SignInURL: `/daf-identity/signin`,
-			SignOutURL: `/daf-identity/signout`
-		}
-	},
-	IdentityService,
+  {
+    provide: IdentityOptions,
+    useValue: {
+      ConfirmPasswordRecoveryURL: `/daf-identity/recover/confirm`,
+      IsAuthenticatedURL: `/daf-identity/authenticated`,
+      IsRegisteredPasswordQueryParamName: `password`,
+      IsRegisteredUserQueryParamName: `email`,
+      IsRegisteredURL: `/daf-identity/registered`,
+      RecoverPasswordURL: `/daf-identity/recover/init`,
+      RegisterURL: `/daf-identity/register`,
+      SignInURL: `/daf-identity/signin`,
+      SignOutURL: `/daf-identity/signout`
+    }
+  },
+  IdentityService
 ];
 
 var localModules: Array<any> = [
-	FlexLayoutModule,
-	ReactiveFormsModule,
-	DndModule,
-	AngularFontAwesomeModule,
+  FlexLayoutModule,
+  ReactiveFormsModule,
+  DndModule,
+  AngularFontAwesomeModule
 ];
 
-var localServices = [
-];
+var localServices = [];
 
 var modules = [
-	FathymSharedModule,
-	...materialModules,
-	...localModules,
-	...fathymModules
+  FathymSharedModule,
+  ...materialModules,
+  ...localModules,
+  ...fathymModules
 ];
 
-var services = [
-	...materialServices,
-	...localServices,
-	...fathymServices
-];
+var services = [...materialServices, ...localServices, ...fathymServices];
 
 @NgModule({
-	declarations: [
-	],
-	imports: [
-		...modules,
-	],
-	exports: [
-		...modules
-	],
-	providers: [
-	]
+  declarations: [],
+  imports: [...modules],
+  exports: [...modules],
+  providers: []
 })
 export class UIModule {
-	//	Constructors
-	constructor(public matIconRegistry: MatIconRegistry) {
-		matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
-	}
+  //	Constructors
+  constructor(public matIconRegistry: MatIconRegistry) {
+    matIconRegistry.registerFontClassAlias("fontawesome", "fa");
+  }
 
-	static forRoot(): ModuleWithProviders {
-		return {
-			ngModule: UIModule,
-			providers: [...services]
-		};
-	}
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: UIModule,
+      providers: [...services]
+    };
+  }
 }

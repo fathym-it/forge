@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 
-import { CoreModule } from '../../../sign-in/src/app/core.module';
+import { MatSnackBarModule } from '@angular/material';
+import { CoreModule } from './core.module';
 
 @NgModule({
 	declarations: [
 	],
 	imports: [
-		CoreModule,
+    CoreModule,
+    MatSnackBarModule,
 	],
 	providers: [],
 	bootstrap: [CoreModule.LoadBootstrap()],
 })
-export class AppModule { }
+export class AppModule {
+}

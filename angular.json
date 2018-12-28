@@ -332,7 +332,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/sign-in",
+						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\apps\\sign-in",
 						"index": "projects/sign-in/src/index.html",
 						"main": "projects/sign-in/src/main.ts",
 						"polyfills": "projects/sign-in/src/polyfills.ts",
@@ -473,7 +473,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/register",
+						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\apps\\register",
 						"index": "projects/register/src/index.html",
 						"main": "projects/register/src/main.ts",
 						"polyfills": "projects/register/src/polyfills.ts",
