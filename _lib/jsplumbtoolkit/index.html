@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>jsPlumb Toolkit Jump Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style type="text/css">
+        a, a:visited {
+            color:#629F8D;
+            text-decoration:none;
+        }
+
+        a:hover {
+            text-decoration:underline;
+        }
+
+        pre {
+            outline: 1px solid #CCC;
+            padding: 15px 5px 1px 10px;
+            margin: 20px;
+            background-color: #deded2;
+            color: #343434;
+        }
+    </style>
+
+</head>
+
+<body>
+<h1>jsPlumbToolkit</h1>
+
+<p>
+    Welcome to the Toolkit edition of jsPlumb. To get started, you'll need these things installed:
+<p>
+
+    <ul>
+        <li>NodeJS  (version 5 or higher)</li>
+        <li>npm     (this is installed with NodeJS)</li>
+        <li>Grunt   (after installing Node, `npm install grunt-cli -g` will install this)</li>
+    </ul>
+
+Once you have these all installed, you'll need to run this command:
+
+<pre>
+    npm install
+    </pre>
+
+<p>
+This will iterate through every demonstration and run `npm install`, `grunt webpack` for those demos that use Webpack,
+and `npm run tsc` for Angular 2 demos using Typescript.
+</p>
+
+<p>
+    Once you've installed everything, you can either host this entire directory on a webserver somewhere, or you can use
+    the embedded webserver:
+</p>
+
+<h4>Mac/Linux/Unix</h4>
+<pre>
+   npm start
+</pre>
+
+<h4>Windows</h4>
+<pre>
+    npm start_windows
+</pre>
+
+By default, this will start up a webserver on port 8910.
+
+<h2>Getting Started</h2>
+With Grunt you can get started straight away with a copy of an existing demo, or with
+an almost empty app you can use as a template.
+
+<h3>Cloning an existing demo</h3>
+        <pre>
+grunt clone --app=database-visualizer --o=&lt;your output directory&gt;
+        </pre>
+
+Valid values for `-app` are:
+
+<ul>
+    <li>database-visualiser</li>
+    <li>flowchart-builder</li>
+    <li>absolute</li>
+    <li>circular</li>
+    <li>hierarchy</li>
+    <li>multiple-hierarchy</li>
+    <li>paths</li>
+    <li>hello-world</li>
+    <li>multiple</li>
+    <li>skeleton</li>
+    <li>spring</li>
+    <li>groups</li>
+    <li>connectivity</li>
+    <li>angular-1.x</li>
+    <li>angular</li>
+    <li>angular-cli</li>
+    <li>angular2</li>
+    <li>angular2-cli</li>
+    <li>angular-1.x-groups</li>
+    <li>angular-groups</li>
+    <li>react</li>
+    <li>vue</li>
+    <li>webpack</li>
+</ul>
+
+<h3>Creating a new skeleton app</h3>
+        <pre>
+grunt create --o=&lt;your output directory&gt;
+        </pre>
+
+<h3>Creating a new app manually</h3>
+See instructions <a href="doc/getting-started.html">here</a>.
+
+<h3>Ingesting an existing jsPlumb instance</h3>
+If you have an existing jsPlumb instance and you want to try the simplest upgrade path, this is for you.
+
+See instructions <a href="doc/getting-started.html#ingest">here</a>.
+
+<a name="demos"></a>
+<h2>Demonstrations</h2>
+<ul>
+    <li><a href="demo/hierarchy/index.html">Hierarchy Layout</a></li>
+    <li><a href="demo/multiple-hierarchy/index.html">Hierarchy Layout (Multiple Roots)</a></li>
+    <li><a href="demo/circular/index.html">Circle Layout</a></li>
+    <li><a href="demo/spring/index.html">Spring Layout</a></li>
+    <li><a href="demo/absolute/index.html">Absolute Layout</a></li>
+    <li><a href="demo/multiple/index.html">Multiple Renderers</a></li>
+    <li><a href="demo/paths/index.html">Path Traversal</a></li>
+    <li><a href="demo/database-visualizer/index.html">Database Visualizer</a></li>
+    <li><a href="demo/flowchart-builder/index.html">Flowchart Builder</a></li>
+    <li><a href="demo/groups/index.html">Groups</a></li>
+
+    <li><a href="demo/hello-world/index.html">Hello World</a></li>
+
+    <li><a href="demo/active-filtering/index.html">Active Filtering</a></li>
+    <li><a href="demo/angular-1.x/index.html">Angular 1.x Integration</a></li>
+    <li><a href="demo/angular-1.x-groups/index.html">Groups (Angular 1.x)</a></li>
+    <li><a href="demo/angular/index.html">Angular 4/Angular 2 Integration (Typescript)</a></li>
+    <li><a href="demo/angular-groups/index.html">Groups (Angular 4/Angular 2)</a></li>
+
+    <li><a href="demo/react/index.html">React Integration</a></li>
+
+    <li><a href="demo/vue/index.html">Vue 2 Integration</a></li>
+
+    <li><a href="demo/webpack/index.html">Webpack Bundling</a></li>
+</ul>
+
+<h2>Documentation</h2>
+<ul>
+    <li><a href="doc/home.html">Toolkit Edition Documentation</a></li>
+    <li><a href="apidocs/index.html">API Documentation</a></li>
+</ul>
+
+</body>
+
+</html>

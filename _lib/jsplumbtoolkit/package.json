@@ -1,0 +1,36 @@
+{
+    "name": "jsplumbtoolkit-project-utils",
+    "version": "1.2.14",
+    "description": "The jsPlumb Toolkit's project utilities",
+    "main": "Gruntfile.js",
+    "scripts":{
+        "preinstall":"node install.js",
+        "start":"./node_modules/http-server/bin/http-server  -a localhost -p 8910 -c-1",
+        "start_windows":"node node_modules\\http-server\\bin\\http-server  -a localhost -p 8910 -c-1"
+    },
+    "apps-dir": "demo",
+    "apps": [
+        "hierarchy",
+        "multiple-hierarchy",
+        "circular",
+        "spring",
+        "absolute",
+        "multiple",
+        "paths",
+        "database-visualizer",
+        "flowchart-builder",
+        "hello-world",
+        "angular-1.x",
+        "angular",
+        "groups",
+        "active-filtering",
+        "react",
+        "webpack",
+        "vue",
+        "skeleton",
+        "webpack"
+    ],
+    "devDependencies": {
+        "http-server": "^0.9.0"
+    }
+}

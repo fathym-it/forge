@@ -1,0 +1,996 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a name="top"></a></p>
+
+<h2>Flowchart Builder (React)</h2>
+
+<p>This is a port of the Flowchart Builder application that demonstrates the Toolkit&#39;s React integration.</p>
+
+<p><img src="demo-flowchart.png" alt="Flowchart Builder Demonstration"></p>
+
+<p>This page gives you an in-depth look at how the application is put together.</p>
+
+<ul>
+<li><a href="#babel-setup">Babel Setup</a></li>
+<li><a href="#package-json">package.json</a></li>
+<li><a href="#webpack-setup">Webpack Setup</a></li>
+<li><a href="#setup">Page Setup</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#toolkitParams">Toolkit Parameters</a></li>
+<li><a href="#renderParams">Render Parameters</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#initialisation">Initialisation</a></li>
+<li><a href="#loading">Data Loading</a></li>
+<li><a href="#behaviour">Behaviour</a></li>
+<li><a href="#resizedrag">Resizing/Dragging Nodes</a></li>
+<li><a href="#selecting">Selecting Nodes</a></li>
+<li><a href="#dialogs">Dialogs</a></li>
+<li><a href="#dragging">Dragging New Nodes</a></li>
+</ul>
+
+<p><a id="babel-setup"></a></p>
+
+<h3>Babel Setup</h3>
+
+<p>This demonstration uses JSX files and ES2015. To transpile these to ES5, we use Babel.</p>
+
+<p>These are the <code>package.json</code> entries we use:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;devDependencies&quot;</span><span class="o">:</span><span class="p">{</span>
+
+    <span class="p">...</span>
+
+    <span class="s2">&quot;babel-core&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-loader&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.2.10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-preset-es2015&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-preset-react&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.0&quot;</span><span class="p">,</span>
+
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="package-json"></a></p>
+
+<h3>package.json</h3>
+
+<p>This is the full <code>package.json</code> for the demonstration:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;jsplumbtoolkit-react&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Integration between jsPlumb Toolkit and React&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;main&quot;</span><span class="o">:</span> <span class="s2">&quot;index.js&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;jsPlumb &lt;hello@jsplumbtoolkit.com&gt; (https://jsplumbtoolkit.com)&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;license&quot;</span><span class="o">:</span> <span class="s2">&quot;Commercial&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;react&quot;</span><span class="o">:</span> <span class="s2">&quot;^15.4.2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;react-dom&quot;</span><span class="o">:</span> <span class="s2">&quot;^15.4.2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span> <span class="s2">&quot;file:../../jsplumbtoolkit.tgz&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;devDependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;babel-core&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-loader&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.2.10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-preset-es2015&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;babel-preset-react&quot;</span><span class="o">:</span> <span class="s2">&quot;^6.22.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grunt&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.0.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grunt-webpack&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.0.11&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;webpack&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.14.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;webpack-dev-server&quot;</span><span class="o">:</span> <span class="s2">&quot;^1.14.1&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note that we import the jsPlumb Toolkit via a local file reference to the Toolkit package, which is included in licensed downloads.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="webpack-setup"></a></p>
+
+<h3>Webpack Setup</h3>
+
+<p>This is the config file we use to setup Webpack to bundle our demonstration:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;webpack&#39;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">entry</span><span class="o">:</span> <span class="s1">&#39;./src/index.js&#39;</span><span class="p">,</span>
+  <span class="nx">output</span><span class="o">:</span> <span class="p">{</span> 
+      <span class="nx">path</span><span class="o">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s2">&quot;dist&quot;</span><span class="p">),</span> 
+      <span class="nx">filename</span><span class="o">:</span> <span class="s1">&#39;bundle.js&#39;</span> 
+    <span class="p">},</span>
+  <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">loaders</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nx">test</span><span class="o">:</span> <span class="sr">/.jsx?$/</span><span class="p">,</span>
+        <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;babel-loader&#39;</span><span class="p">,</span>
+        <span class="nx">exclude</span><span class="o">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="nx">query</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;es2015&#39;</span><span class="p">,</span> <span class="s1">&#39;react&#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="setup"></a></p>
+
+<h3>Page Setup</h3>
+
+<h6>CSS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/font-awesome/css/font-awesome.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-defaults.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-demo.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;app.css&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Font Awesome, Bootstrap, <code>jsplumbtoolkit-demo.css</code>, and <code>app.css</code> are used for this demo and are not jsPlumb Toolkit requirements. <code>jsplumbtoolkit-defaults.css</code> is recommended for 
+all apps using the Toolkit, at least when you first start to build your app. This stylesheet contains sane defaults for the various widgets in the Toolkit.</p>
+
+<h6>JS</h6>
+
+<p>We use Webpack to create a bundle for the demonstration - JS dependencies are the <code>dependencies</code> section of <code>package.json</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;react&quot;</span><span class="o">:</span> <span class="s2">&quot;^15.5.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;react-dom&quot;</span><span class="o">:</span> <span class="s2">&quot;^15.5.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span> <span class="s2">&quot;file:../../jsplumbtoolkit.tgz&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>jsPlumb has been tested against versions <code>15.4.2</code> and <code>15.5.0</code> of React.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="templates"></a></p>
+
+<h3>Templates</h3>
+
+<p>There are four templates used by the app - one each for the node types of <code>Question</code>, <code>Action</code> and <code>Output</code>, and one 
+for the <code>Start</code> node. These are contained in the <code>templates.html</code> file, which is imported into the page via this
+script tag:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/x-jtk-templates&quot;</span> <span class="na">src=</span><span class="s">&quot;templates.html&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>The templates look like this:</p>
+
+<p><strong>Start</strong></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplStart&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;left:${left}px;top:${top}px;width:${w}px;height:${h}px;&quot;</span> <span class="na">class=</span><span class="s">&quot;flowchart-object flowchart-start&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;position:relative&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg:svg</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg:ellipse</span> <span class="na">cx=</span><span class="s">&quot;${w/2}&quot;</span> <span class="na">cy=</span><span class="s">&quot;${h/2}&quot;</span> <span class="na">rx=</span><span class="s">&quot;${w/2}&quot;</span> <span class="na">ry=</span><span class="s">&quot;${h/2}&quot;</span><span class="nt">&gt;&lt;/svg:ellipse&gt;</span>
+        <span class="nt">&lt;svg:text</span> <span class="na">text-anchor=</span><span class="s">&quot;middle&quot;</span> <span class="na">x=</span><span class="s">&quot;${ w / 2 }&quot;</span> <span class="na">y=</span><span class="s">&quot;${ h / 2 }&quot;</span> <span class="na">dominant-baseline=</span><span class="s">&quot;central&quot;</span><span class="nt">&gt;</span>${text}<span class="nt">&lt;/svg:text&gt;</span>
+      <span class="nt">&lt;/svg:svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;jtk-source</span> <span class="na">port-type=</span><span class="s">&quot;start&quot;</span> <span class="na">filter=</span><span class="s">&quot;svg *&quot;</span> <span class="na">filter-negate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/jtk-source&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>The <strong>Start</strong> node consists of an ellipse with a text label centered inside of it. Note here how all SVG elements are required to be declared in the <code>svg:</code> namespace. This is a requirement of <a href="https://github.com/jsplumb/rotors">Rotors</a> and would not necessarily apply if you were using some other template engine.</p>
+
+<p>In this template we can see the <code>w</code>, <code>h</code>, <code>left</code> and <code>top</code> values from the node&#39;s data being used not just to position the element but also to provide appropriate values for the ellipse and text label.</p>
+
+<p>The <code>jtk-source</code> element declares that this node is an edge source, of type <code>start</code> (the <code>port-type</code> attribute specifies this).  The <code>filter</code> attribute instructs the Toolkit to enable drag only from some element that is not a child of an <code>svg</code> element, but then <code>filter-negate</code> is <code>true</code>: the result is that dragging will begin only from a descendant of the <code>svg</code> element. What this means visually is that the user will not be able to start a drag from the whitespace surrounding the ellipse.</p>
+
+<p><strong>Action</strong></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplAction&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;left:${left}px;top:${top}px;width:${w}px;height:${h}px;&quot;</span> <span class="na">class=</span><span class="s">&quot;flowchart-object flowchart-action&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;position:relative&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-edit node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-pencil-square-o&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-delete node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;svg:svg</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg:rect</span> <span class="na">x=</span><span class="s">&quot;0&quot;</span> <span class="na">y=</span><span class="s">&quot;0&quot;</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;&lt;/svg:rect&gt;</span>
+        <span class="nt">&lt;svg:text</span> <span class="na">text-anchor=</span><span class="s">&quot;middle&quot;</span> <span class="na">x=</span><span class="s">&quot;${w/2}&quot;</span> <span class="na">y=</span><span class="s">&quot;${h/2}&quot;</span> <span class="na">dominant-baseline=</span><span class="s">&quot;central&quot;</span><span class="nt">&gt;</span>${text}<span class="nt">&lt;/svg:text&gt;</span>
+      <span class="nt">&lt;/svg:svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;jtk-target</span> <span class="na">port-type=</span><span class="s">&quot;target&quot;</span><span class="nt">&gt;&lt;/jtk-target&gt;</span>
+    <span class="nt">&lt;jtk-port</span> <span class="na">port-type=</span><span class="s">&quot;source&quot;</span><span class="nt">&gt;&lt;/jtk-port&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>Once again we use the position and dimensions for the node&#39;s main container as well as its SVG elements. <strong>Action</strong> nodes are configured as both edge sources and targets.</p>
+
+<p><strong>Question</strong></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplQuestion&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;left:${left}px;top:${top}px;width:${w}px;height:${h}px;&quot;</span> <span class="na">class=</span><span class="s">&quot;flowchart-object flowchart-question&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;position:relative&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-edit node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-pencil-square-o&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-delete node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;svg:svg</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg:path</span> <span class="na">d=</span><span class="s">&quot;M ${w/2} 0 L ${w} ${h/2} L ${w/2} ${h} L 0 ${h/2} Z&quot;</span><span class="nt">&gt;&lt;/svg:path&gt;</span>
+        <span class="nt">&lt;svg:text</span> <span class="na">text-anchor=</span><span class="s">&quot;middle&quot;</span> <span class="na">x=</span><span class="s">&quot;${w/2}&quot;</span> <span class="na">y=</span><span class="s">&quot;${h/2}&quot;</span> <span class="na">dominant-baseline=</span><span class="s">&quot;central&quot;</span><span class="nt">&gt;</span>${text}<span class="nt">&lt;/svg:text&gt;</span>
+      <span class="nt">&lt;/svg:svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;jtk-port</span> <span class="na">port-id=</span><span class="s">&quot;no&quot;</span> <span class="na">port-type=</span><span class="s">&quot;noSource&quot;</span><span class="nt">&gt;&lt;/jtk-port&gt;</span>
+    <span class="nt">&lt;jtk-port</span> <span class="na">port-id=</span><span class="s">&quot;yes&quot;</span> <span class="na">port-type=</span><span class="s">&quot;yesSource&quot;</span><span class="nt">&gt;&lt;/jtk-port&gt;</span>
+    <span class="nt">&lt;jtk-target</span> <span class="na">port-type=</span><span class="s">&quot;target&quot;</span><span class="nt">&gt;&lt;/jtk-target&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>The <strong>Question</strong> node draws a diamond, and declares itself to be an edge target. Unlike the <strong>Action</strong> node, though, this node adds two Endpoints, via <code>jtk-port</code> elements, instead of declaring that the entire element is an edge source.</p>
+
+<p><strong>Output</strong></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"> <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplOutput&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;left:${left}px;top:${top}px;width:${w}px;height:${h}px;&quot;</span> <span class="na">class=</span><span class="s">&quot;flowchart-object flowchart-output&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;position:relative&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-edit node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-pencil-square-o&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;node-delete node-action&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;svg:svg</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg:rect</span> <span class="na">x=</span><span class="s">&quot;0&quot;</span> <span class="na">y=</span><span class="s">&quot;0&quot;</span> <span class="na">width=</span><span class="s">&quot;${w}&quot;</span> <span class="na">height=</span><span class="s">&quot;${h}&quot;</span><span class="nt">&gt;&lt;/svg:rect&gt;</span>
+        <span class="nt">&lt;svg:text</span> <span class="na">text-anchor=</span><span class="s">&quot;middle&quot;</span> <span class="na">x=</span><span class="s">&quot;${w/2}&quot;</span> <span class="na">y=</span><span class="s">&quot;${h/2}&quot;</span> <span class="na">dominant-baseline=</span><span class="s">&quot;central&quot;</span><span class="nt">&gt;</span>${text}<span class="nt">&lt;/svg:text&gt;</span>
+      <span class="nt">&lt;/svg:svg&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;jtk-target</span> <span class="na">port-type=</span><span class="s">&quot;target&quot;</span><span class="nt">&gt;&lt;/jtk-target&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>The <code>Output</code> node is configured to be a connection target only.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="toolkitParams"></a></p>
+
+<h3>Toolkit Parameters</h3>
+
+<p>The parameters passed in to the Toolkit&#39;s constructor are:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">toolkitParams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">nodeFactory</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;dlgText&quot;</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Enter &quot;</span> <span class="o">+</span> <span class="nx">type</span> <span class="o">+</span> <span class="s2">&quot; name:&quot;</span><span class="p">,</span>
+            <span class="nx">onOK</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">text</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">text</span><span class="p">;</span>
+                <span class="c1">// if the user entered a name...</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// and it was at least 2 chars</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// set an id and continue.</span>
+                        <span class="nx">data</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">jsPlumbToolkitUtil</span><span class="p">.</span><span class="nx">uuid</span><span class="p">();</span>
+                        <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span>
+                    <span class="c1">// else advise the user.</span>
+                        <span class="nx">alert</span><span class="p">(</span><span class="nx">type</span> <span class="o">+</span> <span class="s2">&quot; names must be at least 2 characters!&quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="c1">// else...do not proceed.</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="nx">beforeStartConnect</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">edgeType</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// limit edges from start node to 1. if any other type of node, return</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;start&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">getEdges</span><span class="p">().</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="kc">false</span> <span class="o">:</span> <span class="p">{</span> <span class="nx">label</span><span class="o">:</span><span class="s2">&quot;...&quot;</span> <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This is done inside the template for the demo component:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">JsPlumbToolkitComponent</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">&quot;toolkit&quot;</span> <span class="nx">url</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data/flowchart-1.json&quot;</span><span class="p">}</span> <span class="nx">renderParams</span><span class="o">=</span><span class="p">{</span><span class="nx">renderParams</span><span class="p">}</span> 
+    <span class="nx">toolkitParams</span><span class="o">=</span><span class="p">{</span><span class="nx">toolkitParams</span><span class="p">}</span> <span class="nx">view</span><span class="o">=</span><span class="p">{</span><span class="nx">view</span><span class="p">}</span><span class="o">/&gt;</span>                        
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="renderParams"></a></p>
+
+<h3>Surface Parameters</h3>
+
+<p>The parameters passed in to the Surface&#39;s constructor are:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">renderParams</span> <span class="o">=</span> <span class="p">{</span>    
+    <span class="c1">// Layout the nodes using an absolute layout</span>
+    <span class="nx">layout</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Absolute&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+        <span class="p">},</span>
+        <span class="nx">edgeAdded</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">addedByMouse</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">_editLabel</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">edge</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">nodeDropped</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;node &quot;</span><span class="p">,</span> <span class="nx">info</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="s2">&quot;dropped on &quot;</span><span class="p">,</span> <span class="nx">info</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">modeChanged</span><span class="o">:</span><span class="kd">function</span> <span class="p">(</span><span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">demoComponent</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="nx">mode</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">lassoInvert</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="nx">elementsDroppable</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="nx">consumeRightClick</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">dragOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">filter</span><span class="o">:</span> <span class="s2">&quot;.jtk-draw-handle, .node-action, .node-action i&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>...again, via the template for the demo component, as shown above.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="view"></a></p>
+
+<h3>View</h3>
+
+<p>The view contains the definitions of node/edge appearance and behaviour:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">view</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">nodes</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;tmplStart&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;selectable&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">tap</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">toggleSelection</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">node</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;question&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">parent</span><span class="o">:</span> <span class="s2">&quot;selectable&quot;</span><span class="p">,</span>
+            <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;tmplQuestion&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;action&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">parent</span><span class="o">:</span> <span class="s2">&quot;selectable&quot;</span><span class="p">,</span>
+            <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;tmplAction&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;output&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">parent</span><span class="o">:</span><span class="s2">&quot;selectable&quot;</span><span class="p">,</span>
+            <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplOutput&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="c1">// There are two edge types defined - &#39;yes&#39; and &#39;no&#39;, sharing a common</span>
+    <span class="c1">// parent.</span>
+    <span class="nx">edges</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">anchor</span><span class="o">:</span><span class="s2">&quot;AutoDefault&quot;</span><span class="p">,</span>
+            <span class="nx">endpoint</span><span class="o">:</span><span class="s2">&quot;Blank&quot;</span><span class="p">,</span>
+            <span class="nx">connector</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Flowchart&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cornerRadius</span><span class="o">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">],</span>
+            <span class="nx">paintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">strokeWidth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">stroke</span><span class="o">:</span> <span class="s2">&quot;#f76258&quot;</span><span class="p">,</span> <span class="nx">outlineWidth</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">outlineStroke</span><span class="o">:</span> <span class="s2">&quot;transparent&quot;</span> <span class="p">},</span>   <span class="c1">//  paint style for this edge type.</span>
+            <span class="nx">hoverPaintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">strokeWidth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">stroke</span><span class="o">:</span> <span class="s2">&quot;rgb(67,67,67)&quot;</span> <span class="p">},</span> <span class="c1">// hover paint style for this edge type.</span>
+            <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;dblclick&quot;</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+                        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;dlgConfirm&quot;</span><span class="p">,</span>
+                        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;Delete Edge&quot;</span>
+                        <span class="p">},</span>
+                        <span class="nx">onOK</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+                            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeEdge</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">edge</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">});</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="nx">overlays</span><span class="o">:</span> <span class="p">[</span>
+                <span class="p">[</span> <span class="s2">&quot;Arrow&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">location</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">length</span><span class="o">:</span> <span class="mi">10</span> <span class="p">}],</span>
+                <span class="p">[</span> <span class="s2">&quot;Arrow&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">location</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">length</span><span class="o">:</span> <span class="mi">10</span> <span class="p">}]</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;connection&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">parent</span><span class="o">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+            <span class="nx">overlays</span><span class="o">:</span><span class="p">[</span>
+                <span class="p">[</span>
+                    <span class="s2">&quot;Label&quot;</span><span class="p">,</span> <span class="p">{</span>
+                    <span class="nx">label</span><span class="o">:</span> <span class="s2">&quot;${label}&quot;</span><span class="p">,</span>
+                    <span class="nx">events</span><span class="o">:</span><span class="p">{</span>
+                        <span class="nx">click</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="nx">_editLabel</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">edge</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="nx">ports</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">edgeType</span><span class="o">:</span> <span class="s2">&quot;default&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">maxConnections</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nx">edgeType</span><span class="o">:</span> <span class="s2">&quot;connection&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">maxConnections</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nx">isTarget</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nx">dropOptions</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">hoverClass</span><span class="o">:</span> <span class="s2">&quot;connection-drop&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><a name="initialisation"></a></p>
+
+<h3>Initialisation</h3>
+
+<p>The <code>ready</code> callback in <code>src/index.js</code> is responsible for initialising the application, by first creating and rendering a demo coomponent, 
+and storing a reference to the Toolkit component it created:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">JsPlumbToolkitComponent</span> <span class="nx">from</span> <span class="s1">&#39;./jsplumb-toolkit.jsx&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">JsPlumbToolkitMiniviewComponent</span> <span class="nx">from</span> <span class="s1">&#39;./jsplumb-miniview.jsx&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">jsPlumbToolkit</span><span class="p">,</span> <span class="nx">Surface</span><span class="p">,</span> <span class="nx">jsPlumb</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;jsplumbtoolkit&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">DemoNodePalette</span> <span class="nx">from</span> <span class="s1">&#39;./node-palette.jsx&#39;</span><span class="p">;</span>
+
+<span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">ready</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+    <span class="p">...</span>
+
+    <span class="kr">const</span> <span class="nx">mainElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#jtk-demo-flowchart&quot;</span><span class="p">),</span>
+        <span class="nx">canvasElement</span> <span class="o">=</span> <span class="nx">mainElement</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.jtk-demo-canvas&quot;</span><span class="p">),</span>
+        <span class="nx">miniviewElement</span> <span class="o">=</span> <span class="nx">mainElement</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.miniview&quot;</span><span class="p">),</span>
+        <span class="nx">nodePaletteElement</span> <span class="o">=</span> <span class="nx">mainElement</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.node-palette&quot;</span><span class="p">);</span>
+
+
+    <span class="p">...</span>
+
+    <span class="kr">const</span> <span class="nx">demoComponent</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">DemoComponent</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">canvasElement</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">toolkitComponent</span> <span class="o">=</span> <span class="nx">demoComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">;</span>
+
+    <span class="p">...</span>
+</code></pre></div>
+<p>We then create a node palette component and a miniview component:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// helper functions for the drag/drop node palette</span>
+<span class="kd">var</span> <span class="nx">typeExtractor</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-node-type&quot;</span><span class="p">)</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">dataGenerator</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">{</span> <span class="nx">w</span><span class="o">:</span><span class="mi">120</span><span class="p">,</span> <span class="nx">h</span><span class="o">:</span><span class="mi">80</span> <span class="p">};</span> <span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">nodePalette</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">DemoNodePalette</span> <span class="nx">toolkitComponent</span><span class="o">=</span><span class="p">{</span><span class="nx">toolkitComponent</span><span class="p">}</span> <span class="nx">selector</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;li&quot;</span><span class="p">}</span> <span class="nx">typeExtractor</span><span class="o">=</span><span class="p">{</span><span class="nx">typeExtractor</span><span class="p">}</span> <span class="nx">container</span><span class="o">=</span><span class="p">{</span><span class="nx">nodePaletteElement</span><span class="p">}</span> <span class="nx">dataGenerator</span><span class="o">=</span><span class="p">{</span><span class="nx">dataGenerator</span><span class="p">}</span><span class="o">/&gt;</span>
+    <span class="p">,</span> <span class="nx">nodePaletteElement</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">miniview</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">JsPlumbToolkitMiniviewComponent</span> <span class="nx">toolkitComponent</span><span class="o">=</span><span class="p">{</span><span class="nx">toolkitComponent</span><span class="p">}</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.miniview&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>and then there&#39;s a bunch of stuff discussed in <a href="#behaviour">behaviour</a> below (node edit, delete etc).</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="loading"></a></p>
+
+<h3>Data Loading</h3>
+
+<p>Data for this application is loaded by the demo component&#39;s template:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">JsPlumbToolkitComponent</span> <span class="nx">ref</span><span class="o">=</span><span class="s2">&quot;toolkit&quot;</span> <span class="nx">url</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data/flowchart-1.json&quot;</span><span class="p">}</span> <span class="nx">renderParams</span><span class="o">=</span><span class="p">{</span><span class="nx">renderParams</span><span class="p">}</span> 
+    <span class="nx">toolkitParams</span><span class="o">=</span><span class="p">{</span><span class="nx">toolkitParams</span><span class="p">}</span> <span class="nx">view</span><span class="o">=</span><span class="p">{</span><span class="nx">view</span><span class="p">}</span><span class="o">/&gt;</span>                        
+</code></pre></div>
+<p>...via the <code>url</code> prop. But <code>toolkitComponent.toolkit</code> gives you a reference to the underlying <code>jsPlumbToolkitInstance</code>, if you need it.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="dragging"></a></p>
+
+<h3>Dragging New Nodes</h3>
+
+<p>We saw above that a <code>nodePalette</code> is created at initialisation time.  The <code>JsPlumbToolkitPaletteComponent</code> is an abstract class, which you need to 
+subclass in order to provide a <code>render</code> method. Our subclass (in <code>src/node-palette.jsx</code>) looks like this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">JsPlumbToolkitPaletteComponent</span> <span class="nx">from</span> <span class="s1">&#39;./jsplumb-toolkit-palette.jsx&#39;</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">DemoNodePalette</span> <span class="kr">extends</span> <span class="nx">JsPlumbToolkitPaletteComponent</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">data</span><span class="o">-</span><span class="nx">node</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;question&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Drag to add new&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icon-tablet&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;Question</span>
+                <span class="o">&lt;</span><span class="err">/li&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">data</span><span class="o">-</span><span class="nx">node</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;action&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Drag to add new&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icon-eye-open&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;Action</span>
+                <span class="o">&lt;</span><span class="err">/li&gt;</span>
+                <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">data</span><span class="o">-</span><span class="nx">node</span><span class="o">-</span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;output&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Drag to add new&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icon-eye-open&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;Output</span>
+                <span class="o">&lt;</span><span class="err">/li&gt;</span>
+            <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">DemoNodePalette</span><span class="p">;</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="behaviour"></a></p>
+
+<h3>Behaviour</h3>
+
+<p>In the original FlowchartBuilder demo, there are three pieces of behaviour that we need to code that are not 
+completely handled for us by the Toolkit:  </p>
+
+<ul>
+<li>Edit Node Text</li>
+<li>Delete Node</li>
+<li>Remove Edge</li>
+</ul>
+
+<p>These exist in this React demo, too, and are handled largely the same way as in the non-React demo</p>
+
+<h6>Edit Node Text</h6>
+
+<p>// change a question or action&#39;s label
+jsPlumb.on(canvasElement, &quot;tap&quot;, &quot;.node-edit&quot;, function () {
+    // getObjectInfo is a method that takes some DOM element (this function&#39;s <code>this</code> is
+    // set to the element that fired the event) and returns the toolkit data object that
+    // relates to the element. it ascends through parent nodes until it finds a node that is
+    // registered with the toolkit.
+    var info = toolkitComponent.surface.getObjectInfo(this);
+    jsPlumbToolkit.Dialogs.show({
+        id: &quot;dlgText&quot;,
+        data: info.obj.data,
+        title: &quot;Edit &quot; + info.obj.data.type + &quot; name&quot;,
+        onOK: function (data) {
+            if (data.text &amp;&amp; data.text.length &gt; 2) {
+                // if name is at least 2 chars long, update the underlying data and
+                // update the UI.
+                toolkitComponent.toolkit.updateNode(info.obj, data);
+            }
+        }
+    });
+});</p>
+
+<p>This application uses the Toolkit&#39;s <a href="dialogs.html">dialogs</a> import to manage simple interactions with data members such as 
+this. Your application may choose to use a different mechanism.</p>
+
+<h6>Delete Node</h6>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">canvasElement</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;.node-delete&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">surface</span><span class="p">.</span><span class="nx">getObjectInfo</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;dlgConfirm&quot;</span><span class="p">,</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;Delete &#39;&quot;</span> <span class="o">+</span> <span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span>
+        <span class="p">},</span>
+        <span class="nx">onOK</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeNode</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">});</span>        
+</code></pre></div>
+<h6>Remove Edge</h6>
+
+<p>This is handled in the same way by this demo as it is in the original FlowchartBuider.</p>
+
+<p>We register a <code>dblclick</code> listener on edges by providing it as an event handler to the View, on the edge type that 
+acts as the parent type for all others. </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+
+<span class="nx">edges</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">connector</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Flowchart&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cornerRadius</span><span class="o">:</span> <span class="mi">5</span> <span class="p">}</span> <span class="p">],</span>
+    <span class="nx">paintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">strokeStyle</span><span class="o">:</span> <span class="s2">&quot;#f76258&quot;</span><span class="p">,</span> <span class="nx">outlineWidth</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">outlineColor</span><span class="o">:</span> <span class="s2">&quot;transparent&quot;</span> <span class="p">},</span> 
+    <span class="nx">hoverPaintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">strokeStyle</span><span class="o">:</span> <span class="s2">&quot;rgb(67,67,67)&quot;</span> <span class="p">},</span> 
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;dblclick&quot;</span><span class="o">:</span> <span class="p">(</span><span class="nx">params</span><span class="o">:</span><span class="nx">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;dlgConfirm&quot;</span><span class="p">,</span>
+          <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">msg</span><span class="o">:</span> <span class="s2">&quot;Delete Edge&quot;</span>
+          <span class="p">},</span>
+          <span class="nx">onOK</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeEdge</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">edge</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">});</span>
+      <span class="p">}</span>
+   <span class="p">},</span>
+
+<span class="p">...</span>
+</code></pre></div>
+<h6>Editing Edge Label</h6>
+
+<p>All Edges except those from a <em>Start</em> node are set to be of type <code>connection</code>, which is defined in the view as follows:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;connection&quot;</span><span class="o">:</span><span class="p">{</span>
+  <span class="nx">parent</span><span class="o">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+  <span class="nx">overlays</span><span class="o">:</span><span class="p">[</span>
+    <span class="p">[</span> <span class="s2">&quot;Label&quot;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">label</span><span class="o">:</span> <span class="s2">&quot;${label}&quot;</span><span class="p">,</span>
+      <span class="nx">events</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">click</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">_editLabel</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">edge</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}]</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We define a <code>click</code> event handler on the Label overlay which edits the label for the Edge.</p>
+
+<p>The helper function is:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">_editLabel</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">edge</span><span class="p">,</span> <span class="nx">deleteOnCancel</span><span class="p">)</span> <span class="p">{</span>        
+    <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;dlgText&quot;</span><span class="p">,</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">text</span><span class="o">:</span> <span class="nx">edge</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">label</span> <span class="o">||</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">},</span>
+        <span class="nx">onOK</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">updateEdge</span><span class="p">(</span><span class="nx">edge</span><span class="p">,</span> <span class="p">{</span> <span class="nx">label</span><span class="o">:</span><span class="nx">data</span><span class="p">.</span><span class="nx">text</span> <span class="o">||</span> <span class="s2">&quot;&quot;</span> <span class="p">});</span>
+        <span class="p">},</span>
+        <span class="nx">onCancel</span><span class="o">:</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">deleteOnCancel</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeEdge</span><span class="p">(</span><span class="nx">edge</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="resizedrag"></a></p>
+
+<h3>Resizing/Dragging Nodes</h3>
+
+<p>To resize or drag a node first you must either click on it, or use the lasso (described <a href="#selecting">below</a>) to select 
+it.  A selected node looks like this:</p>
+
+<p><img src="flowchart-selected-node.png" alt="Selected Node"></p>
+
+<p>The dotted line and drag handles that are added to a selected Node are put there by the Tookit&#39;s drawing tools. It 
+listens to the Toolkit&#39;s select/deselect events and 
+decorates UI elements accordingly. These tools are discussed in detail on <a href="drawing.html">this page</a>.</p>
+
+<p>The drawing tools are initialized with this line of code (inside the <code>ready</code> callback):</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">new</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">DrawingTools</span><span class="p">({</span>
+    <span class="nx">renderer</span><span class="o">:</span> <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">surface</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>You pass them the instance of the Surface widget you&#39;re working with (which we get from the Toolkit component)</p>
+
+<h4>Dragging</h4>
+
+<p>Nodes can be dragged only by the square in the center of the node. This is achieved by setting a <code>filter</code> on the 
+<code>dragOptions</code> parameter on the <code>render</code> call:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">dragOptions</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">handle</span><span class="o">:</span> <span class="s2">&quot;.jtk-draw-drag&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>jtk-draw-drag</code> is the classname of the square that the drawing tools place in the center of a selected node.</p>
+
+<h4>Resizing</h4>
+
+<p>Resizing is handled automatically by the drawing tools.  By default, these tools will change the <code>w</code>, <code>h</code>, <code>left</code> and <code>top</code> values in a node&#39;s data, but this can be changed.</p>
+
+<p>When a node&#39;s data is updated the drawing tools call the appropriate update method on the underlying Toolkit. The changes 
+will be reflected immediately in the DOM.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="selecting"></a></p>
+
+<h3>Selecting Nodes</h3>
+
+<h5>Left Click</h5>
+
+<p>Nodes can be selected with a left-click (or tap on a touch device; <code>tap</code> is a better event to choose in general because the
+Toolkit abstracts out the difference between mouse devices and touch devices and presents <code>click</code> events as <code>tap</code> events
+on non touch devices).  This is configured in the <code>view</code> parameter to the <code>render</code> call. In this application, 
+Nodes of type <em>selectable</em> have the capability enabled with this code:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;selectable&quot;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">tap</span><span class="o">:</span> <span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">toggleSelection</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">node</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>tap</code> event (discussed <a href="widget-surface.html#eventlist">here</a>) is preferable to <code>click</code>, as it ensures the application responds only to true clicks on devices with a mouse, and also avoids the delay that some vendors introduce to a click event on touch devices.</p>
+
+<h5>Lasso Selection and Zoom to Extents</h5>
+
+<p>Lasso selection is enabled by default on the Surface widget. </p>
+
+<p>To activate the lasso, click the pencil icon in the toolbar:</p>
+
+<p><img src="select-lasso.png" alt="Lasso Select Mode"></p>
+
+<p>To zoom to extents, click the Home icon in the toolbar.</p>
+
+<p><code>ControlsComponent</code> handles clicks on these icons:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">ControlsComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;controls&quot;</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">_container</span> <span class="o">=</span> <span class="nx">c</span> <span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;fa fa-arrows selected-mode&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">mode</span><span class="o">=</span><span class="s2">&quot;pan&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Pan Mode&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+            <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;fa fa-pencil&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">mode</span><span class="o">=</span><span class="s2">&quot;select&quot;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Select Mode&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+            <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;fa fa-home&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">reset</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Zoom To Fit&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;                    </span>
+    <span class="p">}</span>
+
+    <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// pan mode/select mode</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_container</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[data-mode]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">surface</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;data-mode&quot;</span><span class="p">));</span>
+        <span class="p">});</span>
+
+        <span class="c1">// on home button click, zoom content to fit.</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_container</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[data-reset]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+            <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">surface</span><span class="p">.</span><span class="nx">zoomToFit</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="nx">setMode</span><span class="p">(</span><span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_container</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;[data-mode]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_container</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;[data-mode=&#39;&quot;</span> <span class="o">+</span> <span class="nx">mode</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5>Lasso Operation</h5>
+
+<p>The lasso works in two ways: when you drag from left to right, any node that intersects your lasso will be selected.  When you drag from right to left, only nodes that are enclosed by your 
+lasso will be selected.</p>
+
+<p><img src="lasso-select-operation.png" alt="Lasso Operation"></p>
+
+<h5>Exiting Select Mode</h5>
+
+<p>The Surface widget automatically exits select mode once the user has selected something. In this application we also listen to clicks on the 
+whitespace in the widget and switch back to pan mode when we detect one. This is the <code>events</code> argument to the <code>render</code> call:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">toolkitComponent</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>clearSelection</code> clears the current selection and switches back to Pan mode.  </p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="dialogs"></a></p>
+
+<h3>Dialogs</h3>
+
+<p>The dialogs used in this app are part of the jsPlumb Toolkit core. They provide a simple abstraction around the business of getting input from the user and dealing 
+with it; they&#39;re not necessarily fully-featured enough for all applications.</p>
+
+<h4>Initialization</h4>
+
+<p>To initialize the dialogs, we call <code>jsPlumbToolkit.Dialogs.initialize</code>, with an appropriate selector for the templates for your dialogs (see below for an explanation of this). </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">initialize</span><span class="p">({</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s2">&quot;.dlg&quot;</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4>Templates</h4>
+
+<p>Each dialog has a template in the HTML, with some class name that you matched in the <code>selector</code> argument to the <code>initialize</code> call above:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">class=</span><span class="s">&quot;dlg&quot;</span> <span class="na">id=</span><span class="s">&quot;dlgViewQuery&quot;</span> <span class="na">title=</span><span class="s">&quot;Edit Query&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">&quot;txtViewQuery&quot;</span> <span class="err">jtk-focus</span> <span class="na">jtk-att=</span><span class="s">&quot;query&quot;</span><span class="nt">&gt;</span>${query}<span class="nt">&lt;/textarea&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<h5>Binding Parameters</h5>
+
+<p>These templates use the same template engine as the Surface renderer, so in this example you can see we&#39;ve extracted <code>query</code> from the View node&#39;s data, and injected it into the textarea. But what might not be immediately obvious is the purpose of the <code>jtk-att</code> attribute: it tells the dialog handler that the value of this textarea should be passed to the OK handler, using the key <code>query</code>.</p>
+
+<p>Note also in the above example, the <code>jtk-focus</code> attribute: this tells the dialog handler that the textarea should be given the focus when the dialog first opens.</p>
+
+<h4>Showing a dialog</h4>
+
+<p>This example is the dialog that is shown when you edit a View query. We provide the id of the template to use for the dialog, and we provide the View node&#39;s data as the backing data for the dialog. Then we provide an <code>onOK</code> callback:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Dialogs</span><span class="p">.</span><span class="nx">show</span><span class="p">({</span>
+  <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;dlgViewQuery&quot;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span>
+  <span class="nx">onOK</span><span class="o">:</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span><span class="nx">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// update data</span>
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">updateNode</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+    <span class="c1">// update UI                    </span>
+    <span class="nx">info</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.view-details&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The <code>data</code> argument to the <code>onOK</code> callback consists of an object whose key value pairs are determined by the <code>jtk-att</code> attributes found in the template. Recall that above we had a textarea with <code>jtk-att:&quot;query&quot;</code>. This means that the <code>data</code> argument to <code>onOK</code> looks like this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">query</span><span class="o">:</span><span class="s2">&quot;the contents of the text area&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h5>Supported Input Types</h5>
+
+<p>The list of supported input types is:</p>
+
+<ul>
+<li>text</li>
+<li>radio button(s) </li>
+<li>checkbox</li>
+<li>select</li>
+<li>textarea</li>
+</ul>
+
+<h5>Dialog Titles</h5>
+
+<p>If you set a <code>title</code> attribute on a dialog&#39;s template, that value will be used for the title of the dialog. 
+Alternatively, you can provide a <code>title</code> parameter to the <code>show</code> call.</p>
+
+<h5>Lifecycle Callbacks</h5>
+
+<p>There are three lifecycle callbacks supported:</p>
+
+<ul>
+<li><strong>onOpen</strong> Called when the dialog has been opened. The related DOM element for the dialog is passed to this method.</li>
+<li><strong>onOK</strong> Called when the user presses OK. The callback is provided a data object as discussed above.</li>
+<li><strong>onCancel</strong> Called when the user presses cancel. No arguments are provided to the callback.</li>
+</ul>
+
+<p><a href="#top">TOP</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

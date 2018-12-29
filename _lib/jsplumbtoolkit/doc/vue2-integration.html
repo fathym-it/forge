@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a name="top"></a></p>
+
+<h2>Vue 2 Integration</h2>
+
+<p>The jsPlumb Toolkit has several components to assist you in integrating with Vue 2.  These are supplied in the <code>dist/js/jsplumbtoolkit-vue2</code> file of a license package,
+as well as <code>dist/jsplumbtoolkit-vue.tgz</code>, which is an npm package.</p>
+
+<p><a name="components"></a></p>
+
+<h3>Components</h3>
+
+<p>The Toolkit offers 2 components and a mixin:</p>
+
+<p><a name="toolkit-component"></a></p>
+
+<h4>jsplumb-toolkit</h4>
+
+<p>This is component provides an instance of the Toolkit and a Surface widget to render the contents.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;jsplumb-toolkit</span> <span class="na">id=</span><span class="s">&quot;toolkit&quot;</span> <span class="na">surface-id=</span><span class="s">&quot;surfaceId&quot;</span> <span class="na">v-bind:render-params=</span><span class="s">&quot;anObjectReference&quot;</span> 
+        <span class="na">v-bind:toolkit-params=</span><span class="s">&quot;anObjectReference&quot;</span> <span class="na">v-bind:view=</span><span class="s">&quot;anObjectReference&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/jsplumb-toolkit&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<p>All attributes are optional. Note that Vue prefers &quot;kebab case&quot; for attribute names, even if the actual property is camel case on the component (and of course
+Javascript does not like kebab case for property names).</p>
+
+<ul>
+<li><code>id</code> Unique ID for the Toolkit instance. Can be used to retrieve a Toolkit instance from the jsPlumb module.</li>
+<li><code>surface-d</code> Unique ID for the Surface widget. Required if you wish to attach a Miniview or a Palette.</li>
+<li><code>render-params</code> Parameters to pass in to the constructor of the Surface widget. Note here we use the <code>v-bind:</code> prefix to tell Vue that the object we 
+are injecting is in the Vue instance&#39;s model.</li>
+<li><code>toolkit-params</code> Parameters to pass in to the constructor of the Toolkit instance. Note again the use of <code>v-bind:</code> in our example above. </li>
+<li><code>view</code> View parameters. Views are discussed <a href="models-and-views.html#views">here</a>.</li>
+</ul>
+
+<hr>
+
+<p><a name="miniview-component"></a></p>
+
+<h4>jsplumb-miniview</h4>
+
+<p>This is a component that provides a Miniview that can be attached to some Surface.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;jsplumb-miniview</span> <span class="na">surface-id=</span><span class="s">&quot;surfaceId&quot;</span><span class="nt">&gt;&lt;/jsplumb-miniview&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<ul>
+<li><code>surface-id</code> ID for the Surface widget to which to attach the Miniview.</li>
+</ul>
+
+<hr>
+
+<p><a name="palette-mixin"></a></p>
+
+<h4>jsplumb-palette</h4>
+
+<p>This is a mixin: it provides the bulk of the required to implement drag/drop of new Nodes/Groups onto your Surface, but you are expected
+to provide a few pieces of implementation-specific code.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;my-palette&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">props</span><span class="o">:</span><span class="p">[</span> <span class="s2">&quot;nodeTypes&quot;</span> <span class="p">],</span>
+    <span class="nx">mixins</span><span class="o">:</span><span class="p">[</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">Vue</span><span class="p">.</span><span class="nx">Palette</span> <span class="p">],</span>
+    <span class="nx">selector</span><span class="o">:</span><span class="s1">&#39;[data-type]&#39;</span><span class="p">,</span>
+    <span class="nx">template</span><span class="o">:</span><span class="s1">&#39;&lt;ul&gt;&lt;li v-for=&quot;node in nodeTypes&quot; :data-type=&quot;type&quot;&gt;&lt;/li&gt;&lt;/ul&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">typeExtractor</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;jtk-node-type&quot;</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">dataGenerator</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span> <span class="nx">w</span><span class="o">:</span><span class="mi">120</span><span class="p">,</span> <span class="nx">h</span><span class="o">:</span><span class="mi">80</span> <span class="p">};</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>The properties for the component in this code snippet are:</p>
+
+<ul>
+<li><em>props</em> Implementation specific (and therefore optional): indicates that the component expects <code>nodeTypes</code> to be passed in; these are used by the template.</li>
+<li><em>template</em> Required. The template used to render your component.</li>
+<li><em>mixins</em> Required. This is how you include the jsPlumb Palette mixin.</li>
+<li><em>selector</em> Required. A CSS3 selector instructing jsPlumb how to identify which elements in the component represent draggable node types</li>
+<li><em>methods</em> Optional, but usually you&#39;ll want to provide at least a <code>typeExtractor</code>, which is a function the Palette mixin uses to extract the related node type from some element that has been dragged and dropped. <a href="rendering.html#dragpalette">This page</a> has a discussion of the various methods you could provide here.</li>
+</ul>
+
+<p>Sample data for <code>nodeTypes</code> might be:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">[</span>
+    <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;fish&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="o">:</span><span class="s2">&quot;Fish&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;cow&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="o">:</span><span class="s2">&quot;Cow&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;aardvark&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="o">:</span><span class="s2">&quot;Aardvark&quot;</span> <span class="p">},</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>In your markup you might call your node palette like this:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;my-palette</span> <span class="na">v-bind:node-types=</span><span class="s">&quot;your node types object&quot;</span> <span class="na">surface-id=</span><span class="s">&quot;surface&quot;</span><span class="nt">&gt;&lt;/my-palette&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<ul>
+<li><code>surface-id</code> Required. Provides the ID for the Surface widget to which to attach the Palette.</li>
+</ul>
+
+<p>For further reading on the concept of Palettes, see <a href="rendering.html#dragpalette">this page</a> .</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="imports"></a></p>
+
+<h3>Imports</h3>
+
+<p>You need to include the jsPlumb Toolkit and the jsPlumb Toolkit Vue 2 adapter.</p>
+
+<h5>Toolkit Edition</h5>
+
+<h6>NPM</h6>
+
+<p>Since the Toolkit edition is not open source, if you need to include it as an import in package.json, you can use (from NPM 3+) a local import:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span><span class="s2">&quot;file:./somewhere/jsplumbtoolkit.tgz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jsplumbtoolkit-vue2&quot;</span><span class="o">:</span><span class="s2">&quot;file:./somewhere/jsplumbtoolkit-vue2.tgz&quot;</span>
+    <span class="p">...</span>
+<span class="p">},</span>
+</code></pre></div><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit-vue2/dist/js/jsplumbtoolkit-vue2.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h6>Standard Import</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;somewhere/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;somewhere/jsplumbtoolkit-vue2.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>At this point we refer you to the <a href="demo-vue2.html">Vue 2 Demonstration</a> documentation. </p>
+
+<h6>ES 2015</h6>
+
+<p>To </p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

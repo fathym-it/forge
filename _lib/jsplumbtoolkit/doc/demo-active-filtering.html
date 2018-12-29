@@ -1,0 +1,559 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a id="top"></a></p>
+
+<h2>Active Filtering</h2>
+
+<p>This is a demonstration of the <strong>activeFiltering</strong> option in the Surface widget.</p>
+
+<p><img src="demo-active-filtering-app.png" alt="Active Filtering Demo"></p>
+
+<ul>
+<li><a href="#package">package.json</a></li>
+<li><a href="#setup">Page Setup</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#toolkit">Creating the Toolkit instance</a></li>
+<li><a href="#loading">Data Loading</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#rendering">Rendering</a></li>
+<li><a href="#filtering">Active Filtering</a></li>
+<li><a href="#adding">Adding New Nodes</a></li>
+<li><a href="#selecting">Selecting Nodes</a></li>
+</ul>
+
+<p><a id="package"></a></p>
+
+<h3>package.json</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;font-awesome&quot;</span><span class="o">:</span> <span class="s2">&quot;^4.7.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span> <span class="s2">&quot;file:../../jsplumbtoolkit.tgz&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="setup"></a></p>
+
+<h3>Page Setup</h3>
+
+<h6>CSS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/font-awesome/css/font-awesome.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-defaults.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-demo.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;app.css&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Font Awesome, Bootstrap, <code>jsplumbtoolkit-demo.css</code>, and <code>app.css</code> are used for this demo and are not jsPlumb Toolkit requirements. <code>jsplumbtoolkit-defaults.css</code> is recommended for 
+all apps using the Toolkit, at least when you first start to build your app. This stylesheet contains sane defaults for the various widgets in the Toolkit. </p>
+
+<h6>JS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>We import <code>jsplumbtoolkit.js</code> from <code>node_modules</code> (it was listed in <code>package.json</code>). <code>app.js</code> contains the demo code; it is discussed on this page.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="templates"></a></p>
+
+<h3>Templates</h3>
+
+<p>This demonstration uses a single template to render its nodes:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplNode&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;connectivity-node&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>${id.substring(0, 5)}<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;r-each</span> <span class="na">in=</span><span class="s">&quot;items&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;</span>
+                    <span class="nt">&lt;span&gt;</span>${entries.join(&#39; &#39;)}<span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;jtk-source</span> <span class="na">port-id=</span><span class="s">&quot;${index}&quot;</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;jtk-target</span> <span class="na">port-id=</span><span class="s">&quot;${index}&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/r-each&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="toolkit"></a></p>
+
+<h3>Creating the Toolkit instance</h3>
+
+<p>The Toolkit instance is created like this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">toolkit</span> <span class="o">=</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">({</span>
+    <span class="nx">beforeConnect</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+
+         <span class="o">--</span> <span class="nx">see</span> <span class="s1">&#39;Active Filtering&#39;</span> <span class="nx">section</span> <span class="nx">below</span> <span class="o">--</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="loading"></a></p>
+
+<h3>Data Loading</h3>
+
+<p>Nodes for this demonstration consist of a list of Ports, each of which has the name of two animals randomly selected
+ from a list.  The code to generate Nodes is as follows (but note that this code is demo-specific; it exists purely
+ for this demo):</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">words</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;CAT&quot;</span><span class="p">,</span> <span class="s2">&quot;DOG&quot;</span><span class="p">,</span> <span class="s2">&quot;COW&quot;</span><span class="p">,</span> <span class="s2">&quot;HORSE&quot;</span><span class="p">,</span> <span class="s2">&quot;DUCK&quot;</span><span class="p">,</span> <span class="s2">&quot;HEN&quot;</span>
+<span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">randomPort</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">map</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kd">function</span> <span class="nx">_one</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">done</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">a</span> <span class="o">=</span> <span class="nx">words</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">words</span><span class="p">.</span><span class="nx">length</span><span class="p">)];</span>
+            <span class="nx">done</span> <span class="o">=</span> <span class="nx">map</span><span class="p">[</span><span class="nx">a</span><span class="p">]</span> <span class="o">!==</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="nx">map</span><span class="p">[</span><span class="nx">a</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">a</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">out</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">_one</span><span class="p">());</span>
+    <span class="nx">out</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">_one</span><span class="p">());</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="nx">entries</span><span class="o">:</span><span class="nx">out</span><span class="p">,</span> <span class="nx">index</span><span class="o">:</span><span class="nx">index</span> <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">groupCount</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="nx">id</span><span class="o">:</span><span class="nx">jsPlumbUtil</span><span class="p">.</span><span class="nx">uuid</span><span class="p">(),</span>
+            <span class="nx">items</span><span class="o">:</span><span class="p">[]</span>
+        <span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">groupCount</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">randomPort</span><span class="p">(</span><span class="nx">i</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">addNode</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>The initial dataset is constructed as follows:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nodeCount</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nodeCount</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">newNode</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Subsequently, when the user presses the <code>+</code> button, a new Node is added using the <code>newNode</code> method, which adds a new node
+  to a random place on the screen.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="view"></a></p>
+
+<h3>View</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">nodes</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;tmplNode&quot;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">edges</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">connector</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;StateMachine&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">curviness</span><span class="o">:</span> <span class="mi">10</span> <span class="p">}</span> <span class="p">],</span>
+            <span class="nx">endpoint</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;Dot&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">radius</span><span class="o">:</span> <span class="mi">10</span> <span class="p">}</span> <span class="p">],</span>
+            <span class="nx">anchor</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;Continuous&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">faces</span><span class="o">:</span><span class="p">[</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span> <span class="p">]}</span> <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>There is a single Node type (&quot;default&quot;) defined, mapped to the template shown above, and a single Edge, which contains
+rendering instructions for the Connector, its Endpoints, and the type of Anchor to use.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>This is the call that sets up the UI:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">renderer</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+    <span class="nx">container</span><span class="o">:</span> <span class="nx">canvasElement</span><span class="p">,</span>
+    <span class="nx">zoomToFit</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">view</span><span class="o">:</span> <span class="nx">view</span><span class="p">,</span>
+    <span class="nx">layout</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Spring&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">miniview</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">container</span><span class="o">:</span><span class="nx">miniviewElement</span>
+    <span class="p">},</span>
+    <span class="nx">lassoFilter</span><span class="o">:</span> <span class="s2">&quot;.controls, .controls *, .miniview, .miniview *&quot;</span><span class="p">,</span>
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+        <span class="p">},</span>
+        <span class="nx">modeChanged</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getSelector</span><span class="p">(</span><span class="s2">&quot;[mode]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+            <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getSelector</span><span class="p">(</span><span class="s2">&quot;[mode=&#39;&quot;</span> <span class="o">+</span> <span class="nx">mode</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">consumeRightClick</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+    <span class="nx">activeFiltering</span><span class="o">:</span><span class="kc">true</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Here&#39;s an explanation of what the various parameters mean:</p>
+
+<ul>
+<li><strong>container</strong></li>
+</ul>
+
+<p>This identifies the element into which you wish the Toolkit to render.</p>
+
+<ul>
+<li><strong>view</strong></li>
+</ul>
+
+<p>These are the Node and Edge definitions for this renderer, discussed above.</p>
+
+<ul>
+<li><strong>layout</strong></li>
+</ul>
+
+<p>Parameters for the layout. </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Spring&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We specify a <code>Spring</code> layout (force directed).</p>
+
+<ul>
+<li><strong>miniview</strong></li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">container</span><span class="o">:</span><span class="nx">miniviewElement</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The miniview options provide the the element to convert into a Miniview. You can also provide an element ID here.</p>
+
+<ul>
+<li><strong>lassoFilter</strong></li>
+</ul>
+
+<p>This selector specifies elements on which a mousedown should not cause the selection lasso to begin. In this demonstration 
+we exclude the buttons in the top left and the Miniview.</p>
+
+<ul>
+<li><strong>events</strong></li>
+</ul>
+
+<p>We listen for two events:</p>
+
+<p><code>canvasClick</code> - a click somewhere on the widget&#39;s whitespace. Then we clear the Toolkit&#39;s current selection.</p>
+
+<p><code>modeChanged</code> - Surface&#39;s mode has changed (either &quot;select&quot; or &quot;pan&quot;). We update the state of the buttons.</p>
+
+<ul>
+<li><strong>zoomToFit</strong></li>
+</ul>
+
+<p>Instructs the Surface to zoom the contents of the display when it is first rendered so that every Node is visible.</p>
+
+<ul>
+<li><strong>activeFiltering</strong></li>
+</ul>
+
+<p>This flag is the key to this demonstration - see below.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="filtering"></a></p>
+
+<h3>Active Filtering</h3>
+
+<p>The <code>activeFiltering:true</code> parameter set on the <code>render</code> call instructs the Surface to invoke the <code>beforeConnect</code> function 
+declared on the Toolkit for every combination of Node/Port whenever the user starts to drag a new Edge. Whenever 
+<code>beforeConnect</code> returns false - boolean false, not just a falsey value - the related target is disabled.</p>
+
+<h4>beforeConnect</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">beforeConnect</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">source</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// ignore node-&gt;node connections; our UI is not configured to produce them. we could catch it and</span>
+    <span class="c1">// return false, though, which would ensure that nodes could not be connected programmatically.</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">source</span><span class="p">.</span><span class="nx">objectType</span> <span class="o">!==</span> <span class="s2">&quot;Node&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">target</span><span class="p">.</span><span class="nx">objectType</span> <span class="o">!==</span> <span class="s2">&quot;Node&quot;</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// cannot create loopback connections</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">source</span> <span class="o">===</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// cannot connect to Ports on the same Node as the Edge source</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span><span class="p">()</span> <span class="o">===</span> <span class="nx">target</span><span class="p">.</span><span class="nx">getNode</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="nx">sourceData</span> <span class="o">=</span> <span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span><span class="p">().</span><span class="nx">data</span><span class="p">,</span>
+            <span class="nx">targetData</span> <span class="o">=</span> <span class="nx">target</span><span class="p">.</span><span class="nx">getNode</span><span class="p">().</span><span class="nx">data</span><span class="p">;</span>
+
+        <span class="c1">// attempt to match animals.</span>
+        <span class="kd">var</span> <span class="nx">sourceItem</span>  <span class="o">=</span> <span class="nx">sourceData</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">source</span><span class="p">.</span><span class="nx">id</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">targetItem</span>  <span class="o">=</span> <span class="nx">targetData</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">target</span><span class="p">.</span><span class="nx">id</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">sourceItem</span><span class="p">.</span><span class="nx">entries</span> <span class="o">&amp;&amp;</span> <span class="nx">targetItem</span><span class="p">.</span><span class="nx">entries</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">sourceItem</span><span class="p">.</span><span class="nx">entries</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">targetItem</span><span class="p">.</span><span class="nx">entries</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">sourceItem</span><span class="p">.</span><span class="nx">entries</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4>CSS</h4>
+
+<p>In this demonstration, disabled targets are made more transparent and their text color is changed to light grey. This is
+achieved via a CSS class:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.jtk-target-disabled</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span><span class="m">#999</span><span class="p">;</span>
+    <span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">;</span>
+    <span class="k">outline</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>jtk-target-disabled</code> is set on a connection target by jsPlumb whenever the target is disabled.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="adding"></a></p>
+
+<h3>Adding New Nodes</h3>
+
+<p>The <code>+</code> button in the top left corner can be used to add a new Node. Here&#39;s the code that sets up the listener and 
+adds the new Node:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">//</span>
+<span class="c1">// assign a class to a new node which brings the user&#39;s attention to it. then a little while later,</span>
+<span class="c1">// take it off.</span>
+<span class="c1">//</span>
+<span class="kd">function</span> <span class="nx">flash</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="s2">&quot;hl&quot;</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="s2">&quot;hl&quot;</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">1950</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">mainElement</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[add]&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">newNode</span><span class="p">();</span>
+    <span class="nx">renderer</span><span class="p">.</span><span class="nx">zoomToFit</span><span class="p">();</span>
+    <span class="nx">flash</span><span class="p">(</span><span class="nx">renderer</span><span class="p">.</span><span class="nx">getRenderedElement</span><span class="p">(</span><span class="nx">node</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>We add the Node to the data model first via the <code>newNode</code> function we saw above. Then we instruct the Surface to resize
+so it fits all the content, and then we use <code>getRenderedElement(node)</code> on our Surface widget to retrieve the  DOM
+element that was rendered for the given Node.  We then use a little helper function to draw the user&#39;s attention to
+the new Node.</p>
+
+<p>The CSS class is specified like this:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.hl</span> <span class="p">{</span>
+    <span class="k">outline</span><span class="o">:</span><span class="m">12px</span> <span class="k">solid</span> <span class="m">#ffc06c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="selecting"></a></p>
+
+<h3>Selecting Nodes</h3>
+
+<p>Lasso selection is enabled by default on the Surface widget. To activate the lasso, click the pencil icon in the toolbar:</p>
+
+<p><img src="select-lasso.png" alt="Lasso Select Mode"></p>
+
+<p>The code that listens to clicks on this icon is as follows:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// pan mode/select mode</span>
+<span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;.controls&quot;</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[mode]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">renderer</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The tap listener extracts the desired mode from the button that was clicked and sets it on the renderer. This causes
+a <code>modeChanged</code> event to be fired, which is picked up by the <code>modeChanged</code> event listener in the View.</p>
+
+<p>Note that here we could have used a <code>click</code> listener, but <code>tap</code> works better for mobile devices.</p>
+
+<h5>Lasso Operation</h5>
+
+<p>The lasso works in two ways: when you drag from left to right, any node that intersects your lasso will be selected.  When you drag from right to left, only nodes that are enclosed by your lasso will be selected.</p>
+
+<h5>Exiting Select Mode</h5>
+
+<p>The Surface widget automatically exits select mode once the user has selected something. In this application we also listen to clicks on the whitespace in the widget and switch back to pan mode when we detect one. This is the <code>events</code> argument to the <code>render</code> call:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>clearSelection</code> clears the current selection and switches back to Pan mode.</p>
+
+<p><a href="#top">TOP</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

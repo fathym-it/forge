@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <h2>Hierarchical Layout</h2>
+
+<p>The Hierarchical layout uses the Walker algorithm to position Nodes in a hierarchy, oriented either vertically or horizontally.<br>
+The classic use cases for this layout are such things as a family tree or org chart.</p>
+
+<p><img src="hierarchical-layout.png" alt="Hierarchical Layout"></p>
+
+<h5>Parameters</h5>
+
+<ul>
+<li><p><strong>{String|Node} rootNode</strong>  Optional. Defines the node to use as the root of the tree.  This may be provided either as a node id or as a Node object.<br>
+If this parameter is not specified and <code>multipleRoots</code> is not false then the layout uses the result(s) of the <code>getRootNode</code> function; otherwise
+it uses the first Node found in the dataset.</p></li>
+<li><p><strong>{Function} getChildEdges</strong> This function is at the core of how the Hierarchical layout traverses the dataset. It is defined as:</p></li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">getChildEdges</span> <span class="o">=</span> <span class="kd">function</span><span class="p">({</span><span class="nx">Node</span><span class="p">}</span> <span class="nx">node</span><span class="p">,</span> <span class="p">{</span><span class="nx">Toolkit</span><span class="p">}</span> <span class="nx">toolkit</span><span class="p">)</span><span class="o">:</span><span class="nx">Edge</span><span class="p">[];</span>
+</code></pre></div>
+<p>Its purpose is to return a list of Edge objects for the given Node, which Edges define the connections from this Node to what should
+be considered its children. The default implementation of this is:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">toolkit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getAllEdgesFor</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span> <span class="o">===</span> <span class="nx">node</span> <span class="o">||</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">ignorePorts</span> <span class="o">!==</span> <span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span><span class="p">()</span> <span class="o">===</span> <span class="nx">node</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Which basically says, get all the Edges for which this Node (or Port, if connecting via Ports is enabled) is the source. </p>
+
+<p>Custom implementations of this function can, for example, test the <code>type</code> of Edges, to exclude certain types from determining
+ the structure of the hierarchy:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">toolkit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getAllEdgesFor</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s2">&quot;FLOATING&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span> <span class="o">===</span> <span class="nx">node</span> <span class="o">||</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">ignorePorts</span> <span class="o">!==</span> <span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span><span class="p">()</span> <span class="o">===</span> <span class="nx">node</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here we test each Edge to see if it is of type <code>FLOATING</code>, and if so, we do not return it. The result would be that the hierarchical
+layout would be determined by the other Edges; any Edges of this type would still be drawn, of course. They would simply be painted to/from
+wherever in the hierarchy the two end Nodes were located.</p>
+
+<ul>
+<li><strong>{Function} getRootNode</strong> Optional. A function that is given the Toolkit instance as argument and is expected to return
+either a single Node, or an array Nodes, to use as the root(s) for the layout. The default implementation of this is as follows:</li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">toolkit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">multipleRoots</span> <span class="o">!==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">objectType</span> <span class="o">===</span> <span class="s2">&quot;Node&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">getTargetEdges</span><span class="p">().</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">group</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="o">||</span>
+                    <span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">objectType</span> <span class="o">===</span> <span class="s2">&quot;Group&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">getTargetEdges</span><span class="p">().</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="p">}).</span><span class="nx">getAll</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">_super</span><span class="p">.</span><span class="nx">adapter</span><span class="p">.</span><span class="nx">getNodeCount</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="nx">_super</span><span class="p">.</span><span class="nx">adapter</span><span class="p">.</span><span class="nx">getNodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>...when <code>multipleRoots</code> is enabled (which it is by default) then this function search for all Nodes/Groups that are not
+targets of any Edges. When <code>multipleRoots</code> is set to <code>false</code>, the function returns the first Node in the dataset.</p>
+
+<ul>
+<li><p><strong>{Boolean} multipleRoots</strong> Optional, defaults to true. If false, multiple roots are not supported, and assuming you have
+not overriden <code>getRootNdoe</code>, the layout uses the first Node found in the dataset (otherwise it still uses the result of
+your <code>getRootNode</code> function).</p></li>
+<li><p><strong>{Number[]} padding</strong>   Optional [ x, y ] array of values to use as the padding between elements.</p></li>
+<li><p><strong>{String} orientation</strong> Optional, defaults to &quot;vertical&quot;. Valid values are &quot;vertical&quot; and &quot;horizontal&quot;.</p></li>
+<li><p><strong>{Boolean} compress</strong> Optional, defaults to false. If true, the layout will use a regular spacing between each node and 
+its parent. Otherwise the layout pushes each node down by the maximum size of some element in that level of the hierarchy. 
+For complex hierarchies in which any given node may have children, that is better. But for simple hierarchies, setting <code>compress</code> can give good results.</p></li>
+</ul>
+
+<h5>Simple Example</h5>
+
+<p>Here we tell the Surface what the ID of the node to use as the root is, and we specify some padding and a <code>horizontal</code>
+orientation.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span><span class="s2">&quot;someElement&quot;</span><span class="p">,</span>
+  <span class="nx">layout</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Hierarchical&quot;</span><span class="p">,</span>
+    <span class="nx">parameters</span><span class="o">:</span><span class="p">{</span>
+      <span class="nx">rootNode</span><span class="o">:</span><span class="s2">&quot;rootNodeId&quot;</span><span class="p">,</span>
+      <span class="nx">padding</span><span class="o">:</span><span class="p">[</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span> <span class="p">],</span>
+      <span class="nx">orientation</span><span class="o">:</span><span class="s2">&quot;horizontal&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h5>Edge Filter Example</h5>
+
+<p>Taken from the discussion above: only Edges that are not of type <code>FLOATING</code> will determine the structure of the hierarchy. </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span><span class="s2">&quot;someElement&quot;</span><span class="p">,</span>
+  <span class="nx">layout</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Hierarchical&quot;</span><span class="p">,</span>
+    <span class="nx">parameters</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">getChildEdges</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">toolkit</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getAllEdgesFor</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">type</span> <span class="o">!==</span> <span class="s2">&quot;FLOATING&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span> <span class="o">===</span> <span class="nx">node</span> <span class="o">||</span> <span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="nx">ignorePorts</span> <span class="o">!==</span> <span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span> <span class="o">&amp;&amp;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">getNode</span><span class="p">()</span> <span class="o">===</span> <span class="nx">node</span><span class="p">);</span>
+          <span class="p">});</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h5>Root Nodes Example</h5>
+
+<p>Return all Nodes whose type is <code>ROOT</code> to use as the roots of the hierarchy.  </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span><span class="s2">&quot;someElement&quot;</span><span class="p">,</span>
+  <span class="nx">layout</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Hierarchical&quot;</span><span class="p">,</span>
+    <span class="nx">parameters</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">getRootNodes</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">toolkit</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">objectType</span> <span class="o">===</span> <span class="s2">&quot;Node&quot;</span> <span class="o">&amp;&amp;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">type</span> <span class="o">===</span> <span class="s2">&quot;ROOT&quot;</span><span class="p">)</span>
+          <span class="p">}).</span><span class="nx">getAll</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h5>Demonstration</h5>
+
+<p>See a demonstration of this layout in single root mode <a href="/demos/toolkit/hierarchy/index.html">here</a>, and in multiple root
+mode <a href="/demos/toolkit/multiple-hierarchy/index.html">here</a>.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

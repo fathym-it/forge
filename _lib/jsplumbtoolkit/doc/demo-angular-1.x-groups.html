@@ -1,0 +1,706 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a id="top"></a></p>
+
+<h2>Groups</h2>
+
+<p>This demonstration is a clone of the Groups demo, but using the Toolkit&#39;s Angular 1.x integration. </p>
+
+<p><img src="demo-groups-app.png" alt="Groups Demo"></p>
+
+<ul>
+<li><a href="#package">package.json</a></li>
+<li><a href="#setup">Page Setup</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#loading">Data Loading</a></li>
+<li><a href="#directives">Directive Configuration</a></li>
+<li><a href="#model">Model</a></li>
+<li><a href="#rendering">Rendering</a></li>
+<li><a href="#initialisation">Initialisation</a></li>
+<li><a href="#behaviour">Behaviour</a></li>
+<li><a href="#selecting">Selecting Nodes</a></li>
+<li><a href="#adding">Adding New Nodes</a></li>
+<li><a href="#addingGroups">Adding New Groups</a></li>
+<li><a href="#deleting">Deleting Nodes</a></li>
+<li><a href="#collapsing">Collapsing/Expanding Groups</a></li>
+</ul>
+
+<p><a id="package"></a></p>
+
+<h3>package.json</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;font-awesome&quot;</span><span class="o">:</span> <span class="s2">&quot;^4.7.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span> <span class="s2">&quot;file:../../jsplumbtoolkit.tgz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jsplumbtoolkit-angular-1.x&quot;</span><span class="o">:</span><span class="s2">&quot;file:../../jsplumbtoolkit-angular-1.x.tgz&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="setup"></a></p>
+
+<h3>Page Setup</h3>
+
+<h6>CSS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/font-awesome/css/font-awesome.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-defaults.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-demo.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;app.css&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Font Awesome, Bootstrap, <code>jsplumbtoolkit-demo.css</code>, and <code>app.css</code> are used for this demo and are not jsPlumb Toolkit requirements. <code>jsplumbtoolkit-defaults.css</code> is recommended for 
+all apps using the Toolkit, at least when you first start to build your app. This stylesheet contains sane defaults for the various widgets in the Toolkit. </p>
+
+<h6>JS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit-angular-1.x/dist/js/jsplumbtoolkit-angular-1.x.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>We import <code>jsplumbtoolkit.js</code> and <code>jsplumbtoolkit-angular</code> from <code>node_modules</code> (they are listed in <code>package.json</code>). <code>app.js</code> contains the demo code; it is discussed on this page.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="templates"></a></p>
+
+<h3>Templates</h3>
+
+<p>This is the template used to render Nodes: </p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/ng-template&quot;</span> <span class="na">id=</span><span class="s">&quot;node_template.tpl&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;delete&quot;</span> <span class="na">title=</span><span class="s">&quot;Click to delete&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;remove(node)&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;span&gt;</span>{{node.name}}<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;connect&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;jtk-source</span> <span class="na">filter=</span><span class="s">&quot;.connect&quot;</span><span class="nt">&gt;&lt;/jtk-source&gt;</span>
+    <span class="nt">&lt;jtk-target&gt;&lt;/jtk-target&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>This is the template used to render Groups:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/ng-template&quot;</span> <span class="na">id=</span><span class="s">&quot;group_template.tpl&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;group-title&quot;</span><span class="nt">&gt;</span>
+            {{group.title}}
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;expand&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;toggleGroup(group)&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">jsplumb-group-content=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p>Group templates can have arbitrary markup as with Node templates. By default, the DOM element representing any Node 
+that is a child of the Group will be appended to the Group&#39;s root element. You can, however, mark a place in the Group
+element that should act as the parent of Node elements - by setting <code>jsplumb-group-content=&quot;true&quot;</code> on the element you
+wish to use. In this demo we use that concept to provide a title bar for each Group onto which Node elements can never
+be dragged.</p>
+
+<p>Note that there are a few main differences between the format of this template and that of a template using
+the Toolkit&#39;s default templating mechanism:</p>
+
+<ul>
+<li>You must prefix a <code>style</code> attribute, eg <code>ng-attr-style</code> instead of just <code>style</code>. This is just for IE compatibility;
+other browsers allow you to specify <code>style</code>.</li>
+<li><p>All references to the Node data that is being rendered are prefixed with <code>node.</code>. For Groups, Aal references to the Group data
+that is being rendered are prefixed with <code>group.</code>.</p></li>
+<li><p>Any <code>jtk-source</code>, <code>jtk-target</code> or <code>jtk-port</code> elements that are intended to configure a Node&#39;s main container have to
+be placed in the <em>root of the template</em>. This is in contrast to the default templating mechanism, which expects one
+root element per template. It is due to the fact that the template is rendered by Angular inside of its directive element,
+and the directive element is not discarded. There is a mechanism in Angular to instruct it to remove the original
+directive element (<code>replace:true</code> in a directive), but this is deprecated and not recommended by Angular, and will not
+work with the Toolkit integration.</p></li>
+</ul>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="loading"></a></p>
+
+<h3>Data Loading</h3>
+
+<p>This is the data used by this demonstration:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span>
+    <span class="nx">data</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;groups&quot;</span><span class="o">:</span><span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;Group 1&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span><span class="mi">100</span><span class="p">,</span> <span class="nx">top</span><span class="o">:</span><span class="mi">50</span> <span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;Group 2&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span><span class="mi">450</span><span class="p">,</span> <span class="nx">top</span><span class="o">:</span><span class="mi">250</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;constrained&quot;</span>  <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;nodes&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;one&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;one&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">450</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">50</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">110</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">370</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">140</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">150</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;one&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;two&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window7&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;left&quot;</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="o">:</span> <span class="mi">450</span> <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span> <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>As with Nodes, if you&#39;re using the <code>Absolute</code> layout, you can specify left/top properties for the element.</p>
+
+<p>Additionally, Groups are considered to have a <code>type</code>, just like Nodes, whose default value is <code>default</code>, but which can
+be overridden in the same way as that of Nodes. Here we see the Group 2 is defined to be of type <code>constrained</code>, which we
+will discuss in the <a href="#view">View</a> section below.</p>
+
+<p>The relationship between Nodes and Groups is written into each Node&#39;s data, not into the Group data. Here we see that
+4 of the Nodes in our dataset have a <code>group</code> declared.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="directives"></a></p>
+
+<h3>Directive Configuration</h3>
+
+<p>Everything is contained within one element that declares the controller and app to use:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;jtk-demo-main&quot;</span> <span class="na">id=</span><span class="s">&quot;jtk-demo-groups&quot;</span> <span class="na">ng-controller=</span><span class="s">&quot;DemoController as DemoController&quot;</span> <span class="na">ng-app=</span><span class="s">&quot;app&quot;</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>The demo uses three directives. Here we see how the Toolkit and its Miniview are declared:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;jsplumb-toolkit</span> <span class="na">params=</span><span class="s">&quot;DemoController.toolkitParams&quot;</span>
+             <span class="na">init=</span><span class="s">&quot;DemoController.init&quot;</span>
+             <span class="na">render-params=</span><span class="s">&quot;DemoController.renderParams&quot;</span>
+             <span class="na">jtk-id=</span><span class="s">&quot;demoToolkit&quot;</span>
+             <span class="na">surface-id=</span><span class="s">&quot;demoSurface&quot;</span>
+             <span class="na">style=</span><span class="s">&quot;width:750px;height:600px;position:relative;margin:0&quot;</span><span class="nt">&gt;</span>
+
+    ...
+
+    <span class="c">&lt;!-- miniview --&gt;</span>
+    <span class="nt">&lt;jsplumb-miniview</span> <span class="na">surface-id=</span><span class="s">&quot;demoSurface&quot;</span> <span class="na">class=</span><span class="s">&quot;miniview&quot;</span><span class="nt">&gt;&lt;/jsplumb-miniview&gt;</span>
+
+<span class="nt">&lt;/jsplumb-toolkit&gt;</span>
+</code></pre></div>
+<p>Points to note:</p>
+
+<ul>
+<li>Both <code>params</code> (for the Toolkit constructor) and <code>renderParams</code> (for the renderer) are provided.</li>
+<li>An ID is assigned to the Toolkit and to the Surface</li>
+<li>An <code>init</code> method is declared; this will be executed after the Toolkit and Surface have been created.</li>
+</ul>
+
+<p>Here is how the palette (the set of nodes that can be dragged into the work area) is declared:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;sidebar node-palette&quot;</span> <span class="err">jsplumb-palette</span> <span class="na">selector=</span><span class="s">&quot;li&quot;</span> <span class="na">surface-id=</span><span class="s">&quot;demoSurface&quot;</span> <span class="na">type-extractor=</span><span class="s">&quot;DemoController.typeExtractor&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">ng-repeat=</span><span class="s">&quot;obj in draggableTypes&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">jtk-node-type=</span><span class="s">&quot;{{ obj.type }}&quot;</span> <span class="na">title=</span><span class="s">&quot;Drag to add new&quot;</span> <span class="na">jtk-group=</span><span class="s">&quot;{{ obj.group }}&quot;</span><span class="nt">&gt;</span>
+            {{obj.label}}
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>Points to note:</p>
+
+<ul>
+<li><code>draggableTypes</code> is an object in the scope of <code>DemoController</code>.</li>
+<li><code>surface-id</code> maps to the <code>surface-id</code> specified in the <code>jsplumb-toolkit</code> directive.</li>
+<li>The <code>selector</code> attribute instructs the Palette to look for any <code>li</code> elements that are descendants of the Palette&#39;s element.</li>
+<li>A <code>type-extractor</code> function is specified; this is what determines the type of newly dropped elements. We set the <code>jtk-group</code>
+for the Group entry (it has a boolean <code>group:true</code> in <code>draggableTypes</code>).</li>
+</ul>
+
+<h4>Node/Group directives</h4>
+
+<p>As discussed in the <a href="angular-integration.html">Angular integration</a> docs, each of your Node/Group types must be backed by
+a matching directive.  In this demo, we have a single Node type:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">jsPlumbFactory</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">jsPlumbFactory</span><span class="p">.</span><span class="nx">node</span><span class="p">({</span>
+        <span class="nx">templateUrl</span><span class="o">:</span> <span class="s2">&quot;node_template.tpl&quot;</span><span class="p">,</span>
+        <span class="nx">inherit</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;remove&quot;</span><span class="p">]</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>and a single Group type:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">app</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">jsPlumbFactory</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">jsPlumbFactory</span><span class="p">.</span><span class="nx">group</span><span class="p">({</span>
+        <span class="nx">inherit</span><span class="o">:</span><span class="p">[</span><span class="s2">&quot;toggleGroup&quot;</span><span class="p">],</span>
+        <span class="nx">templateUrl</span><span class="o">:</span> <span class="s2">&quot;group_template.tpl&quot;</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>These directives map types to jsPlumb&#39;s Angular renderer, and take care of the vagaries of the digest loop for you, to
+ensure everything ends up painted properly. Note the <code>inherit</code> array on each of these: it is a list of method names to
+lift out of the controller and place into the scope of each directive when it is executed. This then allows you to
+reference the method in your HTML, for instance this from the Node template:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;delete&quot;</span> <span class="na">title=</span><span class="s">&quot;Click to delete&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;remove(node)&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>We will discuss this again below in the <a href="#behaviour">Behaviour</a> discussion.</p>
+
+<p><a href="#top">TOP</a> </p>
+
+<hr>
+
+<p><a id="model"></a></p>
+
+<h3>Model</h3>
+
+<p>The Toolkit instance is created with a <code>groupFactory</code> and a <code>nodeFactory</code>; these are the functions used when a new
+Group or Node is created after the user drags something on to the canvas:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">toolkitParams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">groupFactory</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Group &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">getGroupCount</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">nodeFactory</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">getNodeCount</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>Render params are declared as members of <code>DemoController</code>, and referenced in the <code>jsplumb-toolkit</code> directive in the HTML:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">renderParams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">view</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="nx">nodes</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;node&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">groups</span><span class="o">:</span><span class="p">{</span>
+            <span class="s2">&quot;default&quot;</span><span class="o">:</span><span class="p">{</span>
+                <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>
+                <span class="nx">endpoint</span><span class="o">:</span><span class="s2">&quot;Blank&quot;</span><span class="p">,</span>
+                <span class="nx">anchor</span><span class="o">:</span><span class="s2">&quot;Continuous&quot;</span><span class="p">,</span>
+                <span class="nx">revert</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+                <span class="nx">orphan</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+                <span class="nx">constrain</span><span class="o">:</span><span class="kc">false</span>
+            <span class="p">},</span>
+            <span class="nx">constrained</span><span class="o">:</span><span class="p">{</span>
+                <span class="nx">parent</span><span class="o">:</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+                <span class="nx">constrain</span><span class="o">:</span><span class="kc">true</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">layout</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Absolute&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">jsPlumb</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">Anchor</span><span class="o">:</span><span class="s2">&quot;Continuous&quot;</span><span class="p">,</span>
+        <span class="nx">Endpoint</span><span class="o">:</span> <span class="s2">&quot;Blank&quot;</span><span class="p">,</span>
+        <span class="c1">//Endpoint: &quot;Dot&quot;,</span>
+        <span class="nx">Connector</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;StateMachine&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cssClass</span><span class="o">:</span> <span class="s2">&quot;connectorClass&quot;</span><span class="p">,</span> <span class="nx">hoverClass</span><span class="o">:</span> <span class="s2">&quot;connectorHoverClass&quot;</span> <span class="p">}</span> <span class="p">],</span>
+        <span class="nx">PaintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">strokeWidth</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">stroke</span><span class="o">:</span> <span class="s1">&#39;#89bcde&#39;</span> <span class="p">},</span>
+        <span class="nx">HoverPaintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">stroke</span><span class="o">:</span> <span class="s2">&quot;orange&quot;</span> <span class="p">},</span>
+        <span class="nx">Overlays</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">[</span> <span class="s2">&quot;Arrow&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">fill</span><span class="o">:</span> <span class="s2">&quot;#09098e&quot;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">length</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">location</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="p">]</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">lassoFilter</span><span class="o">:</span> <span class="s2">&quot;.controls, .controls *, .miniview, .miniview *&quot;</span><span class="p">,</span>
+    <span class="nx">dragOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">filter</span><span class="o">:</span> <span class="s2">&quot;.delete *&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">consumeRightClick</span><span class="o">:</span><span class="kc">false</span>
+<span class="p">};</span>
+</code></pre></div>
+<h5>view</h5>
+
+<p>The single Node mapping is the most basic Node mapping possible; Nodes derive their Anchor and Endpoint definitions from
+the <code>jsPlumb</code> params passed in to the <a href="#rendering">render call</a> discussed below.  </p>
+
+<p>The Group mappings, though, bear a little discussion. First, the <code>default</code> Group mapping:</p>
+
+<ul>
+<li><em>template</em> - ID of the template to use to render Groups of this type</li>
+<li><em>endpoint</em> - Definition of the Endpoint to use for Connections to the Group when it is collapsed.</li>
+<li><em>anchor</em> - Definition of the Anchor to use for Connections to the Group when it is collapsed.</li>
+<li><em>revert</em> - Whether or not to revert Nodes back into the Group element if they were dropped outside.</li>
+<li><em>orphan</em> - Whether or not to remove Nodes from the Group if they were dragged outside of it and dropped. In actual fact
+we did not need to set <code>revert</code> to false if <code>orphan</code> is set to true, but in this demo we included all the possible flags
+just for completeness.</li>
+<li><em>constrain</em> - Whether or not to constrain Nodes from being dragged outside of the Group&#39;s element. </li>
+</ul>
+
+<p>The <code>constrained</code> Group mapping is declared to extend <code>default</code>, so it gets all of the values defined therein, but it
+overrides <code>constrain</code> to be true: Nodes cannot be dragged out of the Group element for this type of Group (in this demo
+we set Group 2 to be of type <code>constrained</code>, and Group 1 - and any Groups dragged on - to be of type <code>default</code>).</p>
+
+<h5>layout</h5>
+
+<p>Parameters for the layout. Here we specify an <code>Absolute</code> layout. It is the only layout currently that supports Groups.</p>
+
+<h5>lassoFilter</h5>
+
+<p>This selector specifies elements on which a mousedown should not cause the selection lasso to begin. In this 
+demonstration we exclude the buttons in the top left and the miniview.</p>
+
+<h5>events</h5>
+
+<p>We listen for two events:</p>
+
+<p><code>canvasClick</code> - a click somewhere on the widget&#39;s whitespace. Then we clear the Toolkit&#39;s current selection.</p>
+
+<p><code>modeChanged</code> - Surface&#39;s mode has changed (either &quot;select&quot; or &quot;pan&quot;). We update the state of the buttons.</p>
+
+<h5>jsPlumb</h5>
+
+<p>Recall that the Surface widget is backed by an instance of jsPlumb Community Edition. This parameter sets 
+the <a href="/community/doc/defaults.html">Defaults</a> for that object.  </p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="initialisation"></a></p>
+
+<h3>Initialisation</h3>
+
+<p><code>DemoController.init</code> looks like this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">toolkit</span> <span class="o">=</span> <span class="nx">scope</span><span class="p">.</span><span class="nx">toolkit</span><span class="p">;</span>
+
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">...</span>  <span class="p">(</span><span class="nx">shown</span> <span class="nx">above</span><span class="p">)</span> 
+    <span class="p">});</span>
+
+    <span class="nx">surface</span> <span class="o">=</span> <span class="nx">jsPlumbService</span><span class="p">.</span><span class="nx">getSurface</span><span class="p">(</span><span class="s2">&quot;demoSurface&quot;</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">controls</span> <span class="o">=</span> <span class="nx">element</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.controls&quot;</span><span class="p">);</span>
+    <span class="c1">// listener for mode change on renderer.</span>
+    <span class="nx">surface</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;modeChanged&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">controls</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;[mode]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">controls</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;[mode=&#39;&quot;</span> <span class="o">+</span> <span class="nx">mode</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="c1">// pan mode/select mode</span>
+    <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">controls</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[mode]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">surface</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">));</span>
+    <span class="p">});</span>
+
+    <span class="c1">// on home button click, zoom content to fit.</span>
+    <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">controls</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[reset]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+        <span class="nx">surface</span><span class="p">.</span><span class="nx">zoomToFit</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>The main things to note here are that the <code>scope</code> passed in to this method contains <code>toolkit</code> and <code>surface</code> members. This
+ demo assigns the <code>toolkit</code> member to a variable in the Controller&#39;s scope, so it is subsequently available
+ everywhere.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="behaviour"></a></p>
+
+<h3>Behaviour</h3>
+
+<p>There are two pieces of behaviour that we need to code that are not completely handled for us by the Toolkit:  </p>
+
+<ul>
+<li>Delete Node</li>
+<li>Collapse/Expand Group</li>
+</ul>
+
+<p>which is to say, the Toolkit&#39;s API provides functions to call to do these things, but there is no automatic binding of
+these functions to elements in the UI.</p>
+
+<h6>Delete Node</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;delete&quot;</span> <span class="na">title=</span><span class="s">&quot;Click to delete&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;remove(node)&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$scope</span><span class="p">.</span><span class="nx">remove</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeNode</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p><code>remove</code> makes a direct call to the <code>removeNode</code> method on the underlying Toolkit instance. The method is lifted into
+the Node directive&#39;s scope via the <code>node</code> directive that is discussed <a href="#directives">above</a>.</p>
+
+<h6>Collapse/Expand Group</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;group-title&quot;</span><span class="nt">&gt;</span>
+    {{group.title}}
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;expand&quot;</span> <span class="na">ng-click=</span><span class="s">&quot;toggleGroup(group)&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$scope</span><span class="p">.</span><span class="nx">toggleGroup</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">group</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">surface</span><span class="p">.</span><span class="nx">toggleGroup</span><span class="p">(</span><span class="nx">group</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>As with <code>remove</code> above, <code>toggleGroup</code> is lifted into the directive&#39;s scope by dint of being declared in the <code>inherit</code>
+list for the <code>group</code> directive (see <a href="#directives">Directive Configuration</a>).</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="selecting"></a></p>
+
+<h3>Selecting Nodes</h3>
+
+<p>Lasso selection is enabled by default on the Surface widget. To activate the lasso, click the pencil icon in the toolbar:</p>
+
+<p><img src="select-lasso.png" alt="Lasso Select Mode"></p>
+
+<p>The code that listens to clicks on this icon is as follows:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// pan mode/select mode</span>
+<span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;.controls&quot;</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;[mode]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">renderer</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The tap listener extracts the desired mode from the button that was clicked and sets it on the renderer. This causes
+a <code>modeChanged</code> event to be fired, which is picked up by the <code>modeChanged</code> event listener in the View.</p>
+
+<p>Note that here we could have used a <code>click</code> listener, but <code>tap</code> works better for mobile devices.</p>
+
+<h5>Lasso Operation</h5>
+
+<p>The lasso works in two ways: when you drag from left to right, any node that intersects your lasso will be selected.  When you drag from right to left, only nodes that are enclosed by your lasso will be selected.</p>
+
+<h5>Exiting Select Mode</h5>
+
+<p>The Surface widget automatically exits select mode once the user has selected something. In this application we also listen to clicks on the whitespace in the widget and switch back to pan mode when we detect one. This is the <code>events</code> argument to the <code>render</code> call:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+  <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>clearSelection</code> clears the current selection and switches back to Pan mode.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="adding"></a></p>
+
+<h3>Adding New Nodes/Groups</h3>
+
+<p>As discussed above, a <code>jsplumb-palette</code> is declared, which configures all of its child <code>li</code> elements to be droppable onto
+the Surface canvas.  When a drop occurs, the type of the newly dragged node is calculated by the <code>typeExtractor</code> 
+function declared on <code>DemoController</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">typeExtractor</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;jtk-node-type&quot;</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>For a detailed discussion of this functionality, see <a href="rendering.html#dragpalette">this page</a>.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="deleting"></a></p>
+
+<h3>Deleting Nodes</h3>
+
+<p><img src="demo-absolute-single-node.png" alt="Single Node"></p>
+
+<p>Clicking the <strong>X</strong> button in this demonstration deletes the current node.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;#canvas&quot;</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;.delete *&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getObjectInfo</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeNode</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="collapsing"></a></p>
+
+<h3>Collapsing/Expanding Groups</h3>
+
+<p>Clicking the <strong>-</strong> button in this demonstration collapses a Group. It then changes to a +, which, when clicked, 
+expands the Group.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="nx">canvasElement</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;.group-title button&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getObjectInfo</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">renderer</span><span class="p">.</span><span class="nx">toggleGroup</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The label of the button is changed via css: when a group is collapsed, it is assigned the CSS class <code>jsplumb-group-collapsed</code>.
+ In the CSS for this demo we have these rules:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.group-title</span> <span class="nt">button</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="o">:</span><span class="s2">&quot;-&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.jtk-group.jtk-group-collapsed</span> <span class="nc">.group-title</span> <span class="nt">button</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="o">:</span><span class="s2">&quot;+&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Another point to note is that the Toolkit does not take any specific action to &quot;collapse&quot; your Groups visually. It is left
+up to you to respond to the <code>jsplumb-group-collapsed</code> class as you need to. In this demo, we simply hide the group content
+area:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.jtk-group.jtk-group-collapsed</span> <span class="o">[</span><span class="nt">jtk-group-content</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

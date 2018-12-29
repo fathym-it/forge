@@ -1,0 +1,766 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <h2>1.3.3</h2>
+
+<p>10th May 2017</p>
+
+<ul>
+<li>updated to Rotors 0.3.16</li>
+</ul>
+
+<h2>1.3.2</h2>
+
+<p>10th May 2017</p>
+
+<ul>
+<li>updated the code that handles a moved connection to ensure it treats Ports correctly.</li>
+</ul>
+
+<h2>1.3.1</h2>
+
+<p>9th May 2017</p>
+
+<ul>
+<li>remove all String refs from React demo and from docs for React demo</li>
+<li>minor documentation updates</li>
+</ul>
+
+<h2>1.3.0</h2>
+
+<p>8th May 2017</p>
+
+<ul>
+<li>Upgrade to Community edition 2.4.0</li>
+<li>Support Angular 4 (when we say &#39;Angular&#39; now, we mean Angular 4. Angular 2 and Angular 1.x are labelled specifically).</li>
+<li>Upgrade to Webpack 2 and related grunt-webpack in React and Webpack demo pages</li>
+<li>replaced String refs in React integration with the callback pattern.</li>
+<li>Added Angular CLI version of the Angular 4 flowchart demo</li>
+<li>Added support for onDrop to the <code>jsplumb-palette</code> directive in the Angular 1.x integration.</li>
+</ul>
+
+<h2>1.2.16</h2>
+
+<p>30th April 2017</p>
+
+<ul>
+<li>group auto size now correctly takes into account the group&#39;s drag area</li>
+<li>when adding a node to a group, if left/top properties are set in the data, they are used as the node&#39;s position.</li>
+<li>fixed an issue with groups not being cleared properly from the underlying Community instance when using the <code>clear</code> method</li>
+</ul>
+
+<h3>1.2.15</h3>
+
+<p>26th April 2017</p>
+
+<ul>
+<li>update to version 15.5.0 in the React integration demo.</li>
+</ul>
+
+<h3>1.2.14</h3>
+
+<p>24th April 2017</p>
+
+<ul>
+<li>added support for onBeforeAutoSave and onAfterAutoSave optional functions to Toolkit&#39;s auto save functionality.</li>
+</ul>
+
+<h3>1.2.13</h3>
+
+<p>24th April 2017</p>
+
+<ul>
+<li>upgrade to Community edition 2.3.5</li>
+<li>nodes dropped on groups now assigned their correct position</li>
+</ul>
+
+<h3>1.2.12</h3>
+
+<p>20th April 2017</p>
+
+<ul>
+<li>fix issue with <code>data</code> not being exported on edges whose source is a Group</li>
+</ul>
+
+<h3>1.2.11</h3>
+
+<p>8th April 2017</p>
+
+<ul>
+<li>Fixed issue with source element creating multiple connections after drag.</li>
+</ul>
+
+<h3>1.2.10</h3>
+
+<p>30th March 2017</p>
+
+<ul>
+<li>added support for <code>magnetize</code> option in <code>dragOptions</code> of <code>render</code> call. Instructs jsPlumb to adjust a dragged Node/Group so
+that it does not overlap any other Nodes/Groups(at drag end).</li>
+</ul>
+
+<h3>1.2.9</h3>
+
+<p>22nd March 2017</p>
+
+<ul>
+<li>upgrade to Community edition 2.3.2 (which includes Katavorio 1.19.2)</li>
+</ul>
+
+<h3>1.2.8</h3>
+
+<p>16th March 2017</p>
+
+<ul>
+<li>upgrade to Community edition 2.3.1</li>
+<li>update to ensure that endpoints/anchors in Port definitions correctly override endpoints/anchors in Edge definitions.</li>
+</ul>
+
+<h3>1.2.7</h3>
+
+<p>8th March 2017</p>
+
+<ul>
+<li>Updated Angular 2 integration to force a render of each node as it is created. This ensures that any <code>jtk-port</code>,
+<code>jtk-source</code> or <code>jtk-target</code> elements are fully rendered before we try to process them.</li>
+</ul>
+
+<h3>1.2.6</h3>
+
+<p>8th March 2017</p>
+
+<ul>
+<li><p>added support for <code>isEndpoint</code> flag in port definitions in the view. Causes jsPlumb to use an Endpoint instead of making
+an entire element a source/target.</p></li>
+<li><p>added support for <code>jtk-port</code>, <code>jtk-source</code> and <code>jtk-target</code> elements to Group templates.</p></li>
+<li><p>updated the Surface widget to correctly render <code>isEndpoint</code> Ports when new Ports are added programmatically to a Toolkit instance.</p></li>
+<li><p>updated the Angular docs with a short discussion on the perils of the asynchronous nature of Angular&#39;s rendering cycle.</p></li>
+</ul>
+
+<h3>1.2.5</h3>
+
+<p>1st March 2017</p>
+
+<ul>
+<li>added support for <code>anchor-x</code>, <code>anchor-y</code>, <code>orientation-x</code>, <code>orientation-y</code>, <code>offset-x</code> and <code>offset-y</code> attributes in the <code>jtk-port</code> element.</li>
+</ul>
+
+<h3>1.2.4</h3>
+
+<p>27th February 2017</p>
+
+<ul>
+<li>updated the <code>exportData</code> method to correctly export edges between Groups.</li>
+</ul>
+
+<h3>1.2.3</h3>
+
+<p>27th February 2017</p>
+
+<ul>
+<li>add grunt to webpack package json</li>
+</ul>
+
+<h3>1.2.2</h3>
+
+<p>27th February 2017</p>
+
+<ul>
+<li>fix issue with preinstall script when running on Windows</li>
+</ul>
+
+<h3>1.2.1</h3>
+
+<p>21st February 2017</p>
+
+<ul>
+<li><code>setPosition</code> method of Surface widget now works for Groups too</li>
+<li><code>animateToPosition</code> method of Surface widget now works for Groups too.</li>
+<li><code>toolkit</code> and <code>renderer</code> are now passed as arguments to any events defined in your views.</li>
+</ul>
+
+<h3>1.2.0</h3>
+
+<p>16th February 2017</p>
+
+<ul>
+<li>Upgrade to Community edition 2.3.0</li>
+<li>Community edition is now bundled into the Toolkit edition - no separate import is required.</li>
+<li>addition of Angular 2 integration support</li>
+<li>addition of Webpack bundling example</li>
+<li>addition of React integration support</li>
+<li>addition of Vue 2 integration support</li>
+<li>npm pack of the Toolkit code is shipped with licenses</li>
+<li>documentation updates</li>
+<li>fixed issue that was preventing deselection of Group elements</li>
+<li>fixed issue with update of moved nodes in miniview.</li>
+<li>fixed issue with duplicate Nodes being allowed inside Groups</li>
+<li><code>doNotFireEvent</code> parameter removed from Toolkit&#39;s <code>addToGroup</code> method.</li>
+<li>fixed issue with Groups not being removed from DOM on clear.</li>
+<li>Surface widget fires <code>lasso:end</code> event on lasso mouseup. No arguments are passed to the callback method.</li>
+</ul>
+
+<h3>1.1.6</h3>
+
+<p>3rd January 2017</p>
+
+<ul>
+<li>added getClusters method to Toolkit and to Graph</li>
+</ul>
+
+<h3>1.1.5</h3>
+
+<p>20 December 2016</p>
+
+<ul>
+<li>upgrade to Community edition 2.2.8</li>
+</ul>
+
+<h3>1.1.4</h3>
+
+<p>2 December 2016</p>
+
+<ul>
+<li>added <code>getEdgeAt</code> method to Path</li>
+<li>added support for custom buttons on dialogs.</li>
+</ul>
+
+<h3>1.1.3</h3>
+
+<p>29 November 2016</p>
+
+<ul>
+<li>documentation updates for Hierarchical layout</li>
+</ul>
+
+<h3>1.1.2</h3>
+
+<p>28 November 2016</p>
+
+<ul>
+<li>documentation updates.</li>
+</ul>
+
+<h3>1.1.1</h3>
+
+<p>27 November 2016</p>
+
+<ul>
+<li><p>upgrade to Community edition 2.2.6</p></li>
+<li><p><code>setAbsolutePosition(el, xy[])</code> removed from the Surface widget. Use <code>setPosition(el, x, y)</code> instead. <code>setAbsolutePosition</code> is
+still used by Decorators.</p></li>
+<li><p>Nodes added programmatically to Groups (via the Toolkit&#39;s <code>addToGroup(Group, Node)</code> method) are placed in the center of
+the Group&#39;s drag area. Previously no change was made to their offset and this more often than not resulted in the Node
+not appearing inside the Group.</p></li>
+<li><p>upgrade to Rotors 0.3.12</p></li>
+<li><p>support HTTP headers in <code>save</code> method and in auto save functionality.</p></li>
+</ul>
+
+<h3>1.1.0</h3>
+
+<p>28 October 2016</p>
+
+<ul>
+<li><p>added support for Groups</p></li>
+<li><p>added support for multiple root nodes in hierarchical layout</p></li>
+<li><p>aliased the <code>getEdge</code> method in Selection as <code>getEdgeAt</code>; this is more consistent with the API to access Nodes/Groups.</p></li>
+<li><p>support for custom template resolver in <code>render</code> call</p></li>
+<li><p>support for templates provided as a map of string s in <code>render</code> call.</p></li>
+<li><p>added a couple of helper methods to the jsPlumbToolkitInstance class for working with Edges:</p>
+
+<p>selectAllEdges  : Gets all edges in the Toolkit instance as a Selection object.</p>
+
+<p>addAllEdgesToSelection : Adds all the Edges in the Toolkit instance to the Toolkit&#39;s current selection.</p></li>
+</ul>
+
+<h3>1.0.31</h3>
+
+<p>18 October 2016</p>
+
+<ul>
+<li>fix issue with ingestNode method causing miniview to fail with ingested community instance.</li>
+<li>ensure ingested nodes are registered with the layout.</li>
+</ul>
+
+<h3>1.0.30</h3>
+
+<p>20 September 2016</p>
+
+<ul>
+<li>fix issue that was causing a loopback to be added twice to the object it belonged to (although not to the Toolkit itself)</li>
+</ul>
+
+<h3>1.0.29</h3>
+
+<p>6 September 2016</p>
+
+<ul>
+<li>update to jsPlumb 2.1.7, containing a few minor connection fixes.</li>
+</ul>
+
+<h3>1.0.28</h3>
+
+<p>29 August 2016</p>
+
+<ul>
+<li>further small fix to whitespace rendering</li>
+</ul>
+
+<h3>1.0.27</h3>
+
+<p>28 August 2016</p>
+
+<ul>
+<li><p>fixed issue with whitespace rendering inside templates (in some cases whitespace was being trimmed when it should not
+have been)</p></li>
+<li><p>added setSourceEnabled, setTargetEnabled, setEnabled methods to Surface widget</p></li>
+</ul>
+
+<h3>1.0.26</h3>
+
+<p>18 August 2016</p>
+
+<ul>
+<li>fixed issue with <code>setVisible</code> method on the Surface widget, in which connections from some element were made visible
+when the element was made visible, even if their other element was not currently visible.</li>
+</ul>
+
+<h3>1.0.25</h3>
+
+<p>12 August 2016</p>
+
+<ul>
+<li>upgraded Community edition to 2.1.5, which contains Mottle 0.7.3, which itself has a fix for the synthesized tap
+event on Safari and Firefox.</li>
+</ul>
+
+<h3>1.0.24</h3>
+
+<p>8 July 2016</p>
+
+<ul>
+<li>upgrade to community jsPlumb 2.1.4</li>
+<li>reinstate missing apps (hello world, skeleton app)</li>
+</ul>
+
+<h3>1.0.23</h3>
+
+<p>19 May 2016</p>
+
+<ul>
+<li>upgrade to jsPlumb Community 2.1.2, which contains a couple of bugfixes for click events and for overlays that were not
+being removed when switching types.</li>
+</ul>
+
+<h3>1.0.22</h3>
+
+<p>6 May 2016</p>
+
+<ul>
+<li>upgrade to jsPlumb Community 2.1.1</li>
+<li>fix for an operator precedence issue in the default object factory that was causing the object&#39;s type to be forgotten.</li>
+<li>upgrade to Rotors 0.3.11 (fix for deeply nested template rendering)</li>
+<li>fix for default JSON parser when Ports that have no nodeId are present.</li>
+</ul>
+
+<h3>1.0.21</h3>
+
+<p>21 April 2016</p>
+
+<ul>
+<li>api documentation fixes</li>
+<li>upgrade to jsPlumb community 2.1.0 (a couple of memory leak issue fixes)</li>
+<li>upgrade to Rotors 0.3.10</li>
+<li>upgrade to Farahey 0.7</li>
+<li>memory leak fixes</li>
+<li>fix issue with miniview not repainting after expansion</li>
+</ul>
+
+<h3>1.0.20</h3>
+
+<p>17 March 2016</p>
+
+<ul>
+<li>update Rotors to fix possible infinite loop with nested templates</li>
+</ul>
+
+<h3>1.0.19</h3>
+
+<p>9 March 2016</p>
+
+<ul>
+<li>update Rotors</li>
+</ul>
+
+<h3>1.0.18</h3>
+
+<p>9 March 2016</p>
+
+<ul>
+<li>fixed an issue with the auto save: it was not suspended during data load.</li>
+</ul>
+
+<h3>1.0.17</h3>
+
+<p>8 February 2016</p>
+
+<ul>
+<li>fix for inverse lasso: the mask does not appear until the user starts to drag.</li>
+</ul>
+
+<h3>1.0.16</h3>
+
+<p>1 February 2016</p>
+
+<ul>
+<li>fix for state deactivate - parameterised overlays now retain their values.</li>
+</ul>
+
+<h3>1.0.15</h3>
+
+<p>25 January 2016</p>
+
+<ul>
+<li>internal build script update to community 2.0.6</li>
+</ul>
+
+<h3>1.0.14</h3>
+
+<p>24 January 2016</p>
+
+<ul>
+<li><p>update to Rotors 0.3.7, which contains a fix for parameterised attributes on custom elements, and support for an
+&#39;updated&#39; callback in custom tags.</p></li>
+<li><p>add support for <code>inverted</code> mode to lasso, in which unselected parts of the UI are masked, rather than the default
+behaviour of drawing an element to represent the selected area.</p></li>
+<li><p>update community jsPlumb to 2.0.6. Not a required update for 1.0.14; 2.0.5 is ok. </p></li>
+</ul>
+
+<h3>1.0.13</h3>
+
+<p>11 January 2016</p>
+
+<ul>
+<li>getAllEdges in jsPlumbToolkit no longer takes parameters, and actually works properly now.</li>
+<li>added getAllEdges to Graph class.</li>
+<li>small tidy up in Angular demo templates to fix IE* rendering issue.</li>
+</ul>
+
+<h3>1.0.12</h3>
+
+<p>14 December 2015</p>
+
+<ul>
+<li><p>Update to Rotors to support attributes with colons (such as <code>xlink:href</code> on an svg image)</p></li>
+<li><p>Fix updateNode bug: nodes were not being removed from previous posses before being possibly added to new ones.</p></li>
+<li><p>Posses are assigned to elements in bulk after load, in case one of them has tried to access a node that is not yet 
+loaded.</p></li>
+<li><p>Added <code>batch</code> function to Surface widget, to run a function while rendering and events are both suspended.</p></li>
+<li><p>Added support for rectangular tiles in the tiled background of a Surface widget</p></li>
+<li><p>Fixed issue that caused an error when dragging an existing edge from one source to another.</p></li>
+<li><p><code>zoomToFit</code> on the Surface widget now defaults to filling 90% of the viewport. This can be overriden by supplying
+a <code>fill</code> parameter:</p></li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">surface</span><span class="p">.</span><span class="nx">zoomToFit</span><span class="p">({</span><span class="nx">fill</span><span class="o">:</span><span class="mf">0.75</span><span class="p">});</span>
+</code></pre></div>
+<ul>
+<li><p>The link to <code>filters</code> in the documentation no longer gives a 404.</p></li>
+<li><p>Fixed an issue that was occasionally causing multiple buttons in dialogs.</p></li>
+<li><p>Fixed an issue that was causing dynamically populated overlays to revert when a new State was applied.</p></li>
+<li><p>Introduced the concept of <code>typeProperty</code> (and <code>edgeTypeProperty</code> / <code>portTypeProperty</code>). This reflects the fact that
+for the majority of applications, the function used to determine some object&#39;s <code>type</code> simply looks at the value of some
+given property. By providing the name of this property, rather than a <code>typeFunction</code>, the Toolkit is then able to write
+an object&#39;s type as well as read it.</p></li>
+<li><p>Added support for setType method</p></li>
+<li><p>Added small fix to avoid buttons being added more than once to a dialog.</p></li>
+</ul>
+
+<h3>1.0.11</h3>
+
+<p>23 October 2015</p>
+
+<ul>
+<li>upgrade to Community edition 2.0.4. Contains a couple of change to the way posses are handled, and the
+ability to drop elements onto other elements. Also contains a a fix for the computation of offets when dragging 
+nested elements.</li>
+<li>update to Rotors to support attributes with colons (such as <code>xlink:href</code> on an svg image)</li>
+<li>update to Rotors to include <code>&lt;r-html&gt;</code> tag (for embedding HTMl rather than plain text)</li>
+<li>change pan/zoom widget so it no longer consumes all mouse events it does not process. </li>
+<li><code>jsPlumbToolkitUtil.ajax</code> takes optional <code>headers</code> map (for setting http headers).</li>
+<li><code>jsPlumbToolkitInstance.load</code> takes optional <code>headers</code> map (for setting http headers).</li>
+<li><code>jsPlumbToolkitInstance.load</code> sets <code>Accept:application/json</code> HTTP header if headers not supplied. </li>
+</ul>
+
+<h3>1.0.10</h3>
+
+<p>16 October 2015</p>
+
+<ul>
+<li>added <code>adHocLayout</code> method to Surface widget. This lets you run a named layout one time on your data.</li>
+</ul>
+
+<h3>1.0.9</h3>
+
+<p>16 October 2015</p>
+
+<ul>
+<li><p>upgrade to Community edition 2.0.3 (changes to Posse dragging, minor bugfixes)</p></li>
+<li><p>Removed a number of spurious animations that were unnecessarily occurring while the Surface widget initialised a paint.</p></li>
+</ul>
+
+<h3>1.0.8</h3>
+
+<p>12 October 2015</p>
+
+<ul>
+<li>Upgrade to Community edition 2.0.2 (for documentation improvements)</li>
+</ul>
+
+<hr>
+
+<h3>1.0.7</h3>
+
+<p>7 October 2015</p>
+
+<ul>
+<li>Upgrade to Community edition 2.0.1</li>
+<li>Documentation improvements</li>
+</ul>
+
+<hr>
+
+<h3>1.0.6</h3>
+
+<p>6 October 2015</p>
+
+<ul>
+<li>upgrade to Community edition 2.0.0</li>
+<li>upgrade to Rotors 0.3.5</li>
+<li>nodeUpdated/edgeUpdated/portUpdated events are given the updates that the user passed in (issue 61)</li>
+<li>beforeConnect interceptor gets edgeData as third argument (if some data was returned from beforeStartConnect) (issue 62)</li>
+<li>Add the ability to &#39;refresh&#39; the set of nodes registered via a <code>registerDroppableNodes</code> call on a Surface.</li>
+<li>Add <code>centerOnAndZoom</code> function to <code>Surface</code></li>
+<li><code>modelLeftAttribute</code> and <code>modelTopAttribute</code>, which specify the left/top attribute against which to store node
+positions, now support dotted notation, ie. can refer to a nested element.</li>
+<li>Added <code>zoomToSelection</code> to Surface widget.</li>
+</ul>
+
+<hr>
+
+<h3>1.0.5</h3>
+
+<p>31 August 2015</p>
+
+<ul>
+<li>Reinstate animation when panning the surface</li>
+<li>Expose <code>setPan</code> method on the surface</li>
+<li>Support animation in the <code>setPan</code> method</li>
+<li>Support enableAnimation:false flag in <code>render</code> method. default is true.</li>
+<li>Upgrade to Community edition 1.7.10 (bugfix for animation when providing 0 as param value)</li>
+</ul>
+
+<hr>
+
+<h3>1.0.4</h3>
+
+<p>29 August 2015</p>
+
+<ul>
+<li>Several improvements to the ingest functionality, including the ability to subsequently ingest new elements.</li>
+<li>Upgrade to Community edition 1.7.9</li>
+</ul>
+
+<hr>
+
+<h3>1.0.3</h3>
+
+<p>21 August 2015</p>
+
+<ul>
+<li>Fix loading issue with directed edges in basic JSON parser.</li>
+<li>Add setDirected method to Edge</li>
+<li>Add tracePath method to Renderer</li>
+<li>Add Path Tracing demo</li>
+</ul>
+
+<hr>
+
+<h3>1.0.2</h3>
+
+<p>10 August 2015</p>
+
+<ul>
+<li>Add <code>traversePath</code> method to Surface (and <code>animateOverlay</code> method to Connection)</li>
+<li>Upgrade to Rotors 0.3.0</li>
+<li>Fix issue in Hierarchical layout in which circular references in the hierarchy cause an infinite loop.</li>
+</ul>
+
+<hr>
+
+<h3>1.0.1</h3>
+
+<p>1 August 2015</p>
+
+<ul>
+<li>Addition of fixElement and floatElement methods to pan/zoom widget and Surface, and exposing of these methods
+to the layout decorator functionality.</li>
+</ul>
+
+<hr>
+
+<h3>1.0.0</h3>
+
+<p>19 July 2015</p>
+
+<p>Initial release.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

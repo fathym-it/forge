@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a id="top"></a></p>
+
+<h2>Spring Layout</h2>
+
+<p>This is an example of how to use the Spring  Layout to display a dataset. There are many datasets that can be efficiently represented using this layout.</p>
+
+<p><img src="demo-spring-app.png" alt="Spring Layout Demo"></p>
+
+<ul>
+<li><a href="#package">package.json</a></li>
+<li><a href="#setup">Page Setup</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#loading">Data Loading</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#rendering">Rendering</a></li>
+<li><a href="#selecting">Selecting Nodes</a></li>
+<li><a href="#adding">Adding New Nodes</a></li>
+<li><a href="#deleting">Deleting Nodes</a></li>
+</ul>
+
+<p><a id="package"></a></p>
+
+<h3>package.json</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;font-awesome&quot;</span><span class="o">:</span> <span class="s2">&quot;^4.7.0&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span> <span class="s2">&quot;file:../../jsplumbtoolkit.tgz&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="setup"></a></p>
+
+<h3>Page Setup</h3>
+
+<h6>CSS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/font-awesome/css/font-awesome.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-defaults.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/css/jsplumbtoolkit-demo.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;app.css&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+<p>Font Awesome, Bootstrap, <code>jsplumbtoolkit-demo.css</code>, and <code>app.css</code> are used for this demo and are not jsPlumb Toolkit requirements. <code>jsplumbtoolkit-defaults.css</code> is recommended for 
+all apps using the Toolkit, at least when you first start to build your app. This stylesheet contains sane defaults for the various widgets in the Toolkit. </p>
+
+<h6>JS</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;demo-support.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>We import <code>jsplumbtoolkit.js</code> from <code>node_modules</code> (it was listed in <code>package.json</code>). <code>demo-support.js</code> is used to generate random data sets for the demo. <code>app.js</code> contains the demo code; it is
+discussed on this page.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="templates"></a></p>
+
+<h3>Templates</h3>
+
+<p>This demonstration uses a single template to render its nodes:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplNode&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;width:${w}px;height:${h}px;&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;delete&quot;</span> <span class="na">title=</span><span class="s">&quot;Click to delete&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-times&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;span&gt;</span>${name}<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;add&quot;</span> <span class="na">title=</span><span class="s">&quot;Add child node&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-plus&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="loading"></a></p>
+
+<h3>Data Loading</h3>
+
+<p>This is the data used:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;nodes&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;2&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;3&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;4&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;5&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;6&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;window7&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;7&quot;</span> <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;edges&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window1&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window3&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window5&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window4&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span> <span class="s2">&quot;window6&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;window2&quot;</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>The data is loaded via this call</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span><span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="o">:</span> <span class="nx">data</span><span class="p">})</span>
+</code></pre></div>
+<p>The <code>load</code> function takes an optional <code>type</code> parameter that indicates the format of the data you are loading. If not supplied - as is the case here - it defaults to <code>&quot;json&quot;</code>, which refers to the Toolkit&#39;s <a href="loading-and-saving-data.html#graph-json-syntax">default Graph JSON syntax</a>.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="view"></a></p>
+
+<h3>View</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">nodes</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">template</span><span class="o">:</span> <span class="s2">&quot;tmplNode&quot;</span>
+      <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">edges</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;default&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">paintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">lineWidth</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">strokeStyle</span><span class="o">:</span> <span class="s1">&#39;#89bcde&#39;</span> <span class="p">},</span>
+          <span class="nx">hoverPaintStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">strokeStyle</span><span class="o">:</span> <span class="s2">&quot;orange&quot;</span> <span class="p">},</span>
+          <span class="nx">overlays</span><span class="o">:</span> <span class="p">[</span>
+              <span class="p">[</span><span class="s2">&quot;Arrow&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">fillStyle</span><span class="o">:</span> <span class="s2">&quot;#89bcde&quot;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">length</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">location</span><span class="o">:</span><span class="mi">1</span> <span class="p">}</span> <span class="p">]</span>
+          <span class="p">]</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>This View specifies that the default Node type uses a template with id <code>tmplNode</code>, and that the default Edge 
+type has a Dynamic Anchor, with an Arrow overlay at location of 1. It also specifies the <code>paintStyle</code>
+and <code>hoverPaintStyle</code> as well as the <code>connector</code> for Edges of type &quot;default&quot;.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="rendering"></a></p>
+
+<h3>Rendering</h3>
+
+<p>This is the call that sets up the UI:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">render</span><span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span> <span class="nx">canvasElement</span><span class="p">,</span>
+  <span class="nx">view</span><span class="o">:</span><span class="nx">view</span><span class="p">,</span>
+  <span class="nx">layout</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;Spring&quot;</span><span class="p">,</span>
+      <span class="nx">parameters</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">padding</span><span class="o">:</span><span class="p">[</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span> <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+  <span class="nx">miniview</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">container</span><span class="o">:</span> <span class="nx">miniviewElement</span>
+  <span class="p">},</span>
+  <span class="nx">lassoFilter</span><span class="o">:</span> <span class="s2">&quot;.controls, .controls *, .miniview, .miniview *&quot;</span><span class="p">,</span>
+  <span class="nx">dragOptions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">filter</span><span class="o">:</span> <span class="s2">&quot;.delete *, .add *&quot;</span>
+  <span class="p">},</span>
+  <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+    <span class="p">},</span>
+    <span class="nx">modeChanged</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getSelector</span><span class="p">(</span><span class="s2">&quot;[mode]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+        <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getSelector</span><span class="p">(</span><span class="s2">&quot;[mode=&#39;&quot;</span> <span class="o">+</span> <span class="nx">mode</span> <span class="o">+</span> <span class="s2">&quot;&#39;]&quot;</span><span class="p">),</span> <span class="s2">&quot;selected-mode&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">jsPlumb</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">Endpoint</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;Dot&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">cssClass</span><span class="o">:</span> <span class="s2">&quot;endpointClass&quot;</span><span class="p">,</span> <span class="nx">radius</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span> <span class="nx">hoverClass</span><span class="o">:</span> <span class="s2">&quot;endpointHoverClass&quot;</span> <span class="p">}</span> <span class="p">],</span>
+    <span class="nx">EndpointStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">fillStyle</span><span class="o">:</span> <span class="s1">&#39;#89bcde&#39;</span> <span class="p">},</span>
+    <span class="nx">EndpointHoverStyle</span><span class="o">:</span> <span class="p">{</span> <span class="nx">fillStyle</span><span class="o">:</span> <span class="s2">&quot;orange&quot;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here&#39;s an explanation of what the various parameters mean:</p>
+
+<ul>
+<li><strong>container</strong></li>
+</ul>
+
+<p>This identifies the element into which you wish the Toolkit to render.</p>
+
+<ul>
+<li><strong>view</strong></li>
+</ul>
+
+<p>These are the Node, Port and Edge definitions for this renderer.</p>
+
+<ul>
+<li><strong>layout</strong></li>
+</ul>
+
+<p>Parameters for the layout. </p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;Spring&quot;</span><span class="p">,</span>
+  <span class="nx">parameters</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">padding</span><span class="o">:</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here we specify a <code>Spring</code> layout with padding of 30 pixels between nodes in each axis.</p>
+
+<ul>
+<li><strong>miniview</strong></li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">container</span><span class="o">:</span><span class="nx">miniviewElement</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The miniview options provide the element to convert into a miniview. You can also supply an element ID here.</p>
+
+<ul>
+<li><strong>lassoFilter</strong></li>
+</ul>
+
+<p>This selector specifies elements on which a mousedown should <strong>not</strong> cause the selection lasso to begin. In this demonstration we exclude the buttons in the top left and the miniview.</p>
+
+<ul>
+<li><strong>dragOptions</strong></li>
+</ul>
+
+<p>Options for Node drag. Here we supply a filter that tells the Toolkit not to start a drag from the delete or add buttons.</p>
+
+<ul>
+<li><strong>events</strong></li>
+</ul>
+
+<p>We listen for two events:</p>
+
+<p><code>canvasClick</code> - a click somewhere on the widget&#39;s whitespace. Then we clear the Toolkit&#39;s current selection.</p>
+
+<p><code>modeChanged</code> - Surface&#39;s mode has changed (either &quot;select&quot; or &quot;pan&quot;). We update the state of the buttons.</p>
+
+<ul>
+<li><strong>jsPlumb</strong></li>
+</ul>
+
+<p>Recall that the Surface widget is backed by an instance of jsPlumb. This parameter sets the <a href="/community/doc/defaults.html">Defaults</a> for that object.  </p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="selecting"></a></p>
+
+<h3>Selecting Nodes</h3>
+
+<p>Lasso selection is enabled by default on the Surface widget. To activate the lasso, click the pencil icon in the toolbar:</p>
+
+<p><img src="select-lasso.png" alt="Lasso Select Mode"></p>
+
+<p>The code that listens to clicks on this icon is as follows:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// pan mode/select mode</span>
+<span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;.controls&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;[mode]&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">renderer</span><span class="p">.</span><span class="nx">setMode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;mode&quot;</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>The tap listener extracts the desired mode from the button that was clicked and sets it on the renderer. This causes
+a <code>modeChanged</code> event to be fired, which is picked up by the <code>modeChanged</code> event listener in the View.</p>
+
+<p>Note that here we could have used a <code>click</code> listener, but <code>tap</code> works better for mobile devices.</p>
+
+<h5>Lasso Operation</h5>
+
+<p>The lasso works in two ways: when you drag from left to right, any node that intersects your lasso will be selected.  When you drag from right to left, only nodes that are enclosed by your lasso will be selected.</p>
+
+<h5>Exiting Select Mode</h5>
+
+<p>The Surface widget automatically exits select mode once the user has selected something. In this application we also 
+listen to clicks on the whitespace in the widget and switch back to pan mode when we detect one. This is the related code,
+from the <code>events</code> argument to the <code>render</code> call:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">canvasClick</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">toolkit</span><span class="p">.</span><span class="nx">clearSelection</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="p">...</span>
+</code></pre></div>
+<p><code>clearSelection</code> clears the current selection and switches back to Pan mode.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="adding"></a></p>
+
+<h3>Adding New Nodes</h3>
+
+<p>Each node in this demonstration has two buttons:</p>
+
+<p><img src="demo-spring-single-node.png" alt="Single Node"></p>
+
+<p>Clicking on the <strong>+</strong> button causes a new node to be added as a child of the current Node. Here&#39;s the code that sets up the listener and adds the child. It is <strong>important</strong> to note the usage of the <code>toolkit.batch</code> function in this example: its purpose is to allow multiple operations to occur on the dataset without any re-rendering taking place.  In the case of this demonstration, we add a new Node and then connect it via a new Edge to the Node that was clicked.  If we did not batch these operations then the Spring layout would run after the new Node was placed, and the Node&#39;s placement would be calculated without the knowledge that it should be connected to some other Node. The Spring layout locks the position of Nodes once they have been calculated in order to reduce the jittery effect you sometimes see with these layouts.  On a <code>relayout</code>, every Node is unlocked, but operations such as <code>addNode</code> and <code>addEdge</code> kick off only an incremental layout, not a full relayout.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;#canvas&quot;</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;.add *&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// this helper method can retrieve the associated</span>
+  <span class="c1">// toolkit information from any DOM element.</span>
+  <span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getObjectInfo</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="nx">toolkit</span><span class="p">.</span><span class="nx">batch</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get data for a random node and add the node to the toolkit</span>
+    <span class="kd">var</span> <span class="nx">newNode</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">addNode</span><span class="p">(</span><span class="nx">jsPlumbToolkitDemoSupport</span><span class="p">.</span><span class="nx">randomNode</span><span class="p">());</span>
+    <span class="c1">// and add an edge for it from the current node.</span>
+    <span class="nx">toolkit</span><span class="p">.</span><span class="nx">addEdge</span><span class="p">({</span><span class="nx">source</span><span class="o">:</span> <span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span> <span class="nx">newNode</span><span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a id="deleting"></a></p>
+
+<h3>Deleting Nodes</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;#canvas&quot;</span><span class="p">,</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span> <span class="s2">&quot;.delete *&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">toolkit</span><span class="p">.</span><span class="nx">getObjectInfo</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="nx">toolkit</span><span class="p">.</span><span class="nx">removeNode</span><span class="p">(</span><span class="nx">info</span><span class="p">.</span><span class="nx">obj</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Once again we see <code>tap</code> used rather than <code>click</code>; this works better on mobile devices.</p>
+
+<p><a href="#top">TOP</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

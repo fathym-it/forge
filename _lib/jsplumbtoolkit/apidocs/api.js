@@ -1,0 +1,41 @@
+YUI.add("yuidoc-meta", function(Y) {
+   Y.YUIDoc = { meta: {
+    "classes": [
+        "Cluster",
+        "Edge",
+        "Graph",
+        "Group",
+        "Layouts.Absolute",
+        "Layouts.AbsoluteBackedLayout",
+        "Layouts.AbstractHierarchicalLayout",
+        "Layouts.AbstractLayout",
+        "Layouts.EmptyLayout",
+        "Layouts.Hierarchical",
+        "Layouts.Mistletoe",
+        "Node",
+        "Path",
+        "Port",
+        "Selection",
+        "Surface",
+        "Vue 2 jsplumb-miniview component",
+        "Vue 2 jsplumb-toolkit component",
+        "Vue2 palette mixin",
+        "ZoomWidget",
+        "jsPlumb Palette directive",
+        "jsPlumb.ng",
+        "jsPlumbToolkit directive.",
+        "jsPlumbToolkit.Dialogs",
+        "jsPlumbToolkit.DrawingTools",
+        "jsPlumbToolkit.Layouts.Spring",
+        "jsPlumbToolkit.Model",
+        "jsPlumbToolkit.Renderers.AbstractRenderer",
+        "jsPlumbToolkit.Renderers.Miniview",
+        "jsPlumbToolkit.Support",
+        "jsPlumbToolkit.Vue",
+        "jsPlumbToolkit.Widgets.Lasso",
+        "jsPlumbToolkitInstance"
+    ],
+    "modules": [],
+    "allModules": []
+} };
+});

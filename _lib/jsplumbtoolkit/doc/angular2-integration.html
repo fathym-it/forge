@@ -1,0 +1,388 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a name="top"></a></p>
+
+<h2>Angular 2/4 Integration</h2>
+
+<p>The jsPlumb Toolkit has several components to assist you in integrating with Angular 2.x and Angular 4.x.  For Angular 1.x 
+integration, refer to <a href="angular-1.x-integration">this page</a>.</p>
+
+<h3>Typescript vs Javascript</h3>
+
+<p>The default, and recommended, language for writing applications in Angular 2 is Typescript. The jsPlumb Toolkit supports
+only Typescript.</p>
+
+<ul>
+<li><a href="#components">Components</a></li>
+</ul>
+
+<p><a name="components"></a></p>
+
+<h3>Components</h3>
+
+<p>Angular 2 and Angular 4 are component based - everything is a component. The Toolkit offers 3 components:</p>
+
+<h4>jsplumb-toolkit</h4>
+
+<p>This is an element component that provides an instance of the Toolkit and a Surface widget to render the contents.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;jsplumb-toolkit</span> <span class="na">jtkId=</span><span class="s">&quot;toolkit&quot;</span> <span class="na">surfaceId=</span><span class="s">&quot;surfaceId&quot;</span> <span class="err">[renderParams]=&quot;anObjectReference&quot;</span> 
+        <span class="err">[toolkitParams]=&quot;anObjectReference&quot;</span> <span class="err">[view]=&quot;anObjectReference&quot;</span> <span class="err">[nodeResolver]=&quot;aFunctionReference&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/jsplumb-toolkit&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<p>All attributes are optional except <code>nodeResolver</code>.</p>
+
+<ul>
+<li><code>jtkId</code> Unique ID for the Toolkit instance. Can be used to retrieve a Toolkit instance from the jsPlumb module.</li>
+<li><code>surfaceId</code> Unique ID for the Surface widget. Required if you wish to attach a Miniview or a Palette.</li>
+<li><code>renderParams</code> Parameters to pass in to the constructor of the Surface widget.</li>
+<li><code>toolkitParams</code> Parameters to pass in to the constructor of the Toolkit instance.</li>
+<li><code>view</code> View parameters. Views are discussed <a href="models-and-views.html#views">here</a>.</li>
+<li><code>nodeResolver</code> This function is given the<code>type</code> of some Node/Group to render, and is expected to return an Angular 2
+component to render an object of that given type.</li>
+</ul>
+
+<hr>
+
+<h4>jsplumb-miniview</h4>
+
+<p>This is an element component that provides a Miniview that can be attached to some Surface.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;jsplumb-miniview</span> <span class="na">surfaceId=</span><span class="s">&quot;surfaceId&quot;</span><span class="nt">&gt;&lt;/jsplumb-miniview&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<ul>
+<li><code>surfaceId</code> ID for the Surface widget to which to attach the Miniview.</li>
+</ul>
+
+<hr>
+
+<h4>jsplumb-palette</h4>
+
+<p>This is an &quot;attribute component&quot;: it is created by adding this attribute to some other element. The Palette component provides
+a means to implement drag/drop of new Nodes/Groups onto your Surface.</p>
+
+<h5>Example</h5>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;someClass&quot;</span> <span class="err">jsplumb-palette</span> <span class="na">selector=</span><span class="s">&quot;li&quot;</span> <span class="na">surfaceId=</span><span class="s">&quot;surfaceId&quot;</span> <span class="err">[typeExtractor]=&quot;typeExtractor&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-node-type=</span><span class="s">&quot;foo&quot;</span><span class="nt">&gt;</span>FOO<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">data-node-type=</span><span class="s">&quot;bar&quot;</span><span class="nt">&gt;</span>BAR<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h5>Attributes</h5>
+
+<ul>
+<li><code>selector</code> A valid CSS3 selector identifying descendant nodes that are to be configured as draggable/droppables.</li>
+<li><code>surfaceId</code> The ID of the Surface to which to attach the Palette.</li>
+<li><code>typeExtractor</code> A Function that, given some DOM element, can return the <code>type</code> of the Node/Group the element represents. In this
+example, our <code>typeExtractor</code> function would return the value of the <code>data-node-type</code> attribute.</li>
+<li><code>dataGenerator</code> Not shown in our example, this optional Function can be used to provide default data for some Node/Group type.</li>
+</ul>
+
+<p>For further reading on the concept of Palettes, see <a href="rendering.html#dragpalette">this page</a> .</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="imports"></a></p>
+
+<h3>Typescript Integration</h3>
+
+<p>jsPlumb&#39;s Angular 2/Angular 4 integration and demonstrations are based on the <a href="https://angular.io/docs/ts/latest/quickstart.html">Quickstart Guide</a>.  This page provides a high level overview;
+for more detailed information see the <a href="demo-angular2-typescript.html">Angular Demonstration</a> documentation.</p>
+
+<h4>Imports</h4>
+
+<p>You need to include the jsPlumb Toolkit and the jsPlumb Toolkit Angular Typescript adapter.</p>
+
+<h5>Toolkit Edition</h5>
+
+<h6>NPM</h6>
+
+<p>Since the Toolkit edition is not open source, if you need to include it as an import in package.json, you can use (from NPM 3+) a local import:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span><span class="s2">&quot;file:./somewhere/jsplumbtoolkit.tgz&quot;</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">},</span>
+</code></pre></div><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h6>Standard Include</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;somewhere/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h5>Angular 2 Typescript adapter</h5>
+
+<p>This - `jsplumbtoolkit-angular2.ts - is a Typescript file.  The easiest thing to do is to include it alongside the other Typescript files in your application.</p>
+
+<p><a id="typescript-definitions"></a></p>
+
+<h4>Typescript Definitions</h4>
+
+<p>Since the jsPlumb Community and Toolkit editions are Javascript files, you will probably need to import the Typescript Definition files for these. The Typescript
+definition files are stored in the <code>types</code> directory in the root of your licensed download: there&#39;s a <code>jsplumb</code> and a <code>jsplumbtoolkit</code> directory, each of which
+contains an <code>index.d.ts</code> and a <code>package.json</code>. </p>
+
+<p>Here&#39;s how the Angular 2 demo imports the Typescript definitions:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span>    
+    <span class="s2">&quot;jsplumbtoolkittypes&quot;</span><span class="o">:</span><span class="s2">&quot;file:../../types/jsplumbtoolkit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jsplumbtypes&quot;</span><span class="o">:</span><span class="s2">&quot;file:../../types/jsplumb&quot;</span><span class="p">,</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When you run <code>npm install</code> these definitions are copied into <code>node_modules/@types/jsplumb</code> and <code>node_modules/@types/jsplumbtoolkit</code>. These are appropriate locations for the Typescript
+module loader to find, as long as you use <code>&quot;moduleResolution&quot;: &quot;node&quot;,</code> in your Typescript config.</p>
+
+<h4>Components</h4>
+
+<p>jsPlumb offers three components:</p>
+
+<ul>
+<li><strong>jsplumb-toolkit</strong> - A Toolkit instance and associated Surface widget</li>
+<li><strong>jsplumb-miniview</strong> - A miniview you can attach to a Surface</li>
+<li><strong>jsplumb-palette</strong> - A palette from which nodes can be dragged onto a Surface</li>
+</ul>
+
+<h4>Imports</h4>
+
+<h5>Module imports</h5>
+
+<p>To import the Toolkit into your module:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">jsPlumbToolkitModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./jsplumbtoolkit-angular2&quot;</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+    <span class="nx">imports</span><span class="o">:</span>      <span class="p">[</span> <span class="nx">BrowserModule</span><span class="p">,</span> <span class="nx">jsPlumbToolkitModule</span> <span class="p">],</span>
+    <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span> <span class="nx">AppComponent</span><span class="p">,</span> <span class="nx">QuestionNodeComponent</span><span class="p">,</span> <span class="nx">ActionNodeComponent</span><span class="p">,</span> <span class="nx">StartNodeComponent</span><span class="p">,</span> <span class="nx">OutputNodeComponent</span> <span class="p">],</span>
+    <span class="nx">bootstrap</span><span class="o">:</span>    <span class="p">[</span> <span class="nx">AppComponent</span> <span class="p">],</span>
+    <span class="nx">entryComponents</span><span class="o">:</span> <span class="p">[</span> <span class="nx">QuestionNodeComponent</span><span class="p">,</span> <span class="nx">ActionNodeComponent</span><span class="p">,</span> <span class="nx">StartNodeComponent</span><span class="p">,</span> <span class="nx">OutputNodeComponent</span> <span class="p">],</span>
+    <span class="nx">schemas</span><span class="o">:</span><span class="p">[</span> <span class="nx">CUSTOM_ELEMENTS_SCHEMA</span> <span class="p">]</span>
+<span class="p">})</span>
+</code></pre></div>
+<p>The important bit here is the <code>imports</code> array. This example comes from the Angular 2 Typescript demo that ships with the Tookit (linked below).</p>
+
+<h5>Component imports</h5>
+
+<p>To import components inside a <code>.ts</code> file:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">jsPlumbToolkitComponent</span><span class="p">,</span> <span class="nx">jsPlumbMiniviewComponent</span><span class="p">,</span> <span class="nx">jsPlumbPaletteComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./jsplumbtoolkit-angular2&quot;</span>
+</code></pre></div>
+<h3>Further Reading</h3>
+
+<p>We refer you to the <a href="demo-angular2-typescript.html">Angular 2 Demonstration</a> documentation.  It uses all of the Angular 2 integration.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="javascript"></a></p>
+
+<h3>Javascript Integration</h3>
+
+<p>Although the vast majority of Angular 2 development seems to be done in Typescript, it is possible - and the jsPlumb
+Toolkit supports this - to write an Angular 2 app completely in Javascript.</p>
+
+<h4>Imports</h4>
+
+<h6>NPM</h6>
+
+<p>Since the Toolkit edition is not open source, if you need to include it as an import in package.json, you can use (from NPM 3+) a local import.
+You can also import the Javascript Angular 2 adapter via NPM.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="s2">&quot;jsplumbtoolkit&quot;</span><span class="o">:</span><span class="s2">&quot;file:./somewhere/jsplumbtoolkit.tgz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jsplumbtoolkit-angular2&quot;</span><span class="o">:</span><span class="s2">&quot;file:./somewhere/jsplumbtoolkit-angular2-javascript.tgz&quot;</span>
+    <span class="p">...</span>
+<span class="p">},</span>
+</code></pre></div><div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit/dist/js/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/jsplumbtoolkit-angular2-javascript/dist/js/jsplumbtoolkit-angular2-javascript.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h6>Standard Import</h6>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;somewhere/jsplumbtoolkit.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;somewhere/jsplumbtoolkit-angular2.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<h4>Overview</h4>
+
+<p>jsPlumb&#39;s Angular 2 Javascript API consists of a few pieces:</p>
+
+<ul>
+<li><strong>jsPlumbService</strong> - an Angular 2 service used internally by the jsPlumb components</li>
+<li><strong>jsPlumbToolkit.ng.registerApplicationNodes</strong> - a static method used to <a href="#node-group-components">register your node/group components</a></li>
+<li><strong>jsplumb-toolkit</strong> - a component consisting of a Toolkit instance and a Surface widget</li>
+<li><strong>jsplumb-miniview</strong> - a miniview component</li>
+<li><strong>jsplumb-palette</strong> - a component providing nodes that are draggable onto a Surface</li>
+</ul>
+
+<p><a name="node-group-components"></a></p>
+
+<h5>Node/Group Components</h5>
+
+<p>The Toolkit expects to render each Node/Group with some Angular 2 component. These components must be identified in your application&#39;s module
+(in both the <code>declarations</code> and <code>entryComponents</code> arrays).  This, for example, is the very first thing that the Javascript Angular 2 demo does:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">ng</span><span class="p">.</span><span class="nx">registerApplicationNodes</span><span class="p">(</span><span class="nx">app</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s2">&quot;StartNode&quot;</span><span class="o">:</span><span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span><span class="s2">&quot;templates/start.html&quot;</span> <span class="p">},</span>
+    <span class="s2">&quot;QuestionNode&quot;</span><span class="o">:</span><span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span><span class="s2">&quot;templates/question.html&quot;</span> <span class="p">},</span>
+    <span class="s2">&quot;OutputNode&quot;</span><span class="o">:</span><span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span><span class="s2">&quot;templates/output.html&quot;</span> <span class="p">},</span>
+    <span class="s2">&quot;ActionNode&quot;</span><span class="o">:</span><span class="p">{</span> <span class="nx">templateUrl</span><span class="o">:</span><span class="s2">&quot;templates/action.html&quot;</span> <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>For a more in-depth look at the Angular 2 Javascript integration, take a look at <a href="demo-angular2-javascript.html">this demo</a>.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

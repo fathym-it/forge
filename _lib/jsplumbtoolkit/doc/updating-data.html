@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <h2>Updating Data</h2>
+
+<p>When you make changes to the underlying dataset used by an instance of the jsPlumb Toolkit, in most cases you&#39;ll 
+want the UI to change to reflect those changes. There are two sets of methods to help you with this - one in which 
+you ask the Toolkit to make the updates and then refresh itself, and another in which you tell the Toolkit the data 
+has already been updated and that it should refresh.</p>
+
+<h4>Telling the Toolkit to update data</h4>
+
+<p>To do this, you use one of the <code>updateXXX</code> methods:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">myToolkitInstance</span><span class="p">.</span><span class="nx">updateNode</span><span class="p">(</span><span class="s2">&quot;aNodeId&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">foo</span><span class="o">:</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="nx">baz</span><span class="o">:</span><span class="mi">42</span> <span class="p">});</span>
+</code></pre></div>
+<p>Here, we have passed in a node id - &quot;aNodeId&quot; to identify which Node to update.  As with all Node-related methods in 
+the Toolkit, we could have passed in one of three things:</p>
+
+<ul>
+<li>a Node id</li>
+<li>a jsPlumb Toolkit Node object </li>
+<li>the data representing some Node</li>
+</ul>
+
+<p>For Edges and Ports the methods are:</p>
+
+<ul>
+<li><code>updatePort( somePortOrPortId, { key:value... })</code></li>
+<li><code>updateEdge( someEdgeOrEdgeId, { key:value... })</code></li>
+</ul>
+
+<h4>Telling the Toolkit some data was updated</h4>
+
+<p>To do this, you use one of these three methods:</p>
+
+<ul>
+<li><code>refreshNode(someNodeOrNodeId)</code></li>
+<li><code>refreshPort(somePortOrPortId)</code></li>
+<li><code>refreshEdge(someEdgeOrEdgeId)</code></li>
+</ul>
+
+<p>These methods are called internally by their corresponding <code>updateXXX</code> methods after the data has been updated.</p>
+
+<h4>Events</h4>
+
+<p>The following events are fired by these methods:</p>
+
+<table width="100%">
+<tr><th>Method</th><th>Event</th><th>Parameters</th></tr>
+<tr><td>updateNode</td><td>nodeUpdated</td><td>{ node:Node }</td></tr>
+<tr><td></td><td>nodeRefreshed</td><td>{ node:Node }</td></tr>
+<tr><td>updatePort</td><td>portUpdated</td><td>{ node:Node, port:Port }</td></tr>
+<tr><td></td><td>portRefreshed</td><td>{ node:Node, port:Port }</td></tr>
+<tr><td>updateEdge</td><td>edgeUpdated</td><td>{ edge:Edge }</td></tr>
+<tr><td></td><td>edgeRefreshed</td><td>{ edge:Edge }</td></tr>
+<tr><td>refreshNode</td><td>nodeRefreshed</td><td>{ node:Node }</td></tr>
+<tr><td>refreshPort</td><td>portRefreshed</td><td>{ node:Node, port:Port }</td></tr>
+<tr><td>refreshEdge</td><td>edgeRefreshed</td><td>{ edge:Edge }</td></tr>
+</table>
+
+<h4>Updating the original dataset</h4>
+
+<p>If you use the Graph JSON format when loading data into the Toolkit, the dataset is, by default, automatically 
+updated whenever you add/remove Nodes and Edges. This is handled by a &quot;data manager&quot; that is registered in 
+the <code>jsPlumbToolkitIO</code> namespace:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumbToolkitIO</span><span class="p">.</span><span class="nx">managers</span><span class="p">[</span><span class="s2">&quot;json&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+
+  <span class="nx">addNode</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">node</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">addEdge</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">edge</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">removeNode</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">node</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">removeEdge</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">edge</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This behaviour can be suppressed by setting <code>doNotUpdateOriginalData:true</code> when you instantiate your instance of the 
+Toolkit:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myToolkit</span> <span class="o">=</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">({</span><span class="nx">doNotUpdateOriginalData</span><span class="o">:</span><span class="kc">true</span><span class="p">});</span>
+</code></pre></div>
+<p>The methods related to Nodes and Edges are given the associated Node/Edge as argument. The methods related to Ports
+are given an object containing both <code>node</code> and <code>port</code>.</p>
+
+<h6>Auto update vs save</h6>
+
+<p>The existence of this functionality means that when you&#39;re using the default &quot;Graph JSON&quot; syntax, if you loaded 
+the data from a local object then you might not find yourself needing to call <code>exportData</code> on the Toolkit instance, 
+since the dataset is always up to date. It might seem redundant to provide two ways to get the current dataset, but 
+when you&#39;re using a custom loader, or the &quot;hierarchical json&quot; syntax, your original data will not be 
+automatically updated. It&#39;s only for &quot;graph json&quot; that this functionality is enabled out of the box.</p>
+
+<h4>Writing a custom data manager</h4>
+
+<p>It may have already occurred to you, but you can write your own data manager and register it on an instance of the 
+Toolkit.  You just need to implement any of the six methods discussed above, and then register the manager using the 
+same id under which you registered the associated data loader. Say you had a data loader with type <code>&quot;complicated&quot;</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumbToolkitIO</span><span class="p">.</span><span class="nx">parsers</span><span class="p">[</span><span class="s2">&quot;complicated&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">toolkit</span><span class="p">,</span> <span class="nx">parameters</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Then you could also register this:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jsPlumbToolkitIO</span><span class="p">.</span><span class="nx">managers</span><span class="p">[</span><span class="s2">&quot;complicated&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+
+  <span class="nx">addNode</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">node</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">addEdge</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">edge</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">removeNode</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">node</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">},</span>
+  <span class="nx">removeEdge</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">dataset</span><span class="p">,</span> <span class="nx">edge</span><span class="p">,</span> <span class="nx">idFunction</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>But note again that not all the methods are required. </p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

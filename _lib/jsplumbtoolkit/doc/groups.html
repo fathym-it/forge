@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>jsPlumb Toolkit - documentation</title>
+        <link href="../../css/main.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+
+
+
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-defaults.css">
+        <link rel="stylesheet" href="../css/jsplumbtoolkit-demo.css">
+        <link rel="stylesheet" href="../css/jsplumb-doc.css">
+    </head>
+
+    <body>
+
+        <div class="jtk-header">
+    <a class="jtk-logo" href="../index.html"><img src="../img/logo-medium-jsplumb.png"></a>
+
+    <div class="jtk-nav">
+        <li><a href="../index.html#demos">DEMOS</a></li>
+<li><a href="../doc/home.html">DOCS</a></li>
+<li><a href="../apidocs/index.html">APIDOCS</a></li>
+
+    </div>
+
+</div>
+
+
+        <div class="jtk-page-container padding-top-page " style="display:flex;">
+            <div id="docs-nav" tabindex="0">
+                <ul>
+<li>Introduction
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="basic-concepts.html">Basic Concepts</a></li>
+<li><a href="basic-concepts.html#instantiating">Instantiating the Toolkit</a></li>
+<li><a href="basic-concepts.html#basicloading">Loading Data</a></li>
+<li><a href="basic-concepts.html#rendering">Rendering</a></li>
+<li><a href="getting-started.html">Creating an app</a></li>
+</ul></li>
+<li>Data Model
+
+<ul>
+<li><a href="data-model.html">Overview</a></li>
+<li><a href="data-model.html#format">Data Format</a></li>
+<li><a href="data-model.html#node-edge-port-id">Node, Group, Edge and Port IDs</a></li>
+<li><a href="data-model.html#node-edge-port-type">Node, Group, Edge and Port Type</a></li>
+<li><a href="data-model.html#datafactories">Data Factories</a></li>
+<li><a href="graph.html">Graph Operations</a></li>
+</ul></li>
+<li>Rendering
+
+<ul>
+<li><a href="rendering.html">Overview</a></li>
+<li><a href="views.html">Configuring a View</a></li>
+<li><a href="templating.html">Templating</a></li>
+<li><a href="groups.html">Groups</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+<li><a href="ui-states.html">UI States</a></li>
+<li><a href="path-tracing.html">Path Tracing</a></li>
+<li><a href="rendering.html#visibility">Hiding/Showing Elements</a></li>
+<li><a href="rendering.html#dragpalette">Drag &amp; Drop Nodes</a></li>
+<li><a href="navigation.html">Navigating your Dataset</a></li>
+<li><a href="widget-surface.html#zooming">Zooming</a></li>
+<li><a href="widget-surface.html">Surface Widget</a></li>
+</ul></li>
+<li>Data Management
+
+<ul>
+<li><a href="loading-and-saving-data.html">Loading &amp; Saving Data</a></li>
+<li><a href="updating-data.html">Updating Data</a></li>
+</ul></li>
+<li>CSS
+
+<ul>
+<li><a href="css.html">Overview</a></li>
+<li><a href="css.html#defaultcss">Default CSS Stylesheet</a></li>
+<li><a href="css.html#ref">Class Reference</a></li>
+</ul></li>
+<li>Events
+
+<ul>
+<li><a href="events.html">Overview</a></li>
+<li><a href="events.html#toolkit">Toolkit Events</a></li>
+<li><a href="events.html#surface">Rendering Events</a></li>
+</ul></li>
+<li>Selecting Content
+
+<ul>
+<li><a href="selections.html">Selections</a></li>
+<li><a href="selections.html#filter">Filtering</a></li>
+<li><a href="paths.html">Paths</a></li>
+</ul></li>
+<li>Library Integrations
+
+<ul>
+<li><a href="angular-1.x-integration">Angular 1.x</a></li>
+<li><a href="angular-integration.html">Angular 4/Angular 2</a></li>
+<li><a href="react-integration.html">React</a> </li>
+<li><a href="vue2-integration.html">Vue 2</a> </li>
+</ul></li>
+<li>Demonstrations<br>
+
+<ul>
+<li><a href="demo-hierarchical.html">Hierarchical Layout</a></li>
+<li><a href="multiple-hierarchy.html">Hierarchy (multiple roots)</a></li>
+<li><a href="demo-spring.html">Spring Layout</a></li>
+<li><a href="demo-circular.html">Circular Layout</a></li>
+<li><a href="demo-multiple.html">Multiple Renderers</a></li>
+<li><a href="demo-paths.html">Path Tracing</a></li>
+<li><a href="demo-absolute.html">Absolute Layout</a></li>
+<li><a href="demo-database-visualizer.html">Database Visualizer</a></li>
+<li><a href="demo-flowchart-builder.html">Flowchart Builder</a></li>
+<li><a href="demo-angular-1.x">Angular 1.x Integration</a></li>
+<li><a href="demo-angular.html">Angular 4 / Angular 2 Integration (Typescript)</a></li>
+<li><a href="demo-react.html">React Integration</a></li>
+<li><a href="demo-vue2.html">Vue 2 Integration</a></li>
+<li><a href="demo-hello-world.html">Hello World</a></li>
+<li><a href="demo-groups.html">Groups</a></li>
+<li><a href="demo-angular-1.x-groups">Groups (Angular)</a></li>
+<li><a href="demo-angular-groups.html">Groups (Angular 2)</a></li>
+<li><a href="demo-active-filtering.html">Active Filtering</a></li>
+<li><a href="demo-webpack.html">Webpack Bundling</a></li>
+</ul></li>
+<li>Miscellaneous
+
+<ul>
+<li><a href="dialogs.html">Dialogs</a></li>
+<li><a href="drawing.html">Drawing</a></li>
+<li><a href="changelog.html">Changelog</a></li>
+</ul></li>
+</ul>
+
+
+            </div>
+            <div id="docs">                
+                <div class="markdown-body">
+                    <p><a name="top"></a></p>
+
+<h3>Groups</h3>
+
+<p>Groups are elements in your UI that act as a container for zero or more Nodes. In the UI, these can be collapsed, and
+Edges to/from the Nodes inside the Group are then temporarily displaced to the Group container.</p>
+
+<ul>
+<li><a href="#datamodel">Working With Groups</a></li>
+<li><a href="#loading">Loading Group Data</a></li>
+<li><a href="#rendering">Rendering Groups</a>
+
+<ul>
+<li><a href="#view">View Specification</a></li>
+<li><a href="#templating">Templating</a></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#autosizing">Autosizing</a></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<p><a name="datamodel"></a></p>
+
+<h4>Working With Groups</h4>
+
+<p>Groups have in common with Nodes, Edges and Ports the two concepts of <code>id</code> and of <code>type</code>, and as with the other graph
+ objects, <code>type</code> will be set to <code>&quot;default&quot;</code> if it cannot be determined.  Group IDs and types either follow the default
+ rules (ie. they are given by the <code>id</code> and <code>type</code> parameters, respectively, in the Group&#39;s data), or they are derived
+ by applying the current <code>idFunction</code> and <code>typeFunction</code>. </p>
+
+<p>Groups, as with the other graph objects, can have arbitrary JSON data associated with them.</p>
+
+<hr>
+
+<p><a name="loading"></a></p>
+
+<h4>Loading Groups</h4>
+
+<p>The Toolkit&#39;s default JSON parser can parse information about Groups, and about Node membership in Groups. You can do
+this in two ways:</p>
+
+<ul>
+<li>Explicitly declared Groups</li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">();</span>
+<span class="nx">t</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">groups</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;g1&quot;</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;groupType1&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;g2&quot;</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span><span class="s2">&quot;groupType1&quot;</span> <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">nodes</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g1&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g1&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g2&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g2&quot;</span> <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">edges</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;2&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;3&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;3&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;2&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Here, we have a <code>groups</code> section which lists out all the groups in the dataset. Then in the <code>nodes</code> we map each Node to
+a Group, which is expected to be declared in the payload. The default behaviour of the Toolkit is to not create Groups
+that are referenced by a Node but which do not exist. You can set that on a flag though:</p>
+
+<ul>
+<li>Implicitly declared Groups</li>
+</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">({</span>
+  <span class="nx">createMissingGroups</span><span class="o">:</span><span class="kc">true</span>
+<span class="p">});</span>
+
+<span class="nx">t</span><span class="p">.</span><span class="nx">load</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">nodes</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g1&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g1&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g2&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">group</span><span class="o">:</span><span class="s2">&quot;g2&quot;</span> <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">edges</span><span class="o">:</span><span class="p">[</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;2&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;3&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;3&quot;</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="s2">&quot;source&quot;</span><span class="o">:</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="nx">target</span><span class="o">:</span><span class="s2">&quot;2&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>By setting <code>createMissingGroups:true</code> in the Toolkit factory method, we no longer need to declare the Groups in the JSON.
+ This approach has the drawback that you cannot specify the <code>type</code> of the Groups that are created: they will be given a
+ type of <code>&quot;default&quot;</code>. Also, you cannot associate arbitrary data with these automatically created groups, meaning in your
+ UI you will not be able to render anything unique to each Group. For some use cases, of course, this is perfectly acceptable.</p>
+
+<p><a href="#top">TOP</a></p>
+
+<hr>
+
+<p><a name="rendering"></a></p>
+
+<h4>Rendering</h4>
+
+<p>Groups are rendered using client side templates just as Nodes are. They are declared inside the <code>view</code> alongside Nodes,
+Edges and Ports. A simple example to start:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="p">...</span>
+  <span class="nx">view</span><span class="o">:</span><span class="p">{</span>
+    <span class="nx">nodes</span><span class="o">:</span><span class="p">{</span>
+        <span class="s2">&quot;default&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplNode&quot;</span><span class="p">,</span>
+            <span class="nx">events</span><span class="o">:</span><span class="p">{</span>
+                <span class="nx">click</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You clicked on node &quot;</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">groups</span><span class="o">:</span><span class="p">{</span>
+        <span class="s2">&quot;groupType1&quot;</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplGroupType1&quot;</span><span class="p">,</span>
+            <span class="nx">constrain</span><span class="o">:</span><span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Here we declare that Groups of type <code>groupType1</code> are to be rendered using the template <code>tmplGroupType1</code>, and that members
+of the Group are constrained to the Group element (that is, they cannot be dragged outside of the Group&#39;s bounds).</p>
+
+<p>There are several flags available to control the drag behaviour of members of a Group:</p>
+
+<ul>
+<li><em>droppable</em> True by default - indicates that Nodes may be dropped onto the Group.</li>
+<li><em>constrain</em> False by default - Nodes may be dragged outside of the bounds of their Group.</li>
+<li><em>revert</em> True by default - a Node dragged outside of its Group will, unless dropped on another Group, revert back to
+its position inside the Group.</li>
+<li><em>prune</em> False by default. If true, Nodes dropped outside of the Group (and not dropped onto another Group) are removed
+from the dataset (not just the Group...the entire dataset).</li>
+<li><em>orphan</em> False by default. If true, Nodes dropped outside of the Group (and not dropped onto another Group) are removed
+from the Group (but remain in the dataset)</li>
+<li><em>dropOverride</em> False by default. If true, Nodes dropped onto other Groups first have any rules established by this Group
+applied. For instance, if the Groups stated <code>prune:true</code>, then the Node would be removed from the dataset rather than be
+dropped onto another Group. </li>
+</ul>
+
+<h5>Collapsing/Expanding Groups</h5>
+
+<p>You can collapse/expand a group using the <code>collapseGroup</code> and <code>expandGroup</code> methods on the <code>Surface</code> widget. When you 
+collapse a Group, any Edges from any of the member Nodes in the Group to Nodes outside of the Group are relocated to the 
+Group&#39;s container, and a CSS class is applied to the Group&#39;s container, indicating the collapsed state. When you subsequently 
+expand the Group, the Edges are placed back onto their appropriate Nodes.</p>
+
+<p>It is important to note that when a Group is collapsed, the jsPlumb Toolkit does not hide the member Nodes automatically
+for you. But a CSS class of <code>jtk-group-collapsed</code> is added to the Group&#39;s container, for you to handle this in your CSS.</p>
+
+<p>The Endpoint and Anchor to be used in the collapsed state can be specified in the Group definition in the <code>view</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolkit</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span>
+  <span class="p">...</span>
+  <span class="nx">view</span><span class="o">:</span><span class="p">{</span>    
+    <span class="nx">groups</span><span class="o">:</span><span class="p">{</span>
+      <span class="s2">&quot;groupType1&quot;</span><span class="o">:</span><span class="p">{</span>
+          <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplGroupType1&quot;</span><span class="p">,</span>
+          <span class="nx">endpoint</span><span class="o">:</span><span class="s2">&quot;Blank&quot;</span><span class="p">,</span>
+          <span class="nx">anchor</span><span class="o">:</span><span class="s2">&quot;Continuous&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Any valid Anchor/Endpoint (including custom Endpoints) can be used here. </p>
+
+<h5>Templating</h5>
+
+<h6>Specifying the Node canvas</h6>
+
+<p>It is not necessarily the case that you wish to use your entire Group template as the parent of the Group&#39;s members. You 
+can set a <code>jtk-group-content</code> attribute on the element that you wish to have acting as the parent for the members:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;jtk&quot;</span> <span class="na">id=</span><span class="s">&quot;tmplMyGroup&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;aGroup&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>${title}<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">jtk-group-content=</span><span class="s">&quot;true&quot;</span> <span class="na">class=</span><span class="s">&quot;aGroupInner&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- Nodes go here --&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
+<p><a href="top.html">TOP</a></p>
+
+<hr>
+
+<p><a name="draganddrop"></a></p>
+
+<h5>Drag and Drop Groups</h5>
+
+<p>You can drag Groups from a palette onto a Surface using the same <code>registerDroppableNodes</code> method used to drag Nodes
+onto a Surface, with two differences:</p>
+
+<ul>
+<li>you need to set <code>jtk-group=&quot;true&quot;</code> as an attribute on an element that you wish to drag on to the Surface as a Group</li>
+<li>the current <code>GroupFactory</code> will be called to prepare a dataset for your new Group, rather than the current <code>NodeFactory</code>.</li>
+</ul>
+
+<p>Here&#39;s an example from the Groups demo that ships with the Toolkit (showing both Nodes and Groups, but we&#39;re just going
+to focus on the Groups setup):</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;sidebar node-palette&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">title=</span><span class="s">&quot;Drag Node to canvas&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-tablet&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>Drag Node
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">title=</span><span class="s">&quot;Drag Group to canvas&quot;</span> <span class="na">jtk-group=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-tablet&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>Drag Group
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>The Toolkit instance is configured with both a <code>nodeFactory</code> and a <code>groupFactory</code>:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">toolkit</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">toolkit</span> <span class="o">=</span> <span class="nx">jsPlumbToolkit</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">({</span>
+    <span class="nx">groupFactory</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Group &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">getGroupCount</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">nodeFactory</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="p">(</span><span class="nx">toolkit</span><span class="p">.</span><span class="nx">getNodeCount</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>...and the call to configure the drag/drop is no different to that which you&#39;d make just for Nodes:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">renderer</span><span class="p">.</span><span class="nx">registerDroppableNodes</span><span class="p">({</span>
+    <span class="nx">droppables</span><span class="o">:</span> <span class="nx">jsPlumb</span><span class="p">.</span><span class="nx">getSelector</span><span class="p">(</span><span class="s2">&quot;.node-palette li&quot;</span><span class="p">),</span>
+    <span class="nx">dragOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">zIndex</span><span class="o">:</span> <span class="mi">50000</span><span class="p">,</span>
+        <span class="nx">cursor</span><span class="o">:</span> <span class="s2">&quot;move&quot;</span><span class="p">,</span>
+        <span class="nx">clone</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><a href="top.html">TOP</a></p>
+
+<hr>
+
+<p><a name="autosize"></a></p>
+
+<h5>Autosizing Groups</h5>
+
+<p>Groups can be configured to automatically resize themselves to encompass the extents of their child Nodes, via the
+ <code>autoSize</code> flag on a Group definition in a View:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"> <span class="nx">view</span><span class="o">:</span><span class="p">{</span>
+     <span class="nx">groups</span><span class="o">:</span><span class="p">{</span>
+         <span class="s2">&quot;groupType1&quot;</span><span class="o">:</span><span class="p">{</span>
+             <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplGroupTypeOne&quot;</span><span class="p">,</span>
+             <span class="nx">autoSize</span><span class="o">:</span><span class="kc">true</span>
+         <span class="p">},</span>
+         <span class="s2">&quot;groupType2&quot;</span><span class="o">:</span><span class="p">{</span>
+             <span class="nx">template</span><span class="o">:</span><span class="s2">&quot;tmplGroupTypeOne&quot;</span><span class="p">,</span>
+             <span class="nx">autoSize</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span>
+             <span class="nx">maxSize</span><span class="o">:</span><span class="p">[</span><span class="mi">600</span><span class="p">,</span><span class="mi">600</span><span class="p">]</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</code></pre></div>
+<p>In this example, both Group types are declared to auto size, but <code>groupType2</code> will grow to a maximum of 600 pixels
+in each axis.</p>
+
+<p>Autosizing is run after a data load (ie. you call <code>toolkit.load(...)</code>), or when data exists in a Toolkit instance and
+you call <code>toolkit.render(...)</code>.</p>
+
+<p>You can run auto sizing on demand:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">surface</span><span class="p">.</span><span class="nx">autoSizeGroups</span><span class="p">();</span>
+</code></pre></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
