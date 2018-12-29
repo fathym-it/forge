@@ -23,6 +23,10 @@ const routes: Routes = [
 		loadChildren: './pages/solutions/solutions.module#SolutionsModule'
 	},
 	{
+		path: 'flux',
+		loadChildren: './pages/flux/flux.module#FluxPagesModule'
+	},
+	{
 		path: '',
 		loadChildren: './pages/pages/pages.module#PagesModule'
 	},

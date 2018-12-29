@@ -1,48 +1,721 @@
-@import '../../common/src/styles/theme';
+@import "../../common/src/styles/theme";
+
+$brand-black: rgb(10, 10, 10) !default;
+
+$brand-white: rgb(245, 245, 245) !default;
+
+@mixin flux($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  iframe {
+    border: none !important;
+  }
+
+  body {
+    height: 100%;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(
+        to bottom,
+        transparentize($brand-white, 0.1),
+        transparentize($brand-white, 0.1)
+      ),
+      url(/img/clouds.jpg);
+
+    .loader {
+      height: 1200px;
+      z-index: 3000;
+
+      &.page-loaded {
+        opacity: 0.5;
+        background-color: white;
+      }
+    }
+
+    .module-manager-container {
+      transform: translateY(0%) scale(1);
+      opacity: 1;
+
+      .module-manager-loading {
+        margin: 100px;
+      }
+    }
+
+    .mat-button,
+    .mat-raised-button {
+      margin-left: 0 !important;
+    }
+
+    mat-dialog-content {
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    flux-layout {
+      app-overview {
+        padding: 5%;
+      }
+
+      app-flux {
+        padding: 0;
+      }
+
+      display: block;
+
+      @media screen and (max-width: 549px) {
+        padding: 2.5%;
+      }
+
+      .lead {
+        font-size: 18px;
+      }
+
+      [color="warn"] {
+        color: mat-color($warn);
+      }
+
+      .mat-list {
+        text-align: left;
+      }
+
+      .mat-list .mat-list-item .mat-line,
+      .mat-nav-list .mat-list-item .mat-line {
+        white-space: normal;
+      }
+
+      .mat-list .mat-list-item .mat-list-item-content,
+      .mat-nav-list .mat-list-item .mat-list-item-content {
+        height: auto !important;
+      }
+
+      .mat-list .mat-subheader {
+        display: block !important;
+      }
+
+      .mat-list .mat-subheader,
+      .mat-nav-list .mat-subheader,
+      .mat-list .mat-list-item,
+      .mat-nav-list .mat-list-item {
+        color: mat-color($primary, 50);
+      }
+
+      app-overview {
+        display: block;
+      }
+    }
+
+    &.flow-manage app {
+      position: relative;
+      padding: 0;
+    }
+
+    flow-manager {
+      .close {
+        position: absolute;
+        top: 0.25rem;
+        right: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        min-width: unset;
+      }
+
+      f-loader {
+        display: block;
+        margin: 4rem;
+      }
+    }
+
+    .menu-item-active {
+      background-color: mat-color($warn, 300);
+    }
+
+    .snack-bar-container {
+      background-color: mat-color($warn, 300);
+      max-width: 1500px;
+    }
+  }
+
+  footer {
+    h3 {
+      padding: 1rem;
+    }
+  }
+
+  .spinner-container {
+    box-shadow: none !important;
+    background: rgba(0, 0, 0, 0);
+    padding-top: 50px;
+
+    .spinner {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .hero {
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+    background-size: cover;
+    background-image: url("https://fathym.com/wp-content/uploads/2016/07/fathym_splash.jpg");
+    background-position: 50% 100%;
+
+    .mat-raised-button.mat-accent {
+      margin-right: 10px;
+    }
+
+    .main-flow-inner {
+      width: 80%;
+      margin: 4rem auto;
+      max-width: 770px;
+      cursor: default !important;
+
+      .mat-card {
+        margin: 1rem;
+        color: mat-color($primary, 50);
+        background-color: transparent;
+        background-image: linear-gradient(
+          to bottom,
+          transparentize(mat-color($primary, 900), 0.4),
+          transparentize(mat-color($primary, 900), 0.4)
+        );
+      }
+    }
+
+    .panel {
+      display: block;
+      height: 100%;
+      width: 100%;
+      color: mat-color($primary, 50);
+      background-color: transparent;
+      background-image: linear-gradient(
+        to bottom,
+        transparentize(mat-color($primary, 900), 0.3),
+        transparentize(mat-color($primary, 900), 0.3)
+      );
+
+      h1 {
+        margin: 0;
+        font-size: 84px;
+        letter-spacing: 3px;
+      }
+
+      h2 {
+        margin: 1rem;
+        font-size: 60px;
+        letter-spacing: 2px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 36px;
+        letter-spacing: 1.5px;
+      }
+
+      .get-started {
+        .mat-raised-button {
+          margin: 2rem;
+          padding: 1rem 4rem;
+          font-size: 36px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          white-space: normal;
+        }
+      }
+
+      @media screen and (max-width: 649px) {
+        h1 {
+          font-size: 60px;
+        }
+
+        h2 {
+          font-size: 48px;
+        }
+
+        h3 {
+          font-size: 30px;
+        }
+      }
+
+      @media screen and (max-width: 549px) {
+        h1 {
+          font-size: 48px;
+        }
+
+        h2 {
+          font-size: 36px;
+        }
+
+        h3 {
+          font-size: 24px;
+        }
+
+        .get-started {
+          .mat-raised-button {
+            font-size: 24px;
+            padding: 0.5rem 2rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: 349px) {
+        padding: 0.5rem;
+
+        .get-started {
+          .mat-raised-button {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 0.5rem 2rem;
+          }
+        }
+      }
+    }
+
+    .giving,
+    .flows,
+    .input,
+    .output,
+    .setup {
+      margin: 2rem;
+      border-radius: 1rem;
+      color: mat-color($primary, 50);
+      background-color: transparent;
+      background-image: linear-gradient(
+        to bottom,
+        transparentize(mat-color($primary, 900), 0.4),
+        transparentize(mat-color($primary, 900), 0.4)
+      );
+
+      h1 {
+        margin: 0;
+        font-size: 108px;
+        letter-spacing: 3px;
+      }
+
+      h2 {
+        margin: 1rem;
+        font-size: 72px;
+        letter-spacing: 2px;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+      }
+
+      .get-started {
+        .mat-raised-button {
+          margin: 2rem;
+          padding: 1rem 4rem;
+          font-size: 36px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          white-space: normal;
+        }
+      }
+
+      @media screen and (max-width: 649px) {
+        h1 {
+          font-size: 81px;
+        }
+
+        h2 {
+          font-size: 54px;
+        }
+
+        h3 {
+          font-size: 24px;
+        }
+      }
+
+      @media screen and (max-width: 549px) {
+        h1 {
+          font-size: 54px;
+        }
+
+        h2 {
+          font-size: 36px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+
+        .get-started {
+          .mat-raised-button {
+            font-size: 24px;
+            padding: 0.5rem 2rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: 349px) {
+        padding: 0.5rem;
+
+        .get-started {
+          .mat-raised-button {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 0.5rem 2rem;
+          }
+        }
+      }
+    }
+
+    .input,
+    .output {
+      h2 {
+        font-size: 48px;
+      }
+
+      h3 {
+        font-size: 18px;
+        white-space: nowrap;
+      }
+
+      .option {
+        h3 {
+          font-size: 24px;
+        }
+
+        .mat-card-content {
+          display: block;
+          height: 100px;
+        }
+
+        &.active {
+          .mat-card-content {
+            height: auto;
+          }
+        }
+      }
+
+      @media screen and (max-width: 949px) {
+        .option {
+          .mat-card-content {
+            height: 75px;
+          }
+
+          &.active {
+            .mat-card-content {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .setup {
+      h2 {
+        font-size: 36px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .provision {
+        margin: 2rem;
+
+        .mat-list-item {
+          padding-left: 2rem;
+        }
+
+        .mat-divider {
+          border-top-color: rgba(255, 255, 255, 0.35);
+        }
+      }
+
+      .cost {
+        .mat-list .mat-subheader,
+        .mat-nav-list .mat-subheader,
+        .mat-list .mat-list-item,
+        .mat-nav-list .mat-list-item {
+          color: mat-color($primary, 900);
+        }
+
+        .price {
+          float: right;
+          text-align: right;
+          width: 125px;
+        }
+      }
+    }
+    /*.jtk-endpoint, .jtk-connector, .jtk-overlay {
+            z-index: 600;
+        }*/
+    .stream-standard {
+      cursor: pointer;
+      stroke-width: 0.2rem;
+      stroke: mat-color($primary, 900);
+    }
+
+    .stream-label {
+      color: mat-color($primary);
+      cursor: pointer;
+      user-select: none;
+
+      &.transformed {
+        color: mat-color($accent);
+      }
+
+      &:hover,
+      &.jtk-hover {
+        color: whitesmoke;
+      }
+    }
+
+    .flow {
+      user-select: none;
+
+      .mat-grid-tile {
+        overflow: visible;
+      }
+
+      .editor {
+        position: relative;
+        /*padding: 2rem;*/
+        .module {
+          position: absolute;
+          width: 100px;
+          height: 100px;
+
+          &.sm {
+            width: 25px;
+            height: 25px;
+          }
+
+          &.lg {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+
+      .support,
+      .develop,
+      .ops,
+      .module-options {
+        margin-top: 2rem;
+      }
+
+      .module-options {
+        > div {
+          overflow: auto;
+        }
+
+        .add-input {
+          .add-options {
+            margin: 1rem 0;
+            overflow-x: auto;
+          }
+        }
+
+        .add-output {
+          .add-options {
+            margin: 1rem 0;
+            overflow-x: auto;
+          }
+        }
+
+        .modules {
+          .module-sets {
+            margin: 1rem;
+
+            a:not([color]) {
+              color: mat-color($primary, 900);
+            }
+          }
+
+          .workbench {
+            margin: 1rem;
+            padding: 1rem;
+            overflow-x: auto;
+            background-image: linear-gradient(
+              to bottom,
+              transparentize(mat-color($primary, 900), 0.2),
+              transparentize(mat-color($primary, 900), 0.2)
+            );
+          }
+        }
+      }
+
+      .module-manage {
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+      }
+
+      .flow-options {
+        position: absolute !important;
+        top: 10px;
+        right: 25px;
+        z-index: 100;
+        width: 100%;
+        background-color: transparent;
+        padding-left: 50px;
+      }
+
+      .flow-options-menu {
+        background-color: mat-color($accent, 100);
+        text-align: left;
+        max-width: 246px;
+
+        mat-toolbar {
+          background-color: mat-color($accent, 100);
+          min-height: 30px;
+          height: 30px;
+
+          span,
+          mat-toolbar-row {
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            padding-top: 15px;
+
+            mat-icon {
+              cursor: pointer;
+              padding-right: 15px;
+            }
+          }
+        }
+
+        mat-card {
+          padding: 0;
+          margin: 20px;
+
+          a {
+            text-align: left;
+            width: 100%;
+          }
+
+          .mat-list-item-content {
+            padding: 0;
+          }
+
+          mat-icon {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .flow-action-icons {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .flow-options-menu-group {
+        text-align: left;
+        margin: 0px 8px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0s;
+
+        &.open {
+          max-height: 4000px;
+          transition: all 2s;
+        }
+
+        hr {
+          margin: 0;
+        }
+
+        mat-list-item a {
+          cursor: move;
+        }
+      }
+
+      .flow-options-toggle {
+        position: absolute !important;
+        top: 50px;
+        right: 50px;
+        z-index: 200;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  app-flux {
+    position: relative;
+    padding: 0;
+
+    .hero {
+      background-size: initial;
+      background-position: initial;
+      background: none;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      overflow: inherit;
+
+      &::before {
+        content: " ";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        will-change: transform;
+        z-index: -1;
+        background-size: cover;
+        background-position: 50% 100%;
+        background-image: url("https://fathym.com/wp-content/uploads/2016/07/fathym_splash.jpg");
+      }
+    }
+  }
+}
 
 @mixin forge-pages($theme) {
-    $primary: map-get($theme, primary);
-    $accent: map-get($theme, accent);
-    $warn: map-get($theme, warn);
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
 
-    .grid {
-        width: 50%;
-    }
+  .grid {
+    width: 50%;
+  }
 
-    .hero .mat-raised-button.mat-accent {
-        margin-right: 10px;
-    }
+  .hero .mat-raised-button.mat-accent {
+    margin-right: 10px;
+  }
 
-    .container {
-        /*width: 350px;*/
-        position: relative;
+  .container {
+    /*width: 350px;*/
+    position: relative;
 
-        .forge-packery {
-            .forge-packery-item, .forge-packery-grid-sizer {
-                width: 20%;
-                height: 150px;
-            }
+    .forge-packery {
+      .forge-packery-item,
+      .forge-packery-grid-sizer {
+        width: 20%;
+        height: 150px;
+      }
 
-            .forge-packery-gutter-sizer {
-                width: 10px;
-            }
+      .forge-packery-gutter-sizer {
+        width: 10px;
+      }
 
-            .forge-packery-gutter-sizer, .forge-packery-grid-sizer {
-                display: none;
-            }
+      .forge-packery-gutter-sizer,
+      .forge-packery-grid-sizer {
+        display: none;
+      }
 
-            .forge-packery-item {
-                .forge-packery-item-content {
-                    border: solid 1px black;
-                    background-color: aqua;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+      .forge-packery-item {
+        .forge-packery-item-content {
+          border: solid 1px black;
+          background-color: aqua;
+          width: 100%;
+          height: 100%;
         }
+      }
     }
+  }
 }
 
 @include forge-theme($forge-app-theme);
+
+@include flux($forge-app-theme);
 
 @include forge-pages($forge-app-theme);

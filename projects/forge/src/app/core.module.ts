@@ -16,6 +16,7 @@ import { AppLayoutComponent } from './app.layout';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { HttpClientModule } from '@angular/common/http';
 import { ForgeBuildersModule } from '@fathym-forge/common';
+import { FluxModule } from '@lcu/flux';
 
 export var modules: any[] = [
 	FathymSharedModule,
@@ -31,7 +32,8 @@ export var modules: any[] = [
 		DndModule.forRoot(),
 		MonacoEditorModule.forRoot(),
 		ForgeBuildersModule.forRoot(),
-		Angulartics2Module.forRoot(),
+    Angulartics2Module.forRoot(),
+    FluxModule.forRoot(),
 		...modules,
 	],
 	declarations: [
