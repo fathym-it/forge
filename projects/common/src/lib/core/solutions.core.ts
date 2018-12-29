@@ -17,6 +17,7 @@ import { ForgeInfrastructureSolutionDisplayModule } from '@lowcodeunit/lcu-sln-i
 import { ForgeReportingSolutionDisplayModule } from '@lowcodeunit/lcu-sln-reporting';
 import { ForgeReportingEditDisplayModule } from '@lowcodeunit/lcu-el-reporting-edit';
 import { ForgeReportingViewDisplayModule } from '@lowcodeunit/lcu-el-reporting-view';
+import { ForgeFluxSolutionDisplayModule } from '@lowcodeunit/lcu-sln-flux';
 
 export const CoreForgeSolutionModules = [
 	{
@@ -80,13 +81,13 @@ export const CoreForgeSolutionModules = [
 				DisplaySetups: [
 				],
 			},
-			// {
-			// 	Name: 'Flow',
-			// 	Control: { Base: 'forge-solution', Details: {}, Type: 'flow' },
-			// 	Solution: ForgeFlowSolutionDisplayModule,
-			// 	DisplaySetups: [
-			// 	],
-			// },
+			{
+				Name: 'Flux',
+				Control: { Base: 'forge-solution', Details: {}, Type: 'flux' },
+				Solution: ForgeFluxSolutionDisplayModule,
+				DisplaySetups: [
+				],
+			},
 			{
 				Name: 'Identity',
 				Control: { Base: 'forge-solution', Details: {}, Type: 'identity' },

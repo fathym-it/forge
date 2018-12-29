@@ -9,12 +9,14 @@ import { ForgeDashboardsSolutionModule } from '@lowcodeunit/lcu-sln-dashboards';
 import { ForgeIdentitySolutionModule } from '@lowcodeunit/lcu-sln-identity';
 import { ForgeInfrastructureSolutionModule } from '@lowcodeunit/lcu-sln-infrastructure';
 import { ForgeReportingSolutionModule } from '@lowcodeunit/lcu-sln-reporting';
+import { ForgeFluxSolutionModule } from '@lowcodeunit/lcu-sln-flux';
 
 const modules = [
 	ForgeApplicationsSolutionModule,
 	ForgeAssetsSolutionModule,
 	ForgeDevicesSolutionModule,
-	ForgeDashboardsSolutionModule,
+  ForgeDashboardsSolutionModule,
+  ForgeFluxSolutionModule,
 	ForgeIdentitySolutionModule,
 	ForgeInfrastructureSolutionModule,
 	ForgeReportingSolutionModule,

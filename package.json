@@ -72,6 +72,7 @@
 		"@lowcodeunit/lcu-sln-assets": "0.0.24",
 		"@lowcodeunit/lcu-sln-dashboards": "0.0.6",
 		"@lowcodeunit/lcu-sln-devices": "0.0.7",
+		"@lowcodeunit/lcu-sln-flux": "0.0.5",
 		"@lowcodeunit/lcu-sln-identity": "0.0.8",
 		"@lowcodeunit/lcu-sln-infrastructure": "0.0.8",
 		"@lowcodeunit/lcu-sln-reporting": "0.0.6",
