@@ -385,6 +385,7 @@ $brand-white: rgb(245, 245, 245) !default;
     }
 
     .flow {
+      height: 100%;
       user-select: none;
 
       .mat-grid-tile {
@@ -392,6 +393,8 @@ $brand-white: rgb(245, 245, 245) !default;
       }
 
       .editor {
+        height: 100%;
+        overflow: auto;
         position: relative;
         /*padding: 2rem;*/
         .module {
@@ -472,9 +475,11 @@ $brand-white: rgb(245, 245, 245) !default;
         // width: 100%;
         background-color: transparent;
         padding-left: 2fem;
+        height: 100%;
       }
 
       .flow-options-menu {
+        height: 100%;
         background-color: mat-color($accent, 100);
         text-align: left;
         max-width: 246px;
