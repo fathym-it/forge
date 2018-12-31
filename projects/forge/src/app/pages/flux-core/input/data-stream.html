@@ -1,0 +1,99 @@
+﻿<form (ngSubmit)="Save()" #settingsForm="ngForm">
+    <div class="container" fxLayout="column" fxLayoutAlign="center center">
+        <div fxFlex="50px" class="header">
+            <h1>Data Stream Settings - {{ModuleTypeName}}</h1>
+        </div>
+
+        <div fxFlex="100%" class="content">
+            <div>
+                <mat-form-field style="width: 100%">
+                    <input type="text" matInput name="description" placeholder="Description"
+                           [(ngModel)]="Description" required />
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 95%">
+                    <input [disabled]="!FirstLoad" (input)="ValidateLookup(3,4)" type="text" matInput name="lookup" placeholder="Lookup"
+                           [(ngModel)]="HubLookup" required minLength="3" maxlength="4" />
+                </mat-form-field>
+                <span *ngIf="!LookupValid" style="color:red;">Lookup already exists for this flow's {{ModuleTypeName}} items</span>
+                <span *ngIf="ServerError" style="color:red;">{{ServerError}}</span>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" matTooltip="Lookups are a 3 to 4 length alphanumeric representation of the current domain object.  Flows are built with the format of 'flw-{Organization Lookup}-{Flow Lookup}-{Module Lookup}'.  This format helps keep your flow agnostic to any specific service provider.  When naming lookups, use something that is recognizable and relevant based on the asset you are creating" class="fa fa-info-circle"></i>
+            </div>
+
+            <div>
+                <div style="width: 100%">
+                    <input type="checkbox" name="withCapture" [(ngModel)]="WithCapture" />
+                    With Capture
+                </div>
+            </div>
+
+            <div *ngIf="WithCapture">
+                <mat-form-field style="width: 100%">
+                    <label>Capture Byte Limit</label>
+                    <input matInput required type="number" step="1" name="captureByteLimit" [(ngModel)]="CaptureByteLimit" min="0"
+                           max="2147483647" />
+                    <span *ngIf="CaptureByteLimitError" style="color:red;">{{CaptureByteLimitError}}</span>
+                </mat-form-field>
+            </div>
+            <div *ngIf="WithCapture">
+                <mat-form-field style="width: 100%">
+                    <label>Capture Interval Seconds</label>
+                    <input matInput required type="number" step="1" name="captureIntervalSeconds" [(ngModel)]="CaptureIntervalSeconds" min="60"
+                           max="86300" />
+                    <span *ngIf="CaptureIntervalSecondsError" style="color:red;">{{CaptureIntervalSecondsError}}</span>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <div style="width: 100%">
+                    <input type="checkbox" name="configureMessaging" [(ngModel)]="ConfigureMessaging" />
+                    Configure Messaging
+                </div>
+            </div>
+
+            <div *ngIf="ConfigureMessaging">
+                <mat-form-field style="width: 100%">
+                    <label>Message Retention Days</label>
+                    <input matInput required type="number" step="1" name="messageRetentionDays" [(ngModel)]="MessageRetentionDays" min="1"
+                           max="30" />
+                    <span *ngIf="MessageRetentionDaysError" style="color:red;">{{MessageRetentionDaysError}}</span>
+                </mat-form-field>
+
+                <mat-form-field style="width: 100%">
+                    <label>Partition Count</label>
+                    <input matInput [disabled]="!FirstLoad" required type="number" step="1" name="partitionCount" [(ngModel)]="PartitionCount" min="1"
+                           max="64" />
+                    <span *ngIf="PartitionCountError" style="color:red;">{{PartitionCountError}}</span>
+                </mat-form-field>
+            </div>
+
+            <!--<div *ngIf="ConfigureMessaging">
+                <div style="width: 100%">
+                    <input type="checkbox" name="autoInflate" [(ngModel)]="AutoInflate" />
+                    Auto Inflate
+                </div>
+            </div>
+
+            <div *ngIf="ConfigureMessaging && AutoInflate">
+                <mat-form-field style="width: 100%">
+                    <label>Max Throughput Units</label>
+                    <input matInput required type="number" step="1" name="maxThroughputUnits" [(ngModel)]="MaxThroughputUnits" min="1"
+                           max="100" />
+                    <span *ngIf="MaxThroughputUnitsError" style="color:red;">{{MaxThroughputUnitsError}}</span>
+                </mat-form-field>
+            </div>-->
+
+        </div>
+
+        <div fxFlex="40px" class="footer">
+            <button *ngIf="!Saving" type="submit" mat-raised-button color="accent" [disabled]="!settingsForm.valid || !LookupValid">
+                OK
+            </button>
+            <div *ngIf="Saving" title="Saving" style="text-align:center;">
+                <i class="fa fa-circle-o-notch fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
+import { PagesRootLayoutComponent } from '../pages-root.layout';
 
 @Component({
 	selector: 'solutions-layout',
 	templateUrl: './solutions.layout.html',
 	host: {}
 })
-export class SolutionsLayoutComponent implements OnInit {
+export class SolutionsLayoutComponent extends PagesRootLayoutComponent {
+	//	Fields
+
 	//	Properties
 
 	//	Constructors
-	constructor() {
+	constructor(protected injector: Injector) {
+      super(injector);
 	}
 
 	//	Life Cycle
-	public ngOnInit() {
-	}
 
 	//	API Methods
+
+	//	Helpers
 }

@@ -1,61 +1,77 @@
-﻿<div class="hero">
-    <div class="flow">
-        <div [fxShow]="Flow && !MainLoader" class="main" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="2rem">
-            <div fxFlex="100%">
-                <div class="panel editor">
-                    <mat-sidenav-container class="flow-options">
-                        <mat-sidenav #sidenav position="end" mode="side" class="flow-options-menu">
-                            <mat-toolbar>
-                                <span>
-                                    <a (click)="FlowLayoutBehavior.RelayoutFlow()" title="Relayout Flow"><mat-icon>swap_calls</mat-icon></a>
-                                    <a (click)="SaveFlow()" title="Save Flow"><mat-icon>sd_card</mat-icon></a>
-                                    <a *ngIf="!HasErrors() && ShowProvisioning && Flow && Flow.CanProvision" (click)="Provision()" title="Provision Flow"><mat-icon>cloud_upload</mat-icon></a>
-                                    <span style="opacity:.2;" *ngIf="!ShowProvisioning" title="Checking Provision Status"><mat-icon>cloud_upload</mat-icon></span>
-                                    <span style="opacity:.2;" *ngIf="(Flow && !Flow.CanProvision) || HasErrors()" title="Provisioning Not Allowed"><mat-icon>cloud_upload</mat-icon></span>
-                                    <a *ngIf="ShowUnprovisioning && Flow && Flow.CanProvision" (click)="Unprovision()" title="Unprovision Flow"><mat-icon>cloud_off</mat-icon></a>
-                                    <span style="opacity:.2;" *ngIf="!ShowUnprovisioning && Flow && Flow.CanProvision" title="Flow not provisioned"><mat-icon>cloud_off</mat-icon></span>
-                                    <a style="color:black;" href="/forge/solutions/forge-solution/flow/manage" title="Back to Forge"><mat-icon>arrow_back</mat-icon></a>
-                                </span>
-                            </mat-toolbar>
-                            <div id="nodePalette" class="node-palette">
-                                <mat-card [fxShow]="moduleType.Options.length > 0" *ngFor="let moduleType of EditorModuleOptions">
-                                    <a mat-button (click)="ToggleModuleGroup(moduleType)">
-                                        <mat-icon *ngIf="moduleType.Visible">close</mat-icon>
-                                        <mat-icon *ngIf="!moduleType.Visible">add</mat-icon>
-                                        {{moduleType.Category}}
-                                    </a>
-                                    <div class="flow-options-menu-group" [class.open]="moduleType.Visible">
-                                        <hr />
-                                        <mat-list>
-                                            <mat-list-item *ngFor="let nodeType of moduleType.Options;" title="Drag to add new {{nodeType.Name}}" [attr.jtk-node-type]="nodeType.ModuleType"
-                                                           [attr.option]="nodeType | json">
-                                                <div mat-line>
-                                                    <a mat-button color="primary" class="menu-item" [ngClass]="nodeType.Service">
-                                                        <mat-icon>{{nodeType.Icon}}</mat-icon>
-                                                        {{nodeType.Name}}
-                                                    </a>
-                                                </div>
-                                            </mat-list-item>
-                                        </mat-list>
-                                    </div>
-                                </mat-card>
-                            </div>
-                        </mat-sidenav>
+﻿<div class="flux-hero">
+  <div class="flow">
+    <div [fxShow]="Flow && !MainLoader" class="main" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="2rem">
+      <div fxFlex="100%">
+        <div fxLayout="row" fxLayoutAlign="start start" class="flow-options">
+          <div fxFlex="80%">
+            <flow-layout-behavior (flow-init)="InitializeFlow()" (on-error)="ShowError($event)" #flowLayout>
+            </flow-layout-behavior>
+          </div>
 
-                        <flow-layout-behavior (flow-init)="InitializeFlow()" (on-error)="ShowError($event)" #flowLayout>
-
-                        </flow-layout-behavior>
-
-                        <button  *ngIf="!MainLoader" mat-mini-fab class="flow-options-toggle" (click)="ToggleSideNav()">
-                            <mat-icon>edit</mat-icon>
-                        </button>
-                    </mat-sidenav-container>
-                </div>
+          <div fxFlex="20%" class="flow-options-menu">
+            <div class="panel editor">
+              <mat-toolbar>
+                <span>
+                  <a (click)="FlowLayoutBehavior.RelayoutFlow()" title="Relayout Flow"><mat-icon>swap_calls</mat-icon></a>
+                  <a (click)="SaveFlow()" title="Save Flow"><mat-icon>sd_card</mat-icon></a>
+                  <a
+                    *ngIf="!HasErrors() && ShowProvisioning && Flow && Flow.CanProvision"
+                    (click)="Provision()"
+                    title="Provision Flow"
+                    ><mat-icon>cloud_upload</mat-icon></a
+                  >
+                  <span style="opacity:.2;" *ngIf="!ShowProvisioning" title="Checking Provision Status"
+                    ><mat-icon>cloud_upload</mat-icon></span
+                  >
+                  <span style="opacity:.2;" *ngIf="(Flow && !Flow.CanProvision) || HasErrors()" title="Provisioning Not Allowed"
+                    ><mat-icon>cloud_upload</mat-icon></span
+                  >
+                  <a *ngIf="ShowUnprovisioning && Flow && Flow.CanProvision" (click)="Unprovision()" title="Unprovision Flow"
+                    ><mat-icon>cloud_off</mat-icon></a
+                  >
+                  <span style="opacity:.2;" *ngIf="!ShowUnprovisioning && Flow && Flow.CanProvision" title="Flow not provisioned"
+                    ><mat-icon>cloud_off</mat-icon></span
+                  >
+                  <a style="color:black;" href="/forge/solutions/forge-solution/flux/manage" title="Back to Forge"
+                    ><mat-icon>arrow_back</mat-icon></a
+                  >
+                </span>
+              </mat-toolbar>
+              <div id="nodePalette" class="node-palette">
+                <mat-card [fxShow]="moduleType.Options.length > 0" *ngFor="let moduleType of EditorModuleOptions">
+                  <a mat-button (click)="ToggleModuleGroup(moduleType)">
+                    <mat-icon *ngIf="moduleType.Visible">close</mat-icon>
+                    <mat-icon *ngIf="!moduleType.Visible">add</mat-icon>
+                    {{ moduleType.Category }}
+                  </a>
+                  <div class="flow-options-menu-group" [class.open]="moduleType.Visible">
+                    <hr />
+                    <mat-list>
+                      <mat-list-item
+                        *ngFor="let nodeType of moduleType.Options"
+                        title="Drag to add new {{ nodeType.Name }}"
+                        [attr.jtk-node-type]="nodeType.ModuleType"
+                        [attr.option]="nodeType | json"
+                      >
+                        <div mat-line>
+                          <a mat-button color="primary" class="menu-item" [ngClass]="nodeType.Service">
+                            <mat-icon>{{ nodeType.Icon }}</mat-icon>
+                            {{ nodeType.Name }}
+                          </a>
+                        </div>
+                      </mat-list-item>
+                    </mat-list>
+                  </div>
+                </mat-card>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<mat-card *ngIf="ModulesLoading || MainLoader" class="loader spinner-container" [class.page-loaded]="!MainLoader"><mat-spinner class="spinner"></mat-spinner></mat-card>
-
-
+<mat-card *ngIf="ModulesLoading || MainLoader" class="loader spinner-container" [class.page-loaded]="!MainLoader"
+  ><mat-spinner class="spinner"></mat-spinner
+></mat-card>

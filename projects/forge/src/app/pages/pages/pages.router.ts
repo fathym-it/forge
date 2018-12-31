@@ -4,35 +4,36 @@ import { PagesLayoutComponent } from './pages.layout';
 import { OverviewPage } from './overview.page';
 import { ViewPage } from './view.page';
 import { CreatePage } from './create.page';
+import { PagesRootLayoutComponent } from '../pages-root.layout';
 
 export const PagesRoutes: Routes = [
 	{
-		path: "",
-		component: PagesLayoutComponent,
-		data: {},
-		children: [
-			{
-				path: "page/create",
-				component: CreatePage,
-				data: {}
-			},
-			{
-				path: "page/:lookup",
-				component: ViewPage,
-				data: {}
-			},
-			{
-				path: "overview",
-				component: OverviewPage,
-				data: {}
-			},
-			{
-				path: "",
-				redirectTo: "overview",
-				pathMatch: 'full'
-			},
-		]
-	}
+    path: "",
+    component: PagesLayoutComponent,
+    data: {},
+    children: [
+      {
+        path: "page/create",
+        component: CreatePage,
+        data: {}
+      },
+      {
+        path: "page/:lookup",
+        component: ViewPage,
+        data: {}
+      },
+      {
+        path: "overview",
+        component: OverviewPage,
+        data: {}
+      },
+      {
+        path: "",
+        redirectTo: "overview",
+        pathMatch: 'full'
+      },
+    ]
+  }
 ];
 
 export var RoutingComponents: any[] = [

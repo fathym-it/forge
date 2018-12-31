@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
+import { PagesRootLayoutComponent } from '../pages-root.layout';
 
 @Component({
 	selector: 'pages-layout',
@@ -7,16 +8,19 @@ import { Component, OnInit } from '@angular/core';
 		'[class]': `'display: block; position: relative;'`
 	}
 })
-export class PagesLayoutComponent implements OnInit {
+export class PagesLayoutComponent extends PagesRootLayoutComponent {
+	//	Fields
+
 	//	Properties
 
 	//	Constructors
-	constructor() {
+	constructor(protected injector: Injector) {
+      super(injector);
 	}
 
 	//	Life Cycle
-	public ngOnInit() {
-	}
 
 	//	API Methods
+
+	//	Helpers
 }

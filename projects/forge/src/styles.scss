@@ -13,138 +13,6 @@ $brand-white: rgb(245, 245, 245) !default;
     border: none !important;
   }
 
-  body {
-    height: 100%;
-    margin: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(
-        to bottom,
-        transparentize($brand-white, 0.1),
-        transparentize($brand-white, 0.1)
-      ),
-      url(/img/clouds.jpg);
-
-    .loader {
-      height: 1200px;
-      z-index: 3000;
-
-      &.page-loaded {
-        opacity: 0.5;
-        background-color: white;
-      }
-    }
-
-    .module-manager-container {
-      transform: translateY(0%) scale(1);
-      opacity: 1;
-
-      .module-manager-loading {
-        margin: 100px;
-      }
-    }
-
-    .mat-button,
-    .mat-raised-button {
-      margin-left: 0 !important;
-    }
-
-    mat-dialog-content {
-      padding: 0 !important;
-      margin: 0 !important;
-      overflow: hidden !important;
-    }
-
-    flux-layout {
-      app-overview {
-        padding: 5%;
-      }
-
-      app-flux {
-        padding: 0;
-      }
-
-      display: block;
-
-      @media screen and (max-width: 549px) {
-        padding: 2.5%;
-      }
-
-      .lead {
-        font-size: 18px;
-      }
-
-      [color="warn"] {
-        color: mat-color($warn);
-      }
-
-      .mat-list {
-        text-align: left;
-      }
-
-      .mat-list .mat-list-item .mat-line,
-      .mat-nav-list .mat-list-item .mat-line {
-        white-space: normal;
-      }
-
-      .mat-list .mat-list-item .mat-list-item-content,
-      .mat-nav-list .mat-list-item .mat-list-item-content {
-        height: auto !important;
-      }
-
-      .mat-list .mat-subheader {
-        display: block !important;
-      }
-
-      .mat-list .mat-subheader,
-      .mat-nav-list .mat-subheader,
-      .mat-list .mat-list-item,
-      .mat-nav-list .mat-list-item {
-        color: mat-color($primary, 50);
-      }
-
-      app-overview {
-        display: block;
-      }
-    }
-
-    &.flow-manage app {
-      position: relative;
-      padding: 0;
-    }
-
-    flow-manager {
-      .close {
-        position: absolute;
-        top: 0.25rem;
-        right: 0.25rem;
-        padding: 0.25rem 0.5rem;
-        min-width: unset;
-      }
-
-      f-loader {
-        display: block;
-        margin: 4rem;
-      }
-    }
-
-    .menu-item-active {
-      background-color: mat-color($warn, 300);
-    }
-
-    .snack-bar-container {
-      background-color: mat-color($warn, 300);
-      max-width: 1500px;
-    }
-  }
-
-  footer {
-    h3 {
-      padding: 1rem;
-    }
-  }
-
   .spinner-container {
     box-shadow: none !important;
     background: rgba(0, 0, 0, 0);
@@ -156,13 +24,59 @@ $brand-white: rgb(245, 245, 245) !default;
     }
   }
 
-  .hero {
+  .flux-hero {
     height: 100%;
     min-height: 100%;
     overflow: auto;
     background-size: cover;
     background-image: url("https://fathym.com/wp-content/uploads/2016/07/fathym_splash.jpg");
     background-position: 50% 100%;
+    background-size: initial;
+    background-position: initial;
+    background: none;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    overflow: inherit;
+
+    &::before {
+      content: " ";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      will-change: transform;
+      z-index: -1;
+      background-size: cover;
+      background-position: 50% 100%;
+      background-image: url("https://fathym.com/wp-content/uploads/2016/07/fathym_splash.jpg");
+    }
+
+    .mat-list {
+      text-align: left;
+    }
+
+    .mat-list .mat-list-item .mat-line,
+    .mat-nav-list .mat-list-item .mat-line {
+      white-space: normal;
+    }
+
+    .mat-list .mat-list-item .mat-list-item-content,
+    .mat-nav-list .mat-list-item .mat-list-item-content {
+      height: auto !important;
+    }
+
+    .mat-list .mat-subheader {
+      display: block !important;
+    }
+
+    .mat-list .mat-subheader,
+    .mat-nav-list .mat-subheader,
+    .mat-list .mat-list-item,
+    .mat-nav-list .mat-list-item {
+      color: mat-color($primary, 50);
+    }
 
     .mat-raised-button.mat-accent {
       margin-right: 10px;
@@ -447,8 +361,8 @@ $brand-white: rgb(245, 245, 245) !default;
       }
     }
     /*.jtk-endpoint, .jtk-connector, .jtk-overlay {
-            z-index: 600;
-        }*/
+              z-index: 600;
+          }*/
     .stream-standard {
       cursor: pointer;
       stroke-width: 0.2rem;
@@ -551,13 +465,13 @@ $brand-white: rgb(245, 245, 245) !default;
       }
 
       .flow-options {
-        position: absolute !important;
-        top: 10px;
-        right: 25px;
-        z-index: 100;
-        width: 100%;
+        // position: absolute !important;
+        // top: 10px;
+        // right: 25px;
+        // z-index: 100;
+        // width: 100%;
         background-color: transparent;
-        padding-left: 50px;
+        padding-left: 2fem;
       }
 
       .flow-options-menu {
@@ -638,32 +552,181 @@ $brand-white: rgb(245, 245, 245) !default;
       }
     }
   }
+}
 
-  app-flux {
-    position: relative;
+@mixin flux-core($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  .no-pointer {
+    cursor: default !important;
+  }
+
+  body {
+    height: 100%;
+    margin: 0;
     padding: 0;
 
-    .hero {
-      background-size: initial;
-      background-position: initial;
-      background: none;
-      position: relative;
-      width: 100%;
-      text-align: center;
-      overflow: inherit;
+    h3 {
+      font-size: 24px;
+    }
 
-      &::before {
-        content: " ";
-        position: fixed;
-        width: 100%;
+    .snack-bar-container {
+      background-color: mat-color($warn, 300);
+      max-width: 1500px;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    .mat-button,
+    .mat-raised-button {
+      margin-left: 0 !important;
+    }
+
+    .mat-tooltip {
+      font-size: 14px !important;
+    }
+
+    .mat-select-panel {
+      margin-left: 30px !important;
+    }
+
+    .cdk-overlay-pane {
+      max-width: 100% !important;
+    }
+
+    .mat-option-text {
+      overflow: initial;
+    }
+
+    .dnd-drag-start {
+      -moz-transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0.7;
+      border: 2px dashed #000;
+    }
+
+    .dnd-drag-enter {
+      opacity: 0.7;
+      border: 2px dashed #000;
+    }
+
+    .dnd-drag-over {
+      border: 2px dashed #000;
+    }
+
+    .dnd-sortable-drag {
+      -moz-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+      opacity: 0.7;
+      border: 1px dashed #000;
+    }
+
+    .fill-remaining-space {
+      flex: 1 1 auto;
+    }
+
+    .container {
+      padding-bottom: 20px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .flow-module-add-function {
+      position: absolute !important;
+      right: 50px;
+      z-index: 200;
+      opacity: 0.7;
+      top: 40px;
+    }
+
+    .mat-dialog-container {
+      max-width: 100%;
+    }
+
+    .mat-dialog-content.stretch-dialog-height {
+      height: 80%;
+      max-height: 85%;
+    }
+
+    .module-manager {
+      height: 100%;
+      width: 100%;
+
+      .inline {
+        display: inline-block;
+      }
+
+      form {
         height: 100%;
-        top: 0;
-        left: 0;
-        will-change: transform;
-        z-index: -1;
-        background-size: cover;
-        background-position: 50% 100%;
-        background-image: url("https://fathym.com/wp-content/uploads/2016/07/fathym_splash.jpg");
+      }
+
+      .container {
+        height: 100%;
+        padding: 0.25rem;
+        overflow: auto;
+        width: 100%;
+
+        .header {
+          width: 100%;
+          padding: 0;
+          background-color: white;
+
+          h1 {
+            padding: 0;
+            font-size: 24px;
+          }
+        }
+
+        .content {
+          width: 100%;
+          height: 100%;
+          overflow-y: auto;
+
+          .mat-tab-body {
+            overflow: hidden;
+          }
+
+          .mat-tab-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 500;
+          }
+
+          .mat-card {
+            margin: 0.5rem;
+          }
+
+          .flow-module-add-schema {
+            position: absolute !important;
+            top: 80px;
+            right: 50px;
+            z-index: 200;
+            opacity: 0.7;
+          }
+
+          .flow-module-schema-options {
+            position: absolute !important;
+            top: 80px;
+            left: 555px;
+            z-index: 200;
+            opacity: 0.7;
+            width: 200px;
+            max-width: 200px;
+          }
+
+          .jtk-surface-pan {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -714,8 +777,10 @@ $brand-white: rgb(245, 245, 245) !default;
   }
 }
 
-@include forge-theme($forge-app-theme);
-
 @include flux($forge-app-theme);
+
+@include flux-core($forge-app-theme);
+
+@include forge-theme($forge-app-theme);
 
 @include forge-pages($forge-app-theme);

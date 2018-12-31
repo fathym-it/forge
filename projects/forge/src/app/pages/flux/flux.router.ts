@@ -5,16 +5,16 @@ import { FluxComponent } from './flux';
 
 export const FluxRoutes: Routes = [
 	{
-		path: "",
-		component: FluxLayoutComponent,
-		data: {},
-		children: [
+    path: "",
+    component: FluxLayoutComponent,
+    data: {},
+    children: [
       {
         path: "manage/:id",
         component: FluxComponent
       },
-		]
-	}
+    ]
+  }
 ];
 
 export var FluxRoutingComponents: any[] = [

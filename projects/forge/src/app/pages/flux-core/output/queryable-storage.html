@@ -1,0 +1,85 @@
+﻿<form (ngSubmit)="Save()" #settingsForm="ngForm">
+    <div class="container" fxLayout="column" fxLayoutAlign="center center">
+        <div fxFlex="50px" class="header">
+            <h1>Queryable Storage Settings - {{ModuleTypeName}}</h1>
+        </div>
+
+        <div fxFlex="100%" class="content">
+            <div>
+                <mat-form-field style="width: 85%">
+                    <input type="text" matInput name="description" placeholder="Description"
+                           [(ngModel)]="Description" required />
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 85%">
+                    <input [disabled]="!FirstLoad" (input)="ValidateLookup(3,15)" type="text" matInput name="lookup" placeholder="Database Name"
+                           [(ngModel)]="DatabaseId" required />
+                    <span *ngIf="!LookupValid" style="color:red;">Database Lookup already exists for this flow's {{ModuleTypeName}} items</span>
+                    <span *ngIf="ServerError" style="color:red;">{{ServerError}}</span>
+                </mat-form-field>
+
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" matTooltip="The name of the main container for underlying data collections" class="fa fa-info-circle"></i>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 85%">
+                    <input [disabled]="!FirstLoad" (input)="ValidateSubLookup(DatabaseId,3,15)" type="text" matInput name="sublookup" placeholder="Collection Name"
+                           [(ngModel)]="CollectionId" required />
+                    <span *ngIf="!SubLookupValid" style="color:red;">Collection Lookup already exists for this flow's {{ModuleTypeName}} items</span>
+                    <span *ngIf="ServerErrorSubLookup" style="color:red;">{{ServerErrorSubLookup}}</span>
+                </mat-form-field>
+
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" matTooltip="The name of container for the collection of items being stored" class="fa fa-info-circle"></i>
+            </div>
+
+            <div *ngIf="!ShowPartitionKey" style="padding-top:10px;padding-bottom:20px;">
+                <span style="color:red;">Connect incomming data source to manage Partition Key</span>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" class="fa fa-info-circle" matTooltip="The Partition Key is used to automatically partition data among multiple servers for scalability.  Choose a JSON property name that has a wide range of values and is likely to have evenly distributed access patterns."></i>
+            </div>
+
+            <div *ngIf="ShowPartitionKey && SchemaProperties.length == 0">
+                <mat-form-field style="width: 85%">
+                    <input (input)="ValidatePartitionKey()" [disabled]="DisablePartitionKey" type="text" matInput #partitionKey name="partitionKey" placeholder="Partition Key"
+                           [(ngModel)]="PartitionKey" required />
+                    <span *ngIf="PartitionKeyError" style="color:red;">{{PartitionKeyError}}</span>
+                </mat-form-field>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" class="fa fa-info-circle" matTooltip="The Partition Key is used to automatically partition data among multiple servers for scalability.  Choose a JSON property name that has a wide range of values and is likely to have evenly distributed access patterns."></i>
+                
+            </div>
+
+            <div *ngIf="ShowPartitionKey && SchemaProperties.length > 0">
+                <mat-form-field style="width:85%;">
+                    <mat-select (selectionChange)="ValidatePartitionKey()" [disabled]="DisablePartitionKey" matInput required placeholder="Partition Key" [(ngModel)]="PartitionKey" #partitionKey name="partitionKey">
+                        <mat-option *ngFor="let prop of SchemaProperties" [value]="prop">
+                            {{prop}}
+                        </mat-option>
+                    </mat-select>
+                    <span *ngIf="PartitionKeyError" style="color:red;">{{PartitionKeyError}}</span>
+                </mat-form-field>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" class="fa fa-info-circle" matTooltip="The Partition Key is used to automatically partition data among multiple servers for scalability.  Choose a JSON property name that has a wide range of values and is likely to have evenly distributed access patterns."></i>
+            </div>
+
+            <div>
+                <mat-form-field style="width: 85%">
+                    <input [disabled]="!FirstLoad" type="number" matInput name="throughputRequestUnits" placeholder="Throughput Request Units" min="1000" step="100"
+                           max="10000" [(ngModel)]="ThroughputRequestUnits" required />
+                    <span *ngIf="ThroughputUnitError" style="color:red;">{{ThroughputUnitError}}</span>
+                </mat-form-field>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" class="fa fa-info-circle" matTooltip="Throughput is specified in terms of request units processing per second. You can think of request units as throughput currency, whereby you reserve an amount of guaranteed request units available to your application on per second basis."></i>
+            </div>
+
+        </div>
+
+        <div fxFlex="40px" class="footer">
+            <button *ngIf="!Saving" type="submit" mat-raised-button color="accent" [disabled]="!CanSave() || !settingsForm.valid">
+                OK
+            </button>
+            <div *ngIf="Saving" title="Saving" style="text-align:center;">
+                <i class="fa fa-circle-o-notch fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</form>
+

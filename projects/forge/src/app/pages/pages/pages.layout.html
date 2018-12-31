@@ -1,1 +1,23 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="sticky">
+  <a mat-icon-button (click)="ToggleSideNav()"> <mat-icon>menu</mat-icon> </a>
+
+  <a mat-button routerLink="/"><img src="/img/logo.png"/></a>
+
+  <span class="filler"></span>
+
+  <a mat-icon-button routerLink="/settings" routerLinkActive="active">
+    <mat-icon>settings</mat-icon>
+  </a>
+
+  <a mat-button color="accent" (click)="SignOut()">Sign Out</a>
+</mat-toolbar>
+
+<mat-sidenav-container class="mainscreen">
+  <mat-sidenav #sidenav mode="side" class="side-nav">
+    <forge-side-nav></forge-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

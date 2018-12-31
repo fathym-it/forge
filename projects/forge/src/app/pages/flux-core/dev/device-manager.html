@@ -1,0 +1,270 @@
+﻿<form (ngSubmit)="Save()" #settingsForm="ngForm" *ngIf="Settings">
+
+    <mat-spinner style="position:absolute;top:45%;left:50%" *ngIf="Saving || Loading"></mat-spinner>
+
+    <div *ngIf="!Saving && !Loading" class="container" style="width:100%" fxLayout="column" fxLayoutAlign="center center">
+        <div fxFlex="50px" class="header">
+            <h1>Device Manager Settings - {{ModuleTypeName}}</h1>
+        </div>
+
+        <div fxFlex="100%" class="content">
+            <div>
+                <mat-form-field style="width: 100%">
+                    <input type="text" matInput name="description" placeholder="Description"
+                           [(ngModel)]="Description" required #description />
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field style="width: 95%">
+                    <input [disabled]="!FirstLoad" (input)="ValidateLookup(3,4)" type="text" matInput name="lookup" placeholder="Lookup"
+                           [(ngModel)]="Lookup" required #lookup maxlength="4" />
+                </mat-form-field>
+                <span *ngIf="!LookupValid" style="color:red;">Lookup already exists for this flow's {{ModuleTypeName}} items</span>
+                <span *ngIf="ServerError" style="color:red;">{{ServerError}}</span>
+                <i style="float:right;color:grey;width:5%;margin-top:10px;cursor:pointer;" matTooltip="Lookups are a 3 to 4 length alphanumeric representation of the current domain object.  Flows are built with the format of 'flw-{Organization Lookup}-{Flow Lookup}-{Module Lookup}'.  This format helps keep your flow agnostic to any specific service provider.  When naming lookups, use something that is recognizable and relevant based on the asset you are creating." class="fa fa-info-circle"></i>
+            </div>
+            <div style="padding:20px 0;">
+                <span style="padding-right:10px;">Data Source: </span>
+                <mat-radio-group [(ngModel)]="DataSource" (change)="IsEmulatedChange($event)" name="dataSource" #dataSource>
+                    <mat-radio-button value="Emulated">Emulated&nbsp;&nbsp;&nbsp;&nbsp;</mat-radio-button>
+                    <mat-radio-button value="Actual">Actual</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <hr />
+
+            <mat-tab-group (selectChange)="TabChanged($event)">
+                <mat-tab label="Emulated Schema">
+                    <div style="padding-top:30px;">
+                        <json-schema-editor [flowId]="FlowID"
+                                            [schema]="SchemaEmulated"
+                                            [disable-edit]="DisableSchemaEditEmulated"
+                                            [schemas]="Schemas"
+                                            (disableEditChanged)="DisableSchemaEditChangedEmulated($event)"
+                                            (schemaChanged)="SchemaChangedEmulated($event)"
+                                            (propertyTypeChanged)="PropertyTypeChangedEmulated($event)"
+                                            (propertyAdded)="PropertyAddedEmulated($event)"
+                                            (propertyDeleted)="PropertyDeletedEmulated($event)"
+                                            (using-hanging-schema-changed)="UsingHangingSchemaChangedEmulated($event)"
+                                            [schema-type]="SchemaType"
+                                            [contains-functions]="ContainsFunctions"
+                                            [show-validations]="false"
+                                            [hanging-in-schemas]="HangingIncommingSchemas"
+                                            [hanging-out-schemas]="HangingOutgoingSchemas"
+                                            (using-exsiting-outgoing-changed)="UsingExistingOutgoingChangedEmulated($event)"
+                                            [outgoing-schemas]="OutgoingSchemas">
+                        </json-schema-editor>
+                    </div>
+                </mat-tab>
+
+                <mat-tab label="Emulated Devices" class="no-scroll" *ngIf="SchemaEmulated && SchemaEmulated.properties && GetPropertiesLengthEmulated() > 0">
+                    <div class="no-scroll">
+                        <h3>
+                            Device Setup
+                        </h3>
+
+                        <div>
+                            <mat-form-field>
+                                <input type="text" matInput name="deviceIdFormat" placeholder="Device ID Format"
+                                       [(ngModel)]="DeviceIDFormat" [matAutocomplete]="deviceIdHelpers" required />
+                            </mat-form-field>
+
+                            <mat-autocomplete #deviceIdHelpers="matAutocomplete">
+                                <mat-option *ngFor="let option of DeviceIDHelperOptions" [value]="option">
+                                    {{option}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </div>
+
+                        <div>
+                            <mat-form-field>
+                                <input type="number" matInput name="deviceCount" placeholder="Device Count" step="1"
+                                       [(ngModel)]="DeviceCount" required />
+                            </mat-form-field>
+                        </div>
+
+                        <h3>Timing</h3>
+
+                        <div>
+                            <cron-editor [(cron)]="CronExpression" [options]="cronOptions"></cron-editor>
+                        </div>
+                    </div>
+                </mat-tab>
+
+                <mat-tab label="Emulation" *ngIf="DeviceIDFormat && DeviceCount">
+                    <div>
+                        <h3>
+                            Simulation Setup
+                        </h3>
+
+                        <json-schema-simulation [schema-properties]="PivotProperties()" [sim-helpers]="SimulationHelperOptions" [properties]="GetSimulation()" (propertiesChange)="PropertiesChanged($event)"
+                                                [force-id]="true">
+                        </json-schema-simulation>
+
+
+                    </div>
+                </mat-tab>
+
+                <mat-tab *ngIf="IOTConnected" label="Physical Schema">
+                    <div style="padding-top:30px;">
+                        <json-schema-editor [flowId]="FlowID"
+                                            [schema]="Schema"
+                                            [disable-edit]="DisableSchemaEdit"
+                                            [schemas]="Schemas"
+                                            (disableEditChanged)="DisableSchemaEditChanged($event)"
+                                            (schemaChanged)="SchemaChanged($event)"
+                                            (propertyTypeChanged)="PropertyTypeChanged($event)"
+                                            (propertyAdded)="PropertyAdded($event)"
+                                            (propertyDeleted)="PropertyDeleted($event)"
+                                            (using-hanging-schema-changed)="UsingHangingSchemaChanged($event)"
+                                            [schema-type]="SchemaType"
+                                            [contains-functions]="ContainsFunctions"
+                                            [show-validations]="false"
+                                            [hanging-in-schemas]="HangingIncommingSchemas"
+                                            [hanging-out-schemas]="HangingOutgoingSchemas"
+                                            (using-exsiting-outgoing-changed)="UsingExistingOutgoingChanged($event)"
+                                            [outgoing-schemas]="OutgoingSchemas">
+                        </json-schema-editor>
+                    </div>
+                </mat-tab>
+
+                <mat-tab *ngIf="IOTConnected" label="Physical Devices">
+                    <mat-spinner style="margin:0 auto; margin-top:50px;margin-bottom:200px;" *ngIf="DevicesLoading"></mat-spinner>
+
+                    <div style="padding-top:30px;" *ngIf="IOTProvisioned && !DevicesLoading">
+                        <div class="container" fxLayout="row">
+                            <div fxFelx>
+                                <mat-form-field style="width:300px;">
+                                    <input type="text" matInput name="NewDeviceName" placeholder="Device Name"
+                                           [(ngModel)]="NewDeviceName" [matAutocomplete]="orgDevices" />
+                                </mat-form-field>
+                            </div>
+
+                            <div fxFelx>
+                                <mat-form-field style="width:300px;">
+                                    <input type="text" matInput name="NewDeviceID" placeholder="Device ID"
+                                           [(ngModel)]="NewDeviceID" />
+                                </mat-form-field>
+                            </div>
+
+                            <mat-autocomplete #orgDevices="matAutocomplete">
+                                <mat-option (onSelectionChange)="NewDeviceID = option.DeviceID" *ngFor="let option of OrgDevices" [value]="option.Name">
+                                    {{option.Name}} ({{option.DeviceID}})
+                                </mat-option>
+                            </mat-autocomplete>
+
+                            <div fxFlex>
+                                <button (click)="RegisterDevice()" title="Register Device" type="button" [disabled]="!CanRegisterDevice()" mat-button color="warn">
+                                    <mat-icon>add</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="container" fxLayout="row">
+                            <div fxFlex>
+                                <span style="color:red;" *ngIf="DeviceError">{{DeviceError}}</span>
+                            </div>
+                            </div>
+
+                        <div *ngIf="Devices.length > 0">
+                            <hr />
+
+                            <div class="container" fxLayout="row">
+                                <div fxFlex="52%">
+
+                                </div>
+
+                                <div fxFlex="12%">
+                                    <button (click)="EnableDevices()" title="Enable Device(s)" type="button" [disabled]="!DevicesSelected()" mat-button color="warn">
+                                        <mat-icon>cloud_upload</mat-icon>
+                                    </button>
+                                </div>
+
+                                <div fxFlex="12%">
+                                    <button (click)="DisableDevices()" title="Disable Device(s)" type="button" [disabled]="!DevicesSelected()" mat-button color="warn">
+                                        <mat-icon>cloud_download</mat-icon>
+                                    </button>
+                                </div>
+
+                                <div fxFlex="12%">
+                                    <button (click)="UnregisterDevices()" title="Unregister Device(s)" type="button" [disabled]="!DevicesSelected()" mat-button color="warn">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </div>
+
+                                <div fxFlex="12%" *ngIf="SelectAll">
+                                    <button (click)="ClickSelectAll()" title="Deselect All" type="button" mat-button color="warn">
+                                        <mat-icon>check_box</mat-icon>
+                                    </button>
+                                </div>
+
+                                <div fxFlex="12%" *ngIf="!SelectAll">
+                                    <button (click)="ClickSelectAll()" title="Select All" type="button" mat-button>
+                                        <mat-icon>check_box_outline_blank</mat-icon>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                            <mat-card style="cursor:default !important;" class="no-pointer" *ngFor="let dev of Devices">
+                                <mat-card-content>
+                                    <div fxLayout="row">
+                                        <div fxFlex="350px">
+                                            <strong>Device Name: </strong><span>{{dev.Name}}</span>
+                                        </div>
+
+                                        <div fxFlex="338px">
+                                            <strong>Device ID: </strong><span>{{dev.DeviceID}}</span>
+                                        </div>
+
+                                        <div style="margin-top:-8px;" *ngIf="!IsViewingDevice(dev.DeviceID)" fxFlex="15%">
+                                            <button type="button" (click)="SetViewingDevice(dev.DeviceID)" mat-button color="warn">
+                                                <mat-icon>expand_more</mat-icon>
+                                            </button>
+                                        </div>
+
+                                        <div style="margin-top:-8px;" *ngIf="IsViewingDevice(dev.DeviceID)" fxFlex="15%">
+                                            <button (click)="SetViewingDevice()" type="button" mat-button color="warn">
+                                                <mat-icon>expand_less</mat-icon>
+                                            </button>
+                                        </div>
+
+                                        <div style="padding-left:23px;max-width:92px;" fxFlex="92px">
+                                            <mat-checkbox color="warn" [checked]="dev.Selected" (change)="ClickSelect(dev)"></mat-checkbox>
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="IsViewingDevice(dev.DeviceID)">
+                                        <hr />
+
+                                        <div>
+                                            <strong>Primary Key: </strong>{{dev.PrimaryKey}}
+                                        </div>
+                                        <div>
+                                            <strong>Secondary Key: </strong>{{dev.SecondaryKey}}
+                                        </div>
+                                        <div>
+                                            <strong>Connection String: </strong>{{dev.ConnectionString}}
+                                        </div>
+                                        <div>
+                                            <strong>Status: </strong>{{DeviceStatus[dev.Status]}}
+                                        </div>
+                                        <div>
+                                            <strong>Connection State: </strong>{{ConnectionState[dev.ConnectionState]}}
+                                        </div>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+
+                        <div style="padding-top:30px;text-align:center;" *ngIf="!IOTProvisioned">
+                            <strong>Device Stream must be provisioned before devices can be added/manipulated.  Please provision first.</strong>
+                        </div>
+</mat-tab>
+            </mat-tab-group>
+        </div>
+
+        <div fxFlex="40px" class="footer">
+            <!--{{CanSave}} ~~ {{settingsForm.valid}}-->
+            <button type="submit" mat-raised-button color="accent" [disabled]="CheckSave()">Save Settings</button>
+        </div>
+    </div>
+</form>

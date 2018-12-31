@@ -26,9 +26,10 @@ import { FathymSharedModule } from "@lcu/hosting";
 
 import { UIModule } from "../../ui.module";
 
-import { FluxRouterModule, FluxRoutingComponents } from "./flux.router";
+import { FluxCoreRouterModule, FluxCoreRoutingComponents } from "./flux-core.router";
 import { ForgeSolutionsModule } from "@fathym-forge/common";
 import { jsPlumbToolkitModule, FluxModule } from "@lcu/flux";
+import { CronEditorModule } from 'cron-editor';
 
 var comps = [];
 
@@ -38,7 +39,8 @@ var comps = [];
     jsPlumbToolkitModule,
     FluxModule,
     UIModule,
-    FluxRouterModule,
+    CronEditorModule,
+    FluxCoreRouterModule,
     DndModule,
     ForgeSolutionsModule,
     MatButtonModule,
@@ -51,9 +53,18 @@ var comps = [];
     MatProgressBarModule,
     MatTabsModule,
     MatToolbarModule,
+    MatAutocompleteModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatTooltipModule,
+    MatRadioModule,
+    MatSnackBarModule
   ],
-  declarations: [...FluxRoutingComponents, ...comps],
+  declarations: [...FluxCoreRoutingComponents, ...comps],
   exports: [...comps],
   entryComponents: [...comps]
 })
-export class FluxPagesModule {}
+export class FluxCorePagesModule {}

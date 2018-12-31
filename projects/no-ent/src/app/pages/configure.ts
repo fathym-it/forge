@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { RouterHelpersService } from "@lcu/routing";
 import { ForgeOrganizationService } from '@lcu/daf-common';
 import { BaseResponse, isResultSuccess } from '@lcu/core';
 import { Status } from '@lcu/common';
