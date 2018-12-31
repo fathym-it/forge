@@ -3,7 +3,7 @@
 	"version": "0.0.29",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
-		"deploy:all": "npm run deploy:forge && npm run deploy:no-ent && npm run deploy:sign-in && npm run deploy:register",
+		"deploy:all": "npm run deploy:common && npm run deploy:forge && npm run deploy:no-ent && npm run deploy:sign-in && npm run deploy:register",
 		"deploy:common": "npm version patch --prefix projects/common && ng build common && npm run styles:common && npm publish ./dist/common --access public",
 		"deploy:forge": "npm version patch --prefix projects/forge && ng build forge --prod && npm publish ./dist/forge --access public",
 		"deploy:no-ent": "npm version patch --prefix projects/no-ent && ng build no-ent --prod && npm publish ./dist/no-ent --access public",
