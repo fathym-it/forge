@@ -2,7 +2,7 @@
   <div class="flow">
     <div [fxShow]="Flow && !MainLoader" class="main" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="2rem">
       <div fxFlex="100%">
-        <div fxLayout="row" fxLayoutAlign="start start" class="flow-options">
+        <div fxLayout="row" fxLayoutAlign="start stretch" class="flow-options">
           <div fxFlex="80%">
             <flow-layout-behavior (flow-init)="InitializeFlow()" (on-error)="ShowError($event)" #flowLayout>
             </flow-layout-behavior>
@@ -69,9 +69,9 @@
         </div>
       </div>
     </div>
+
+    <mat-card *ngIf="ModulesLoading || MainLoader" class="loader spinner-container" [class.page-loaded]="!MainLoader">
+      <mat-spinner class="spinner"></mat-spinner>
+    </mat-card>
   </div>
 </div>
-
-<mat-card *ngIf="ModulesLoading || MainLoader" class="loader spinner-container" [class.page-loaded]="!MainLoader"
-  ><mat-spinner class="spinner"></mat-spinner
-></mat-card>

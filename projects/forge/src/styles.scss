@@ -37,7 +37,7 @@ $brand-white: rgb(245, 245, 245) !default;
     position: relative;
     width: 100%;
     text-align: center;
-    overflow: inherit;
+    overflow: hidden;
 
     &::before {
       content: " ";
@@ -476,6 +476,24 @@ $brand-white: rgb(245, 245, 245) !default;
         background-color: transparent;
         padding-left: 2fem;
         height: 100%;
+        position: relative;
+
+        .flow-layout-behavior {
+          height: 100%;
+          position: relative;
+        }
+
+        .jtk-surface {
+          height: 100% !important;
+        }
+
+        .miniview {
+          position: absolute;
+          top: auto !important;
+          left: auto;
+          bottom: 1.5rem;
+          right: 1.5rem;
+        }
       }
 
       .flow-options-menu {
