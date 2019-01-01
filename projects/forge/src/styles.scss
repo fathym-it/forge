@@ -394,6 +394,10 @@ $brand-white: rgb(245, 245, 245) !default;
         overflow: visible;
       }
 
+      .main {
+        height: 100%;
+      }
+
       .editor {
         height: 100%;
         overflow: auto;
