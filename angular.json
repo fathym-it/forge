@@ -614,7 +614,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\marketing",
+						"outputPath": "dist/marketing",
 						"index": "projects/marketing/src/index.html",
 						"main": "projects/marketing/src/main.ts",
 						"polyfills": "projects/marketing/src/polyfills.ts",
