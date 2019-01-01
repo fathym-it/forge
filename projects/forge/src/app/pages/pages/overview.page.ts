@@ -49,7 +49,7 @@ export class OverviewPage {
 
 	//	API Methods
 	public EnableEnterpriseSubscriptions() {
-		var sln = CoreForgeSolutionModules[0].Modules.find(m => m.Control.Base == 'forge-solution' && m.Control.Type == 'provisioning');
+		var sln = CoreForgeSolutionModules[0].Modules.find(m => m.Control.Base == 'forge-solution' && m.Control.Type == 'infrastructure');
 
 		this.SolutionsSetup.Configs.push(<SolutionElement>{
 			Title: sln.Name,
