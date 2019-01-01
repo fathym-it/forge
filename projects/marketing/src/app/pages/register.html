@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+	<span class="filler"></span>
+
+	<h1>
+		Register a New Account
+	</h1>
+
+	<span class="filler"></span>
+
+	<a mat-button color="accent" routerLink="/sign-in" routerLinkActive="active">Sign In</a>
+</mat-toolbar>
+
+<div class="page register">
+	<f-register (registered)="OnRegistered($event)"></f-register>
+</div>

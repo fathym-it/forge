@@ -1,0 +1,161 @@
+@import "../../common/src/styles/theme";
+
+@mixin forge-pages($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	.hero {
+		height: 350px;
+
+		&.mat-card {
+			color: mat-color($primary, 50);
+			border-radius: 0;
+			background-size: cover;
+			background-position: center center;
+			background-image: linear-gradient(to bottom, transparentize(mat-color($primary, 900), .8), transparentize(mat-color($primary, 900), .8)), url(https://img2.cgtrader.com/items/671249/905a8ffe7a/star-field-space-background-3d-model.jpg);
+
+			.details {
+				width: 60%;
+				padding: 3rem 2rem;
+				margin: auto;
+
+				.info {
+					img {
+						width: 250px;
+						height: 150px;
+						@include material-shadow();
+					}
+				}
+			}
+		}
+	}
+
+	.page {
+		margin: auto;
+
+		&.home {
+			.features {
+				@include set-page-width();
+
+				.mat-grid-tile {
+					.mat-card {
+						width: 80%;
+						background: mat-color($primary, 50);
+
+						.mat-card-content {
+							height: 125px;
+						}
+					}
+				}
+
+				.mat-card-sm-image, .mat-card-md-image {
+					float: right;
+					padding-left: 1rem;
+				}
+			}
+
+			.marketplace {
+				@include set-page-width();
+				padding: 2rem;
+				text-align: center;
+
+				.mat-card-avatar {
+					float: left;
+					vertical-align: middle;
+				}
+
+				.mat-tab-label:first-child {
+					margin-left: auto;
+				}
+
+				.mat-tab-label:last-child {
+					margin-right: auto;
+				}
+
+				.mat-tab-body-content {
+					padding: 2rem;
+					height: unset !important;
+				}
+			}
+
+			.agnostic {
+				.mat-card {
+					text-align: center;
+					padding: 4rem 6rem 0 6rem;
+					color: mat-color($primary, 50);
+					border-radius: 0;
+					background-size: cover;
+					background-position: 100% 0;
+					background-image: linear-gradient(to bottom, transparentize(mat-color($primary, 900), .05), transparentize(mat-color($primary, 900), .05)), url(/marketing/assets/img/FreeVector-Vector-Background-With-Circles.jpg);
+				}
+			}
+
+			.partners {
+				@include set-page-width();
+
+				.details {
+					@include set-page-width();
+				}
+			}
+
+			.xlr8r {
+				.mat-card {
+					text-align: center;
+					padding: 4rem 6rem 0 6rem;
+					color: mat-color($primary, 50);
+					border-radius: 0;
+					background-size: cover;
+					background-position: 100% 0;
+					background-image: linear-gradient(to bottom, transparentize(mat-color($primary, 900), .05), transparentize(mat-color($primary, 900), .05)), url(/marketing/assets/img/FreeVector-Vector-Background-With-Circles.jpg);
+				}
+			}
+
+			.sign-up {
+				@include set-page-width();
+				padding: 4rem;
+
+				.icon {
+					float: right;
+				}
+			}
+		}
+
+		&.register {
+			text-align: center;
+		}
+	}
+
+	.quote {
+		.mat-card {
+			text-align: center;
+			padding: 6rem 12rem;
+			z-index: -25;
+			color: mat-color($primary, 50);
+			border-radius: 0;
+			background-size: cover;
+			background-position: 100% 0;
+			background-image: linear-gradient(to bottom, transparentize(mat-color($primary, 900), .2), transparentize(mat-color($primary, 900), .2)), url(https://adlinkblogist.files.wordpress.com/2015/04/fotolia_67667011_s.jpg);
+		}
+	}
+
+	footer {
+		background-size: cover;
+		background-position: 100% 0;
+		background-image: linear-gradient(to bottom, mat-color($primary, 50), mat-color($primary, 50)), url(https://adlinkblogist.files.wordpress.com/2015/04/fotolia_67667011_s.jpg);
+
+		.details {
+			@include set-page-width();
+
+			.mat-list .mat-list-item .mat-line {
+				white-space: normal;
+			}
+		}
+	}
+}
+
+@include forge-theme($forge-app-theme);
+
+@include forge-pages($forge-app-theme);
+
+body { margin: 0; }

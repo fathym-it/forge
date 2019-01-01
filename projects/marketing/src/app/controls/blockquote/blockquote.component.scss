@@ -1,0 +1,65 @@
+// @import '../../../../_shared/_theme';
+
+// @include forge-theme($forge-app-theme);
+
+// $config: mat-typography-config();
+
+// $primary: map-get($forge-app-theme, primary);
+// $accent: map-get($forge-app-theme, accent);
+// $warn: map-get($forge-app-theme, warn);
+
+// footer {
+// 	font-family: 'Noto Sans', sans-serif;
+// 	font-size: 0.6em;
+// 	font-weight: 700;
+// 	color: darken(mat-color($primary, 50), 15%);
+// 	position: absolute;
+// 	bottom: -(mat-line-height($config, title));
+// 	right: 0;
+
+// 	&:before {
+// 		content: '-';
+// 	}
+// }
+
+// .simple {
+// 	position: relative;
+// 	font-size: mat-font-size($config, title);
+// 	line-height: mat-line-height($config, title);
+
+// 	&:after {
+// 		content: '"';
+// 		position: absolute;
+// 		top: 0.28em;
+// 		right: 0;
+// 		font-size: 6em;
+// 		font-style: italic;
+// 		color: darken(mat-color($primary, 300), 7%);
+// 		z-index: -1;
+// 	}
+// }
+
+// .basic {
+// 	display: block;
+// 	border-width: 2px 0;
+// 	border-style: solid;
+// 	border-color: #eee;
+// 	padding: 1.5em 0 0.5em;
+// 	margin: 1.5em 0;
+// 	position: relative;
+
+// 	&:before {
+// 		content: '\201C';
+// 		position: absolute;
+// 		top: 0em;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 		background: mat-color($primary, 50);
+// 		width: 3rem;
+// 		height: 2rem;
+// 		font: 6em/1.08em 'PT Sans', sans-serif;
+// 		color: mat-color($primary, 500);
+// 		text-align: center;
+// 	}
+// }
+

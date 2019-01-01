@@ -1,0 +1,137 @@
+<mat-toolbar color="primary">
+	<a mat-icon-button (click)="ToggleSideNav()">
+		<mat-icon>menu</mat-icon>
+	</a>
+
+	<a mat-button routerLink="/"><img src="/marketing/assets/img/logo.png" /></a>
+
+	<a mat-button routerLink="/marketplace" routerLinkActive="active">Products</a>
+
+	<a mat-button routerLink="/learn" routerLinkActive="active">Learn</a>
+
+	<a mat-button routerLink="/solutions" routerLinkActive="active">Solutions</a>
+
+	<span class="filler"></span>
+
+	<a mat-button routerLink="/contact" routerLinkActive="active">Contact Us</a>
+
+	<a mat-button color="accent" routerLink="/sign-in" routerLinkActive="active">Sign In</a>
+
+	<a mat-raised-button color="accent" routerLink="/register" routerLinkActive="active">Sign Up</a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<div class="quote">
+	<mat-card>
+		<blockquote cite="Glen Allmendinger, founder, Harbor Research">
+			Fathym is building a profoundly different information architecture than those in common use today...[Fathym] allows for true device and data liquidity. Their development represents a true shift in thinking about how devices, data, people and physical systems will be integrated and how they will interact.
+		</blockquote>
+	</mat-card>
+</div>
+
+<footer>
+	<div class="details">
+		<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5%">
+			<div class="filler"></div>
+
+			<div fxFlex="20%">
+				<div fxFlexFill>
+					<h3>In the News</h3>
+
+					<mat-nav-list>
+						<a mat-list-item href="https://www.rtinsights.com/case-study-real-time-data-on-the-harshest-winter-roads-in-the-world/" target="_blank">
+							Real-time Road Data in Alaska
+						</a>
+
+						<a mat-list-item href="https://www.rtinsights.com/case-study-real-time-data-on-the-harshest-winter-roads-in-the-world/" target="_blank">
+							Zoptic's IoT Quickstart for High Performance Athletes
+						</a>
+					</mat-nav-list>
+				</div>
+			</div>
+
+			<div fxFlex="20%">
+				<div fxFlexFill>
+					<h3>Getting Social</h3>
+
+					<mat-nav-list>
+						<mat-list-item>
+							<mat-icon fontSet="fa" fontIcon="fa-facebook" matListIcon></mat-icon>
+
+							<a matLine href="https://www.facebook.com/FathymInc" target="_blank">
+								Facebook
+							</a>
+						</mat-list-item>
+
+						<mat-list-item>
+							<mat-icon fontSet="fa" fontIcon="fa-twitter-square" matListIcon></mat-icon>
+
+							<a matLine href="https://twitter.com/FathymIt" target="_blank">
+								Twitter
+							</a>
+						</mat-list-item>
+
+						<mat-list-item>
+							<mat-icon fontSet="fa" fontIcon="fa-linkedin" matListIcon></mat-icon>
+
+							<a matLine href="https://www.linkedin.com/company/fathym/" target="_blank">
+								LinkedIn
+							</a>
+						</mat-list-item>
+
+						<mat-list-item>
+							<mat-icon fontSet="fa" fontIcon="fa-instagram" matListIcon></mat-icon>
+
+							<a matLine href="https://www.instagram.com/fathymit/" target="_blank">
+								Instagram
+							</a>
+						</mat-list-item>
+					</mat-nav-list>
+				</div>
+			</div>
+
+			<div fxFlex="30%">
+				<div fxFlexFill>
+					<h3>Contact Us</h3>
+
+					<!-- <f-map [address]="Address" [key]="MapKey"></f-map> -->
+
+					<mat-list>
+						<mat-list-item>
+							<mat-icon matListIcon>location_on</mat-icon>
+
+							<h3 matLine>Address:</h3>
+
+							<p matLine>
+								5485 Conestoga Court, Suite 210, Boulder, CO 80301
+							</p>
+						</mat-list-item>
+
+						<mat-list-item>
+							<mat-icon matListIcon>email</mat-icon>
+
+							<h3 matLine>Email:</h3>
+
+							<a matLine href="mailto:communications@fathym.com">
+								communications@fathym.com
+							</a>
+						</mat-list-item>
+
+						<mat-list-item>
+							<mat-icon matListIcon>phone</mat-icon>
+
+							<h3 matLine>Phone Number:</h3>
+
+							<a matLine href="tel:+1 303-214-2688">
+								(303) 214-2688
+							</a>
+						</mat-list-item>
+					</mat-list>
+				</div>
+			</div>
+
+			<div class="filler"></div>
+		</div>
+	</div>
+</footer>
