@@ -1,0 +1,111 @@
+@import "../../common/src/styles/theme";
+
+@mixin forge-pages($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+
+	.app-builder {
+		fieldset {
+			legend {
+				margin-left: auto;
+			}
+		}
+
+		ngx-monaco-editor {
+			.editor-container {
+				/*height: calc(100vh - 100px);*/
+			}
+		}
+
+		section-manager {
+			padding: .5rem;
+			/*@include material-shadow();*/
+			> fieldset {
+				border-style: dashed;
+			}
+
+			hr {
+				border-style: dashed;
+			}
+
+			component-manager, .component {
+				padding: .5rem;
+				/*@include material-shadow();*/
+				> fieldset {
+					border-style: dashed;
+				}
+			}
+		}
+	}
+
+	.mat-tab-body-content {
+		overflow: hidden !important;
+	}
+
+	.mat-sidenav {
+		text-align: center;
+		color: mat-color($primary, 50);
+
+		.main-controls {
+			z-index: 750;
+			background-size: cover;
+			background-position: 100% 0;
+			background-image: linear-gradient(to bottom, transparentize(mat-color($primary, 900), .15), transparentize(mat-color($primary, 900), .15)), url(/marketing/assets/img/gray-texture.jpg);
+		}
+
+		.mat-expansion-panel-header {
+			position: sticky;
+			top: 254px;
+			background-color: white;
+			z-index: 500;
+		}
+
+		.mat-list-item.sticky {
+			top: 318px;
+			background-color: white;
+			z-index: 250;
+		}
+
+		.mat-list .mat-list-item, .mat-nav-list .mat-list-item {
+			text-align: left;
+			color: mat-color($primary, 50);
+
+			h2 {
+				color: #000;
+			}
+		}
+
+		.mat-nav-list {
+			a.mat-list-item {
+				position: relative;
+
+				&:hover {
+					background-color: rgba(mat-color($primary, 500), .4);
+				}
+
+				&.active {
+					background-color: rgba(mat-color($primary, 900), .8);
+				}
+
+				&.details {
+					margin-left: 2rem;
+					background-color: rgba(mat-color($primary, 500), .7);
+					border-bottom: 3px solid rgba(mat-color($primary, 900), .8);
+
+					&:hover {
+						background-color: rgba(mat-color($primary, 500), .4);
+					}
+
+					&.active {
+						background-color: rgba(mat-color($primary, 800), .8);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include forge-theme($forge-app-theme);
+
+@include forge-pages($forge-app-theme);
