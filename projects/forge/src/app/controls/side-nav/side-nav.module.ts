@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatButtonToggleModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatButtonToggleModule, MatProgressSpinnerModule, MatProgressBarModule } from '@angular/material';
 import { FathymSharedModule } from '@lcu/hosting';
 import { ForgeSideNavComponent } from './side-nav.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -13,7 +13,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 		MatCardModule,
 		MatIconModule,
 		MatListModule,
-		MatProgressSpinnerModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
 	],
 	declarations: [
 		ForgeSideNavComponent,
