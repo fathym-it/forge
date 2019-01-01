@@ -624,7 +624,7 @@
 							"projects/marketing/src/assets",
 							{
 								"glob": "package.json",
-								"input": "./",
+								"input": "./projects/marketing",
 								"output": "/"
 							}
 						],
@@ -690,7 +690,12 @@
 						"scripts": [],
 						"assets": [
 							"projects/marketing/src/favicon.ico",
-							"projects/marketing/src/assets"
+							"projects/marketing/src/assets",
+							{
+								"glob": "package.json",
+								"input": "./projects/marketing",
+								"output": "/"
+							}
 						]
 					}
 				},
