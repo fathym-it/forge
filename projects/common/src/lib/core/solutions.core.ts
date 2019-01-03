@@ -2,6 +2,7 @@ import { SolutionModuleConfig } from '@lcu/elements';
 import { ForgeApplicationsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-applications';
 import { ForgeWeatherCloudSolutionDisplayModule } from '@weather-cloud/lcu-sln-weather-cloud';
 import { ForgeDepartureTableDisplayModule } from '@weather-cloud/lcu-el-departure-table';
+import { ForgeWcRouteMapDisplayModule } from '@weather-cloud/lcu-el-wc-route-map';
 import { ForgeWcSearchFormDisplayModule } from '@weather-cloud/lcu-el-wc-search-form';
 import { ForgeAssetsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-assets';
 import { ForgeAssetsConfigManagerDisplayModule } from '@lowcodeunit/lcu-el-assets-config-manager';
@@ -172,6 +173,13 @@ export const CoreForgeSolutionModules = [
 								Name: 'Departure Table',
 								Control: { Base: 'forge-weather-cloud', Details: { Elements: [], Configs: [] }, Type: 'departure-table' },
 								Display: ForgeDepartureTableDisplayModule,
+								HideDrag: false,
+								BuilderState: 'Render',
+							},
+							{
+								Name: 'Route Map',
+								Control: { Base: 'forge-weather-cloud', Details: { Elements: [], Configs: [] }, Type: 'wc-route-map' },
+								Display: ForgeWcRouteMapDisplayModule,
 								HideDrag: false,
 								BuilderState: 'Render',
 							},

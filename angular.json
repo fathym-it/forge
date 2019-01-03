@@ -13,7 +13,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/forge",
+						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\forge",
 						"index": "projects/forge/src/index.html",
 						"main": "projects/forge/src/main.ts",
 						"polyfills": "projects/forge/src/polyfills.ts",
@@ -28,6 +28,8 @@
 							}
 						],
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/forge/src/styles.scss"
 						],
 						"scripts": [
@@ -86,6 +88,8 @@
 						"tsConfig": "projects/forge/tsconfig.spec.json",
 						"karmaConfig": "projects/forge/karma.conf.js",
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/forge/src/styles.scss"
 						],
 						"scripts": [],
@@ -770,6 +774,8 @@
 							}
 						],
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/lcu-display/src/styles.scss"
 						],
 						"scripts": []
@@ -826,6 +832,8 @@
 						"tsConfig": "projects/lcu-display/tsconfig.spec.json",
 						"karmaConfig": "projects/lcu-display/karma.conf.js",
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/lcu-display/src/styles.scss"
 						],
 						"scripts": [],
@@ -906,6 +914,8 @@
 							}
 						],
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/lcu-builder/src/styles.scss"
 						],
 						"scripts": []
@@ -962,6 +972,8 @@
 						"tsConfig": "projects/lcu-builder/tsconfig.spec.json",
 						"karmaConfig": "projects/lcu-builder/karma.conf.js",
 						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"node_modules/font-awesome/css/font-awesome.min.css",
 							"projects/lcu-builder/src/styles.scss"
 						],
 						"scripts": [],
