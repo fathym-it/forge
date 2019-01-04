@@ -22,7 +22,6 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { MonacoEditorModule } from "ngx-monaco-editor";
 import { FathymSharedModule } from "@lcu/hosting";
 import { DAFUIModule } from "@lcu/daf-ui";
-import { ForgeSideNavModule } from "./controls/side-nav/side-nav.module";
 import { RouterHelpersService } from "@lcu/routing";
 import { IdentityOptions } from "@lcu/identity";
 import { DAFServiceSettings } from "@lcu/api";
@@ -30,6 +29,7 @@ import { SolutionsSetupContext } from "@lcu/daf-common";
 import { WeatherCloudService } from "@weather-cloud/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
+import { ForgeSideNavModule } from 'projects/common/src/lib/controls/side-nav/side-nav.module';
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,
