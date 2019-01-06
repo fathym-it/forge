@@ -28,8 +28,7 @@ import { DAFServiceSettings } from "@lcu/api";
 import { SolutionsSetupContext } from "@lcu/daf-common";
 import { WeatherCloudService } from "@weather-cloud/common";
 import { HttpClientModule } from "@angular/common/http";
-import { ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
-import { ForgeSideNavModule } from 'projects/common/src/lib/controls/side-nav/side-nav.module';
+import { ForgeSideNavModule, ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,
@@ -83,28 +82,6 @@ var fathymServices = [
     }
   },
   RouterHelpersService,
-  // DatabaseService,
-  // DataMapperService,
-  // DomainService,
-  // IdentityService,
-  // SingletonService,
-  // PageUIService,
-  // ForgeApplicationsService,
-  // ForgeOrganizationService,
-  // ForgeOrganizationIdentityService,
-  // ForgePageService,
-  // ForgeJSONSchemaService,
-  // ReportingConfigContext,
-  // ReportingService,
-  // AssetsConfigContext,
-  // DBConfigContext,
-  // DevicesConfigContext,
-  // FlowsConfigContext,
-  // ForgeSettingsContext,
-  // PageSettingsContext,
-  // PagesSetupContext,
-  // PointersConfigContext,
-  // ProvisioningService,
   SolutionsSetupContext,
   WeatherCloudService,
   { provide: IBuildersService, useClass: ForgeBuildersService },
