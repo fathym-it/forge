@@ -16,6 +16,7 @@ import { UIModule } from './ui.module';
 import { AppLayoutComponent } from './app.layout';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { ForgeBuildersModule } from '@fathym-forge/common';
+import { WeatherCloudCommonModule } from '@weather-cloud/common';
 
 export var modules: any[] = [
 	FathymSharedModule,
@@ -28,6 +29,7 @@ export var modules: any[] = [
 		BrowserAnimationsModule,
 		UIModule.forRoot(),
 		DndModule.forRoot(),
+    WeatherCloudCommonModule.forRoot(),
 		MonacoEditorModule.forRoot(),
 		ForgeBuildersModule.forRoot(),
 		Angulartics2Module.forRoot(),

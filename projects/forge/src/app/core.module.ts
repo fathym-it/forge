@@ -17,6 +17,7 @@ import { MonacoEditorModule } from "ngx-monaco-editor";
 import { HttpClientModule } from "@angular/common/http";
 import { ForgeBuildersModule } from "@fathym-forge/common";
 import { FluxModule } from "@lcu/flux";
+import { WeatherCloudCommonModule } from '@weather-cloud/common';
 
 export var modules: any[] = [FathymSharedModule, AppRouterModule];
 
@@ -30,6 +31,7 @@ export var modules: any[] = [FathymSharedModule, AppRouterModule];
     MonacoEditorModule.forRoot(),
     ForgeBuildersModule.forRoot(),
     Angulartics2Module.forRoot(),
+    WeatherCloudCommonModule.forRoot(),
     FluxModule.forRoot(),
     ...modules
   ],
