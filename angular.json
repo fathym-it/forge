@@ -13,7 +13,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\forge",
+						"outputPath": "dist/forge",
 						"index": "projects/forge/src/index.html",
 						"main": "projects/forge/src/main.ts",
 						"polyfills": "projects/forge/src/polyfills.ts",
@@ -756,7 +756,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\apps\\app-display",
+						"outputPath": "dist/lcu-display",
 						"index": "projects/lcu-display/src/index.html",
 						"main": "projects/lcu-display/src/main.ts",
 						"polyfills": "projects/lcu-display/src/polyfills.ts",
@@ -796,7 +796,7 @@
 								{
 									"type": "initial",
 									"maximumWarning": "2mb",
-									"maximumError": "5mb"
+									"maximumError": "6mb"
 								}
 							]
 						}
@@ -932,7 +932,7 @@
 								{
 									"type": "initial",
 									"maximumWarning": "2mb",
-									"maximumError": "5mb"
+									"maximumError": "6mb"
 								}
 							]
 						}
