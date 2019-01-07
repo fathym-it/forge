@@ -771,6 +771,7 @@
 							}
 						],
 						"styles": [
+							"node_modules/nvd3/build/nv.d3.css",
 							"projects/lcu-display/src/styles.scss"
 						],
 						"scripts": []
@@ -907,6 +908,7 @@
 							}
 						],
 						"styles": [
+							"node_modules/nvd3/build/nv.d3.css",
 							"projects/lcu-builder/src/styles.scss"
 						],
 						"scripts": []
