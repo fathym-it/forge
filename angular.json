@@ -13,7 +13,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/forge",
+						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\forge",
 						"index": "projects/forge/src/index.html",
 						"main": "projects/forge/src/main.ts",
 						"polyfills": "projects/forge/src/polyfills.ts",
@@ -893,7 +893,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/lcu-builder",
+						"outputPath": "C:\\Fathym\\Git\\Apps\\Forge\\Fathym.Forge.Web\\wwwroot\\apps\\app-builder",
 						"index": "projects/lcu-builder/src/index.html",
 						"main": "projects/lcu-builder/src/main.ts",
 						"polyfills": "projects/lcu-builder/src/polyfills.ts",
