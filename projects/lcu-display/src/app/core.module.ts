@@ -17,6 +17,8 @@ import { AppLayoutComponent } from './app.layout';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { ForgeBuildersModule } from '@fathym-forge/common';
 import { WeatherCloudCommonModule } from '@weather-cloud/common';
+import { FluxModule } from '@lcu/flux';
+import { HttpClientModule } from '@angular/common/http';
 
 export var modules: any[] = [
 	FathymSharedModule,
@@ -25,15 +27,17 @@ export var modules: any[] = [
 
 @NgModule({
 	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		UIModule.forRoot(),
-		DndModule.forRoot(),
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    UIModule.forRoot(),
+    DndModule.forRoot(),
+    MonacoEditorModule.forRoot(),
+    ForgeBuildersModule.forRoot(),
+    Angulartics2Module.forRoot(),
     WeatherCloudCommonModule.forRoot(),
-		MonacoEditorModule.forRoot(),
-		ForgeBuildersModule.forRoot(),
-		Angulartics2Module.forRoot(),
-		...modules,
+    FluxModule.forRoot(),
+    ...modules
 	],
 	declarations: [
 		...RoutingComponents,
