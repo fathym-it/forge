@@ -3,7 +3,7 @@
 	"version": "0.0.46",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
-		"deploy:all": "parallelshell \"npm run deploy:common\" \"npm run deploy:forge\" \"npm run deploy:marketing\" \"npm run deploy:no-ent\" \"npm run deploy:sign-in\" \"npm run deploy:register\" \"npm run deploy:lcu-display\" \"npm run deploy:lcu-builder\"",
+		"deploy:all": "npm run deploy:common && parallelshell \"npm run deploy:forge\" \"npm run deploy:marketing\" \"npm run deploy:no-ent\" \"npm run deploy:sign-in\" \"npm run deploy:register\" \"npm run deploy:lcu-display\" \"npm run deploy:lcu-builder\"",
 		"deploy:common": "npm version patch --prefix projects/common && ng build common && npm run styles:common && npm publish ./dist/common --access public",
 		"deploy:forge": "npm version patch --prefix projects/forge && lcu daf Switch --project=forge --env=prod && ng build forge --prod && npm publish ./dist/forge --access public",
 		"deploy:lcu-builder": "npm version patch --prefix projects/lcu-builder && lcu daf Switch --project=lcu-builder --env=prod && ng build lcu-builder --prod && npm publish ./dist/lcu-builder --access public",
