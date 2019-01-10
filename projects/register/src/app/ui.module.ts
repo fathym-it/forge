@@ -22,7 +22,7 @@ import { DndModule } from '@beyerleinf/ngx-dnd';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { MaterialDesignFrameworkModule } from 'angular6-json-schema-form';
-import { ForgeRegisterModule } from '@lcu/daf-ui';
+import { ForgeRegisterModule } from '@lcu/identity';
 
 var materialModules = [
 	MaterialDesignFrameworkModule,
@@ -88,7 +88,7 @@ var services = [
 	declarations: [
 	],
 	imports: [
-		...modules,
+	...modules,
 	],
 	exports: [
 		...modules

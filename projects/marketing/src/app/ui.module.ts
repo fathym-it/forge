@@ -29,7 +29,7 @@ import { CarouselModule } from "./controls/carousel/carousel.module";
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { FathymSharedModule } from "@lcu/hosting";
 import { IdentityService, IdentityOptions } from "@lcu/identity";
-import { ForgeRegisterModule, ForgeSignInModule } from "@lcu/daf-ui";
+import { ForgeRegisterModule, ForgeSignInModule } from "@lcu/identity";
 import { PageUIService } from "@lcu/daf-common";
 
 var materialModules = [
