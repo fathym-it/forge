@@ -13,7 +13,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/forge",
+            "outputPath" :"C:\\Users\\shann\\Desktop\\workspace\\Fathym Forge\\Fathym.Forge.Web\\wwwroot\\forge",
 						"index": "projects/forge/src/index.html",
 						"main": "projects/forge/src/main.ts",
 						"polyfills": "projects/forge/src/polyfills.ts",
