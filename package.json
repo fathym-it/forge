@@ -1,6 +1,6 @@
 {
 	"name": "@fathym-it/forge",
-	"version": "0.0.56",
+	"version": "0.0.59",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
 		"deploy:all": "npm run deploy:common && parallelshell \"npm run deploy:forge\" \"npm run deploy:marketing\" \"npm run deploy:no-ent\" \"npm run deploy:sign-in\" \"npm run deploy:register\" \"npm run deploy:lcu-display\" \"npm run deploy:lcu-builder\"",
@@ -131,7 +131,7 @@
 		"karma-jasmine-html-reporter": "^0.2.2",
 		"minimist": "^1.2.0",
 		"ng-packagr": "^4.2.0",
-		"parallelshell": "^3.0.2",
+		"parallelshell": "^3.0.1",
 		"protractor": "~5.4.0",
 		"ts-node": "~7.0.0",
 		"tsickle": ">=0.29.0",

@@ -1,6 +1,10 @@
 {
 		"name": "@fathym-forge/common",
+<<<<<<< HEAD
 		"version": "0.0.56",
+=======
+		"version": "0.0.59",
+>>>>>>> 6dcacaf38bb9b06eb32874e13bf7487d1172df25
 		"peerDependencies": {
 				"@angular/common": "^7.1.0",
 				"@angular/core": "^7.1.0",
