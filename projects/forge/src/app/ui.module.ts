@@ -22,17 +22,18 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { MonacoEditorModule } from "ngx-monaco-editor";
 import { FathymSharedModule } from "@lcu/hosting";
 import { DAFUIModule } from "@lcu/daf-ui";
-import { ForgeSideNavModule } from "./controls/side-nav/side-nav.module";
 import { RouterHelpersService } from "@lcu/routing";
 import { IdentityOptions } from "@lcu/identity";
 import { DAFServiceSettings } from "@lcu/api";
 import { SolutionsSetupContext } from "@lcu/daf-common";
 import { WeatherCloudService } from "@weather-cloud/common";
 import { HttpClientModule } from "@angular/common/http";
-import { ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
+import { ForgeSideNavModule, ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
+import { AmModule } from '@acaisoft/angular-azure-maps';
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,
+  AmModule,
   HttpClientModule,
   FlexLayoutModule,
   MonacoEditorModule,
@@ -83,28 +84,6 @@ var fathymServices = [
     }
   },
   RouterHelpersService,
-  // DatabaseService,
-  // DataMapperService,
-  // DomainService,
-  // IdentityService,
-  // SingletonService,
-  // PageUIService,
-  // ForgeApplicationsService,
-  // ForgeOrganizationService,
-  // ForgeOrganizationIdentityService,
-  // ForgePageService,
-  // ForgeJSONSchemaService,
-  // ReportingConfigContext,
-  // ReportingService,
-  // AssetsConfigContext,
-  // DBConfigContext,
-  // DevicesConfigContext,
-  // FlowsConfigContext,
-  // ForgeSettingsContext,
-  // PageSettingsContext,
-  // PagesSetupContext,
-  // PointersConfigContext,
-  // ProvisioningService,
   SolutionsSetupContext,
   WeatherCloudService,
   { provide: IBuildersService, useClass: ForgeBuildersService },

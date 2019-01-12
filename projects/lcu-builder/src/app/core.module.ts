@@ -16,22 +16,27 @@ import { UIModule } from './ui.module';
 import { AppLayoutComponent } from './app.layout';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { ForgeBuildersModule } from '@fathym-forge/common';
+import { WeatherCloudCommonModule } from '@weather-cloud/common';
+import { HttpClientModule } from '@angular/common/http';
+import { FluxModule } from '@lcu/flux';
+import { AmModule } from '@acaisoft/angular-azure-maps';
 
-export var modules: any[] = [
-	FathymSharedModule,
-	AppRouterModule,
-];
+export var modules: any[] = [FathymSharedModule, AppRouterModule];
 
 @NgModule({
 	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		UIModule.forRoot(),
-		DndModule.forRoot(),
-		MonacoEditorModule.forRoot(),
-		ForgeBuildersModule.forRoot(),
-		Angulartics2Module.forRoot(),
-		...modules,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    UIModule.forRoot(),
+    DndModule.forRoot(),
+    MonacoEditorModule.forRoot(),
+    ForgeBuildersModule.forRoot(),
+    AmModule.forRoot(),
+    Angulartics2Module.forRoot(),
+    WeatherCloudCommonModule.forRoot(),
+    FluxModule.forRoot(),
+    ...modules
 	],
 	declarations: [
 		...RoutingComponents,

@@ -1,3 +1,4 @@
+import { IBuildersService, ISolutionsService } from "@lcu/elements";
 import { ModuleWithProviders, NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {
@@ -6,69 +7,64 @@ import {
   MatIconModule,
   MatButtonModule,
   MatToolbarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatCardModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatButtonToggleModule,
+  MatProgressSpinnerModule,
+  MatSnackBar,
+  MatSnackBarModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { AngularFontAwesomeModule } from "angular-font-awesome";
-
-import { MonacoEditorModule } from "ngx-monaco-editor";
 import { MaterialDesignFrameworkModule } from "angular6-json-schema-form";
-import { IBuildersService, ISolutionsService } from "@lcu/elements";
-import {
-  ForgeBuildersModule,
-  ForgeSolutionsService,
-  ForgeBuildersService
-} from "@fathym-forge/common";
-import {
-  PageUIService,
-  DatabaseService,
-  DataMapperService,
-  ForgeApplicationsService,
-  ForgeOrganizationService,
-  ForgePageService,
-  ForgeJSONSchemaService,
-  DBConfigContext,
-  DevicesConfigContext,
-  ForgeSettingsContext,
-  PageSettingsContext,
-  PagesSetupContext,
-  PointersConfigContext,
-  ReportingConfigContext,
-  ReportingService,
-  SolutionsSetupContext
-} from "@lcu/daf-common";
-import { PageViewModule } from "@lcu/daf-ui";
-import { IdentityOptions, IdentityService } from "@lcu/identity";
+import { AngularFontAwesomeModule } from "angular-font-awesome";
+import { MonacoEditorModule } from "ngx-monaco-editor";
+import { FathymSharedModule } from "@lcu/hosting";
+import { DAFUIModule, PageViewModule } from "@lcu/daf-ui";
 import { RouterHelpersService } from "@lcu/routing";
-import {
-  DomainService,
-  SingletonService,
-  AssetsConfigContext
-} from "@lcu/enterprises";
-import { FathymSharedModule } from '@lcu/hosting';
+import { IdentityOptions } from "@lcu/identity";
+import { DAFServiceSettings } from "@lcu/api";
+import { SolutionsSetupContext } from "@lcu/daf-common";
+import { WeatherCloudService } from "@weather-cloud/common";
+import { HttpClientModule } from "@angular/common/http";
+import { ForgeSideNavModule, ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,
+  HttpClientModule,
   FlexLayoutModule,
+  PageViewModule,
   MonacoEditorModule,
   FormsModule,
   ReactiveFormsModule,
   MaterialDesignFrameworkModule,
   MatButtonModule,
+  MatButtonToggleModule,
+  MatFormFieldModule,
+  MatTabsModule,
   MatDialogModule,
   MatIconModule,
+  MatProgressSpinnerModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatSnackBarModule,
+  MatToolbarModule,
+  MatCardModule
 ];
 
 var thirdPartyServices = [];
 
-var fathymModules = [ForgeBuildersModule, PageViewModule];
+var fathymModules = [
+  ForgeSideNavModule,
+  ForgeBuildersModule,
+  ForgeSolutionsModule,
+  DAFUIModule
+];
 
 var fathymServices = [
   {
     provide: IdentityOptions,
-    useValue: {
+    useValue: <IdentityOptions>{
       ConfirmPasswordRecoveryURL: `/daf-identity/recover/confirm`,
       IsAuthenticatedURL: `/daf-identity/authenticated`,
       IsRegisteredPasswordQueryParamName: `password`,
@@ -80,30 +76,17 @@ var fathymServices = [
       SignOutURL: `/daf-identity/signout`
     }
   },
+  {
+    provide: DAFServiceSettings,
+    useValue: <DAFServiceSettings>{
+      APIRoot: `` //http://intel.fathym.com`
+    }
+  },
   RouterHelpersService,
-  DatabaseService,
-  DataMapperService,
-  DomainService,
-  IdentityService,
-  SingletonService,
-  PageUIService,
-  ForgeApplicationsService,
-  ForgeOrganizationService,
-  ForgePageService,
-  ForgeJSONSchemaService,
-  { provide: ISolutionsService, useClass: ForgeSolutionsService },
+  SolutionsSetupContext,
+  WeatherCloudService,
   { provide: IBuildersService, useClass: ForgeBuildersService },
-  AssetsConfigContext,
-  DBConfigContext,
-  DevicesConfigContext,
-  // FlowsConfigContext,
-  ForgeSettingsContext,
-  PageSettingsContext,
-  PagesSetupContext,
-  PointersConfigContext,
-  ReportingConfigContext,
-  ReportingService,
-  SolutionsSetupContext
+  { provide: ISolutionsService, useClass: ForgeSolutionsService }
 ];
 
 var localModules: Array<any> = [];
