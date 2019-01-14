@@ -29,9 +29,11 @@ import { SolutionsSetupContext } from "@lcu/daf-common";
 import { WeatherCloudService } from "@weather-cloud/common";
 import { HttpClientModule } from "@angular/common/http";
 import { ForgeSideNavModule, ForgeBuildersService, ForgeBuildersModule, ForgeSolutionsModule, ForgeSolutionsService } from "@fathym-forge/common";
+import { AmModule } from '@acaisoft/angular-azure-maps';
 
 var thirdPartyModules = [
   AngularFontAwesomeModule,
+  AmModule,
   HttpClientModule,
   FlexLayoutModule,
   MonacoEditorModule,

@@ -19,6 +19,7 @@ import { ForgeBuildersModule } from '@fathym-forge/common';
 import { WeatherCloudCommonModule } from '@weather-cloud/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FluxModule } from '@lcu/flux';
+import { AmModule } from '@acaisoft/angular-azure-maps';
 
 export var modules: any[] = [FathymSharedModule, AppRouterModule];
 
@@ -31,6 +32,7 @@ export var modules: any[] = [FathymSharedModule, AppRouterModule];
     DndModule.forRoot(),
     MonacoEditorModule.forRoot(),
     ForgeBuildersModule.forRoot(),
+    AmModule.forRoot(),
     Angulartics2Module.forRoot(),
     WeatherCloudCommonModule.forRoot(),
     FluxModule.forRoot(),
