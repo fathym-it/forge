@@ -3,7 +3,7 @@
 	"version": "0.0.77",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
-		"deploy:all": "npm run deploy:common && concurrently \"npm:deploy:forge\" \"npm:deploy:marketing\" \"npm:deploy:no-ent\" \"npm:deploy:sign-in\" \"npm:deploy:register\" \"npm:deploy:lcu-display\" \"npm:deploy:lcu-builder\"",
+		"deploy:all": "npm run deploy:common && concurrently \"npm:deploy:marketing\" \"npm:deploy:no-ent\" \"npm:deploy:sign-in\" \"npm:deploy:register\" && npm run deploy:lcu-display && npm run deploy:lcu-builder && npm run deploy:forge",
 		"deploy:common": "npm version patch --prefix projects/common && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build common && npm run styles:common && npm publish ./dist/common --access public",
 		"deploy:forge": "npm version patch --prefix projects/forge && lcu daf Switch --project=forge --env=prod && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build forge --prod && npm publish ./dist/forge --access public",
 		"deploy:lcu-builder": "npm version patch --prefix projects/lcu-builder && lcu daf Switch --project=lcu-builder --env=prod && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build lcu-builder --prod && npm publish ./dist/lcu-builder --access public",
