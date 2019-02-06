@@ -1,6 +1,6 @@
 {
 	"name": "@fathym-it/forge",
-	"version": "0.0.83",
+	"version": "0.0.84",
 	"scripts": {
 		"deploy": "npm version patch && npm run deploy:all",
 		"deploy:all": "npm run deploy:common && concurrently \"npm:deploy:marketing\" \"npm:deploy:no-ent\" \"npm:deploy:sign-in\" \"npm:deploy:register\" && concurrently \"npm:deploy:lcu-display\" \"npm:deploy:lcu-builder\" && npm run deploy:forge",
