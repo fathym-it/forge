@@ -167,7 +167,7 @@ export const CoreForgeSolutionModules = [
         DisplaySetups: [
           {
             Name: 'Weather Cloud',
-            Icon: 'insert_chart',
+            Icon: 'cloud',
             BaseKey: 'forge-weather-cloud',
             Modules: [
               {
