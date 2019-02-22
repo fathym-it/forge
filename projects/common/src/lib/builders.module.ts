@@ -3,6 +3,7 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { ForgeBuildersService } from './svc/builders.service';
 import { ForgeDepartureTableModule } from '@weather-cloud/lcu-el-departure-table';
 import { ForgeWcRouteMapModule } from '@weather-cloud/lcu-el-wc-route-map';
+import { ForgeWcRouteDetailsModule } from '@weather-cloud/lcu-el-wc-route-details';
 import { ForgeWcSearchFormModule } from '@weather-cloud/lcu-el-wc-search-form';
 import { ForgeAssetsConfigManagerModule } from '@lowcodeunit/lcu-el-assets-config-manager';
 import { ForgeAssetsDomainInputModule } from '@lowcodeunit/lcu-el-assets-domain-input';
@@ -26,49 +27,50 @@ import { ForgeLayoutSwitchStateModule } from '@lowcodeunit/lcu-el-layout-switch-
 import { ForgeLayoutStackedModule } from '@lowcodeunit/lcu-el-layout-stacked';
 
 const modules = [
-	ForgeDepartureTableModule,
-	ForgeWcSearchFormModule,
-	ForgeWcRouteMapModule,
-	ForgeAssetsConfigManagerModule,
-	ForgeAssetsDomainInputModule,
-	ForgeAssetsDomainViewModule,
-	ForgeDisplayActionModule,
-	ForgeDisplayChartsModule,
-	ForgeDisplayContentModule,
-	ForgeDisplayJsonViewModule,
-	ForgeDisplayPointerModule,
-	ForgeIdentityRegisterModule,
-	ForgeIdentitySignInModule,
-	ForgeIdentityRecoverPasswordModule,
-	ForgeLayoutFlexModule,
-	ForgeLayoutStackedModule,
-	ForgeLayoutSwitchStateModule,
-	ForgeMaterialLayoutCardModule,
-	ForgeMaterialLayoutGridListModule,
-	ForgeMaterialNavMenuModule,
-	ForgeMaterialNavToolbarModule,
-	ForgeReportingEditModule,
-	ForgeReportingViewModule,
+  ForgeDepartureTableModule,
+  ForgeWcRouteDetailsModule,
+  ForgeWcSearchFormModule,
+  ForgeWcRouteMapModule,
+  ForgeAssetsConfigManagerModule,
+  ForgeAssetsDomainInputModule,
+  ForgeAssetsDomainViewModule,
+  ForgeDisplayActionModule,
+  ForgeDisplayChartsModule,
+  ForgeDisplayContentModule,
+  ForgeDisplayJsonViewModule,
+  ForgeDisplayPointerModule,
+  ForgeIdentityRegisterModule,
+  ForgeIdentitySignInModule,
+  ForgeIdentityRecoverPasswordModule,
+  ForgeLayoutFlexModule,
+  ForgeLayoutStackedModule,
+  ForgeLayoutSwitchStateModule,
+  ForgeMaterialLayoutCardModule,
+  ForgeMaterialLayoutGridListModule,
+  ForgeMaterialNavMenuModule,
+  ForgeMaterialNavToolbarModule,
+  ForgeReportingEditModule,
+  ForgeReportingViewModule,
 ];
 
 @NgModule({
-	imports: [
-		FathymSharedModule,
-		...modules,
-	],
-	declarations: [
-	],
-	exports: [
-		...modules,
-	]
+  imports: [
+    FathymSharedModule,
+    ...modules,
+  ],
+  declarations: [
+  ],
+  exports: [
+    ...modules,
+  ]
 })
 export class ForgeBuildersModule {
-	static forRoot(): ModuleWithProviders {
-		return {
-			ngModule: ForgeBuildersModule,
-			providers: [
-				ForgeBuildersService
-			]
-		}
-	}
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: ForgeBuildersModule,
+      providers: [
+        ForgeBuildersService
+      ]
+    }
+  }
 }
