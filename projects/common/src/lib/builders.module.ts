@@ -5,6 +5,7 @@ import { ForgeDepartureTableModule } from '@weather-cloud/lcu-el-departure-table
 import { ForgeWcRouteMapModule } from '@weather-cloud/lcu-el-wc-route-map';
 import { ForgeWcRouteDetailsModule } from '@weather-cloud/lcu-el-wc-route-details';
 import { ForgeWcSearchFormModule } from '@weather-cloud/lcu-el-wc-search-form';
+import { ForgeWcForecastPlotsModule } from '@weather-cloud/lcu-el-wc-forecast-plots';
 import { ForgeAssetsConfigManagerModule } from '@lowcodeunit/lcu-el-assets-config-manager';
 import { ForgeAssetsDomainInputModule } from '@lowcodeunit/lcu-el-assets-domain-input';
 import { ForgeAssetsDomainViewModule } from '@lowcodeunit/lcu-el-assets-domain-view';
@@ -51,6 +52,7 @@ const modules = [
   ForgeMaterialNavToolbarModule,
   ForgeReportingEditModule,
   ForgeReportingViewModule,
+  ForgeWcForecastPlotsModule
 ];
 
 @NgModule({
