@@ -3,7 +3,7 @@ import { FathymSharedModule } from '@lcu/hosting';
 import { ForgeBuildersService } from './svc/builders.service';
 import { ForgeDepartureTableModule } from '@weather-cloud/lcu-el-departure-table';
 import { ForgeWcRouteMapModule } from '@weather-cloud/lcu-el-wc-route-map';
-import { ForgeWcRouteDetailsModule } from '@weather-cloud/lcu-el-wc-route-details';
+import { ForgeWcDelayRiskModule } from '@weather-cloud/lcu-el-wc-delay-risk';
 import { ForgeWcSearchFormModule } from '@weather-cloud/lcu-el-wc-search-form';
 import { ForgeWcForecastPlotsModule } from '@weather-cloud/lcu-el-wc-forecast-plots';
 import { ForgeAssetsConfigManagerModule } from '@lowcodeunit/lcu-el-assets-config-manager';
@@ -29,7 +29,7 @@ import { ForgeLayoutStackedModule } from '@lowcodeunit/lcu-el-layout-stacked';
 
 const modules = [
   ForgeDepartureTableModule,
-  ForgeWcRouteDetailsModule,
+  ForgeWcDelayRiskModule,
   ForgeWcSearchFormModule,
   ForgeWcRouteMapModule,
   ForgeAssetsConfigManagerModule,

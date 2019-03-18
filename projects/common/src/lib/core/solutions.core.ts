@@ -4,7 +4,6 @@ import { ForgeWeatherCloudSolutionDisplayModule } from '@weather-cloud/lcu-sln-w
 import { ForgeDepartureTableDisplayModule } from '@weather-cloud/lcu-el-departure-table';
 import { ForgeWcRouteMapDisplayModule } from '@weather-cloud/lcu-el-wc-route-map';
 import { ForgeWcSearchFormDisplayModule } from '@weather-cloud/lcu-el-wc-search-form';
-import { ForgeWcRouteDetailsDisplayModule } from '@weather-cloud/lcu-el-wc-route-details';
 import { ForgeWcForecastPlotsDisplayModule } from '@weather-cloud/lcu-el-wc-forecast-plots';
 import { ForgeAssetsSolutionDisplayModule } from '@lowcodeunit/lcu-sln-assets';
 import { ForgeAssetsConfigManagerDisplayModule } from '@lowcodeunit/lcu-el-assets-config-manager';
@@ -21,6 +20,7 @@ import { ForgeReportingSolutionDisplayModule } from '@lowcodeunit/lcu-sln-report
 import { ForgeReportingEditDisplayModule } from '@lowcodeunit/lcu-el-reporting-edit';
 import { ForgeReportingViewDisplayModule } from '@lowcodeunit/lcu-el-reporting-view';
 import { ForgeFluxSolutionDisplayModule } from '@lowcodeunit/lcu-sln-flux';
+import { ForgeWcDelayRiskDisplayModule } from '@weather-cloud/lcu-el-wc-delay-risk';
 
 export const CoreForgeSolutionModules = [
   {
@@ -193,9 +193,9 @@ export const CoreForgeSolutionModules = [
                 BuilderState: 'Render',
               },
               {
-                Name: 'Route Details',
-                Control: { Base: 'forge-weather-cloud', Details: { Elements: [], Configs: [] }, Type: 'wc-route-details' },
-                Display: ForgeWcRouteDetailsDisplayModule,
+                Name: 'Delay Risk',
+                Control: { Base: 'forge-weather-cloud', Details: { Elements: [], Configs: [] }, Type: 'wc-delay-risk' },
+                Display: ForgeWcDelayRiskDisplayModule,
                 HideDrag: false,
                 BuilderState: 'Render',
               },
