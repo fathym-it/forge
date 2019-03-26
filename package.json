@@ -101,7 +101,7 @@
 		"angulartics2": "^7.2.3",
 		"bootstrap": "^4.2.1",
 		"core-js": "^2.5.4",
-		"cron-editor": "^2.0.0-beta",
+		"cron-editor": "^2.0.0-beta", 
 		"d3": "^3.5.17",
 		"dot-object": "^1.7.1",
 		"hammerjs": "^2.0.8",
