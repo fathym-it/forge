@@ -1,8 +1,8 @@
 {
 	"name": "@fathym-it/forge",
-	"version": "0.0.85",
+	"version": "0.0.86",
 	"scripts": {
-    "build:all": "ng build common && ng build forge && ng build lcu-display && ng build lcu-builder && ng build marketing  && ng build no-ent && ng build register && ng build sign-in",
+		"build:all": "ng build common && ng build forge && ng build lcu-display && ng build lcu-builder && ng build marketing  && ng build no-ent && ng build register && ng build sign-in",
 		"deploy": "npm version patch && npm run deploy:all",
 		"deploy:all": "npm run deploy:common && npm run deploy:core && npm run deploy:lcu && npm run deploy:forge",
 		"deploy:core": "concurrently \"npm:deploy:marketing\" \"npm:deploy:no-ent\" \"npm:deploy:sign-in\" \"npm:deploy:register\"",
