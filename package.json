@@ -1,10 +1,10 @@
 {
 	"name": "@fathym-it/forge",
-	"version": "0.0.87",
+	"version": "0.0.88",
 	"scripts": {
 		"build:all": "ng build common && ng build forge && ng build lcu-display && ng build lcu-builder && ng build marketing  && ng build no-ent && ng build register && ng build sign-in",
 		"deploy": "npm version patch && npm run deploy:all",
-		"deploy:all": "npm run deploy:common && npm run deploy:core && npm run deploy:lcu && npm run deploy:forge && npm run deploy:wizard",
+		"deploy:all": "npm run deploy:common && npm run deploy:core && npm run deploy:lcu && npm run deploy:forge",
 		"deploy:core": "concurrently \"npm:deploy:marketing\" \"npm:deploy:no-ent\" \"npm:deploy:sign-in\" \"npm:deploy:register\"",
 		"deploy:lcu": "concurrently \"npm:deploy:lcu-display\" \"npm:deploy:lcu-builder\"",
 		"deploy:common": "npm version patch --prefix projects/common && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build common && npm run styles:common && npm publish ./dist/common --access public",
@@ -15,7 +15,6 @@
 		"deploy:no-ent": "npm version patch --prefix projects/no-ent && lcu daf Switch --project=no-ent --env=prod && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build no-ent --prod && npm publish ./dist/no-ent --access public",
 		"deploy:register": "npm version patch --prefix projects/register && lcu daf Switch --project=register --env=prod && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build register --prod && npm publish ./dist/register --access public",
 		"deploy:sign-in": "npm version patch --prefix projects/sign-in && lcu daf Switch --project=sign-in --env=prod && node --max-old-space-size=8192 ./node_modules/@angular/cli/bin/ng build sign-in --prod && npm publish ./dist/sign-in --access public",
-		"deploy:wizard": "ng build wizard --prod && npm publish ./dist/wizard --access public",
 		"styles:common": "npm run styles:common:css && npm run styles:common:scss",
 		"styles:common:css": "cpx \"./projects/common/src/styles/**/*.css\" \"./dist/common/styles/\"",
 		"styles:common:scss": "cpx \"./projects/common/src/styles/**/*.scss\" \"./dist/common/styles/\"",
