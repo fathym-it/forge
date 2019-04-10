@@ -1015,6 +1015,142 @@
 					}
 				}
 			}
+		},
+		"wizard": {
+			"root": "projects/wizard/",
+			"sourceRoot": "projects/wizard/src",
+			"projectType": "application",
+			"prefix": "lib",
+			"schematics": {
+				"@schematics/angular:component": {
+					"styleext": "scss"
+				}
+			},
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "dist/wizard",
+						"index": "projects/wizard/src/index.html",
+						"main": "projects/wizard/src/main.ts",
+						"polyfills": "projects/wizard/src/polyfills.ts",
+						"tsConfig": "projects/wizard/tsconfig.app.json",
+						"assets": [
+							"projects/wizard/src/favicon.ico",
+							"projects/wizard/src/assets",
+							{
+								"glob": "package.json",
+								"input": "./",
+								"output": "/"
+							}
+						],
+						"styles": [
+							"projects/wizard/src/styles.scss"
+						],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "projects/wizard/src/environments/environment.ts",
+									"with": "projects/wizard/src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "wizard:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "wizard:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "wizard:build"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "projects/wizard/src/test.ts",
+						"polyfills": "projects/wizard/src/polyfills.ts",
+						"tsConfig": "projects/wizard/tsconfig.spec.json",
+						"karmaConfig": "projects/wizard/karma.conf.js",
+						"styles": [
+							"projects/wizard/src/styles.scss"
+						],
+						"scripts": [],
+						"assets": [
+							"projects/wizard/src/favicon.ico",
+							"projects/wizard/src/assets"
+						]
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/wizard/tsconfig.app.json",
+							"projects/wizard/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**"
+						]
+					}
+				}
+			}
+		},
+		"wizard-e2e": {
+			"root": "projects/wizard-e2e/",
+			"projectType": "application",
+			"prefix": "",
+			"architect": {
+				"e2e": {
+					"builder": "@angular-devkit/build-angular:protractor",
+					"options": {
+						"protractorConfig": "projects/wizard-e2e/protractor.conf.js",
+						"devServerTarget": "wizard:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "wizard:serve:production"
+						}
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": "projects/wizard-e2e/tsconfig.e2e.json",
+						"exclude": [
+							"**/node_modules/**"
+						]
+					}
+				}
+			}
 		}
 	},
 	"defaultProject": "forge"
