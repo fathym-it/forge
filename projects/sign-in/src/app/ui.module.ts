@@ -23,7 +23,7 @@ import { DndModule } from "@beyerleinf/ngx-dnd";
 import { AngularFontAwesomeModule } from "angular-font-awesome";
 
 import { MaterialDesignFrameworkModule } from "angular6-json-schema-form";
-import { ForgeSignInModule } from "@lcu/daf-ui";
+import { ForgeSignInModule } from "@lcu/identity";
 
 var materialModules = [
   MaterialDesignFrameworkModule,
