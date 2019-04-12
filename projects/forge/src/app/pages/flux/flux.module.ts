@@ -18,7 +18,8 @@ import {
   MatSidenavModule,
   MatTooltipModule,
   MatRadioModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule
 } from "@angular/material";
 import { DndModule } from "@beyerleinf/ngx-dnd";
 
@@ -51,6 +52,7 @@ var comps = [];
     MatProgressBarModule,
     MatTabsModule,
     MatToolbarModule,
+    MatDialogModule
   ],
   declarations: [...FluxRoutingComponents, ...comps],
   exports: [...comps],
