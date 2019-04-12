@@ -1,4 +1,4 @@
-﻿import { AfterViewInit, Component, OnInit, ViewChild } from "@angular/core";
+﻿import { AfterViewInit, Component, OnInit, ViewChild, OnDestroy } from "@angular/core";
 import {
   MatSidenav,
   MatSnackBar,
@@ -6,21 +6,25 @@ import {
   MatDialog,
   MatDialogRef,
   MatSnackBarConfig,
-  MatDrawer
+  MatDrawer,
+  DialogRole
 } from "@angular/material";
 import { ActivatedRoute, Router } from "@angular/router";
-import { forkJoin } from "rxjs";
+import { forkJoin, Subscription } from "rxjs";
 import { FlowLayoutBehavior, FlowService, FlowLayoutConfiguration, FlowParser } from "@lcu/flux";
 import { FlowConfig, FlowModuleOption } from "@lcu/apps";
 import { isResultSuccess } from "@lcu/core";
 import { RouterHelpersService } from "@lcu/routing";
+import { ProvisioningWizardComponent } from './provisioning-wizard.component';
+import { DynamicWizardQuestionModel } from '@lcu-ide/dynamic-wizard-common';
+import { ProvisioningWizardService } from './provisioning-wizard.service';
 
 @Component({
   selector: "app-flux",
   templateUrl: "./flux.html",
   providers: [RouterHelpersService]
 })
-export class FluxComponent implements OnInit, AfterViewInit {
+export class FluxComponent implements OnInit, AfterViewInit, OnDestroy {
   //	Fields
   protected environment: string;
 
@@ -33,6 +37,16 @@ export class FluxComponent implements OnInit, AfterViewInit {
   protected timerRunning: boolean;
 
   protected intervalRunning: boolean;
+  
+  /**
+   * The subscription to the wizard service
+   */
+  protected wizSubscription: Subscription;
+  
+  /**
+   * A reference to the current Angular Material Dialog
+   */
+  protected dialogRef: MatDialogRef<any>;
 
   @ViewChild("flowLayout")
   public FlowLayoutBehavior: FlowLayoutBehavior;
@@ -70,7 +84,9 @@ export class FluxComponent implements OnInit, AfterViewInit {
     protected flowParser: FlowParser,
     protected flowLayoutConfiguration: FlowLayoutConfiguration,
     protected router: Router,
-    protected routerHelpers: RouterHelpersService
+    protected routerHelpers: RouterHelpersService,
+    private dialog: MatDialog,
+    private wizardService: ProvisioningWizardService
   ) {
     this.statusChecking = false;
 
@@ -134,6 +150,16 @@ export class FluxComponent implements OnInit, AfterViewInit {
       this.FlowLayoutBehavior.ModeChanged,
       this.FlowLayoutBehavior.ConnectionClick
     );
+    // listen for 'submitClicked' event (when user clicks 'Submit' after filling out wizard)
+    // and do what we need to do for provisioning - provision resources or run the "decision tool"
+    this.wizSubscription = this.wizardService.submitClicked.subscribe(answers => {
+      this.dialogRef.close();
+
+      // this.provisionResources(answers); or... this.runDecisionTool(answers);
+
+      // for testing purposes - logging user's answers to console:
+      console.log('For testing purposes: this has been console logged from the forge code: ', answers);
+    });
   }
 
   //	API Methods
@@ -341,6 +367,54 @@ export class FluxComponent implements OnInit, AfterViewInit {
         }
       );
     });
+  }
+
+  public OpenProvisioningWizard(): void {
+    let questions: DynamicWizardQuestionModel[];
+    questions = [{
+      Phrase: 'Do you have devices you want to connect or will you use emulated data?',
+      Type: 'radio',
+      Required: true,
+      Options: ['I have devices', 'I will use emulated data']
+    },
+    {
+      Phrase: 'How many devices?',
+      Type: 'number',
+      Required: true
+    },
+    {
+      Phrase: 'Do you need to display device data in a dashboard/reports?',
+      Type: 'radio',
+      Required: true,
+      Options: ['yes', 'no']
+    },
+    {
+      Phrase: 'How long do you want to store data?',
+      Type: 'radio',
+      Required: true,
+      Options: ['Hour', 'Day', 'Week', 'Month', 'Year', 'from a certain date to another (see next question)']
+    },
+    {
+      Phrase: 'Date range (if chosen) from previous question. (click \'Next\' to skip)',
+      Type: 'daterange',
+      Required: false
+    },
+    {
+      Phrase: 'Do you need real-time streaming data?',
+      Type: 'radio',
+      Required: true,
+      Options: ['yes - every minute', 'yes - every second', 'yes - every millisecond', 'no']
+    }
+  ];
+
+    let dialogRef = this.dialog.open(ProvisioningWizardComponent, {
+      data: {
+        title: 'Provisioning Wizard',
+        questions: questions
+      }
+    });
+
+    this.dialogRef = dialogRef;
   }
 
   public Unprovision() {
@@ -580,5 +654,9 @@ export class FluxComponent implements OnInit, AfterViewInit {
         );
       }
     }, 30000);
+  }
+
+  ngOnDestroy() {
+    this.wizSubscription.unsubscribe();
   }
 }
