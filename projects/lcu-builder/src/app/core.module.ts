@@ -21,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FluxModule } from '@lcu/flux';
 import { AmModule } from '@acaisoft/angular-azure-maps';
 
-export var modules: any[] = [FathymSharedModule, AppRouterModule];
+export let modules: any[] = [FathymSharedModule, AppRouterModule];
 
 @NgModule({
 	imports: [
