@@ -41,7 +41,7 @@
 		"@angular/platform-browser-dynamic": "~7.1.0",
 		"@angular/router": "~7.1.0",
 		"@aspnet/signalr": "^1.1.4",
-		"@beyerleinf/ngx-dnd": "^7.1.1",
+		"@beyerleinf/ngx-dnd": "^6.0.0-preview3",
 		"@fathym-forge/common": "0.0.49",
 		"@lcu-ide/common": "^0.1.25",
 		"@lcu-ide/dynamic-wizard-common": "^0.1.20-dynamic-wizard",

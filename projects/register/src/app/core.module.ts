@@ -19,7 +19,7 @@ export var modules: any[] = [
 	BrowserModule,
 		BrowserAnimationsModule,
 		UIModule.forRoot(),
-		DndModule,
+		DndModule.forRoot(),
 		...modules,
 	],
 	declarations: [

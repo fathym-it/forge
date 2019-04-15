@@ -32,7 +32,7 @@ export var modules: any[] = [
     BrowserAnimationsModule,
     HttpClientModule,
     UIModule.forRoot(),
-    DndModule,
+    DndModule.forRoot(),
     MonacoEditorModule.forRoot(),
     ForgeBuildersModule.forRoot(),
     AmModule.forRoot(),

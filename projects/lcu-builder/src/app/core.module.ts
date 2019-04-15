@@ -29,7 +29,7 @@ export var modules: any[] = [FathymSharedModule, AppRouterModule];
     BrowserAnimationsModule,
     HttpClientModule,
     UIModule.forRoot(),
-    DndModule,
+    DndModule.forRoot(),
     MonacoEditorModule.forRoot(),
     ForgeBuildersModule.forRoot(),
     AmModule.forRoot(),
