@@ -15,24 +15,24 @@ export var modules: any[] = [
 ];
 
 @NgModule({
-	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		UIModule.forRoot(),
-		DndModule.forRoot(),
-		...modules,
-	],
-	declarations: [
-		...RoutingComponents,
-		AppLayoutComponent,
-	],
-	exports: [
-		...modules,
-	],
-	providers: [
-	],
-	entryComponents: [
-	]
+imports: [
+	BrowserModule,
+	BrowserAnimationsModule,
+	UIModule.forRoot(),
+	DndModule.forRoot(),
+	...modules,
+],
+declarations: [
+	...RoutingComponents,
+	AppLayoutComponent,
+],
+exports: [
+	...modules,
+],
+providers: [
+],
+entryComponents: [
+]
 })
 export class CoreModule {
 	public static LoadBootstrap(): any {
