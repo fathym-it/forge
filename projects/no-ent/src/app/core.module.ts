@@ -19,7 +19,7 @@ imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	UIModule.forRoot(),
-	DndModule.forRoot(),
+	DndModule,
 	...modules,
 ],
 declarations: [
