@@ -372,38 +372,34 @@ export class FluxComponent implements OnInit, AfterViewInit, OnDestroy {
   public OpenProvisioningWizard(): void {
     let questions: DynamicWizardQuestionModel[];
     questions = [{
-      Phrase: 'Do you have devices you want to connect or will you use emulated data?',
+      Phrase: 'Do you have devices you want to securely connect or do you want to start with emulated device data?',
       Type: 'radio',
       Required: true,
       Options: ['I have devices', 'I will use emulated data']
     },
     {
-      Phrase: 'How many devices?',
-      Type: 'number',
-      Required: true
-    },
-    {
-      Phrase: 'Do you need to display device data in a dashboard/reports?',
+      Phrase: 'Do you need to modify or filter the device data?',
       Type: 'radio',
       Required: true,
       Options: ['yes', 'no']
     },
     {
-      Phrase: 'How long do you want to store data?',
+      Phrase: 'Do you need to output the real-time device data to a message queue for downstream use?',
       Type: 'radio',
       Required: true,
-      Options: ['Hour', 'Day', 'Week', 'Month', 'Year', 'from a certain date to another (see next question)']
+      Options: ['yes', 'no']
     },
     {
-      Phrase: 'Date range (if chosen) from previous question. (click \'Next\' to skip)',
-      Type: 'daterange',
-      Required: false
-    },
-    {
-      Phrase: 'Do you need real-time streaming data?',
-      Type: 'radio',
+      Phrase: 'Please select your storage options:',
+      Type: 'checkbox',
       Required: true,
-      Options: ['yes - every minute', 'yes - every second', 'yes - every millisecond', 'no']
+      Options: ['Blob', 'Data Lake', 'CosmosDB']
+    },
+    {
+      Phrase: 'If you selected CosmosDB, how long do you want to store the device data:',
+      Type: 'radio',
+      Required: false,
+      Options: ['Day', 'Week', 'Month', 'Year', 'All Data']
     }
   ];
 
