@@ -4,10 +4,12 @@ import { ProvisioningWizardService } from './provisioning-wizard.service';
 
 @Component({
     selector: 'app-provisioning-wizard',
-    template:   `<h1>{{passedData.title}}</h1>
+    template:   `<div mat-dialog-content>
+                 <h1>{{passedData.title}}</h1>
                  <lcu-dynamic-wizard 
                  [JSONQuestions]="passedData.questions"
-                 (AnsweredQuestions)="HandleWizardResults($event)"></lcu-dynamic-wizard>`
+                 (AnsweredQuestions)="HandleWizardResults($event)"></lcu-dynamic-wizard>
+                 </div>`
 })
 
 export class ProvisioningWizardComponent {
