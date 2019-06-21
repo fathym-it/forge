@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FathymSharedModule } from '@lcu/hosting';
@@ -16,10 +16,9 @@ export var modules: any[] = [
 
 @NgModule({
 	imports: [
-	BrowserModule,
 		BrowserAnimationsModule,
 		UIModule.forRoot(),
-		DndModule.forRoot(),
+		DndModule,
 		...modules,
 	],
 	declarations: [

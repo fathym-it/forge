@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FathymSharedModule } from '@lcu/hosting';
@@ -21,15 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FluxModule } from '@lcu/flux';
 import { AmModule } from '@acaisoft/angular-azure-maps';
 
-export var modules: any[] = [FathymSharedModule, AppRouterModule];
+export let modules: any[] = [FathymSharedModule, AppRouterModule];
 
 @NgModule({
 	imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     UIModule.forRoot(),
-    DndModule.forRoot(),
+    DndModule,
     MonacoEditorModule.forRoot(),
     ForgeBuildersModule.forRoot(),
     AmModule.forRoot(),

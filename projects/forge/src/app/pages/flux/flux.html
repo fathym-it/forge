@@ -32,6 +32,9 @@
                   <span style="opacity:.2;" *ngIf="!ShowUnprovisioning && Flow && Flow.CanProvision" title="Flow not provisioned"
                     ><mat-icon>cloud_off</mat-icon></span
                   >
+                  <a style="color:black;" (click)="OpenProvisioningWizard()" title="Provisioning Wizard"
+                    ><mat-icon>live_help</mat-icon></a
+                  >
                   <a style="color:black;" href="/forge/solutions/forge-solution/flux/manage" title="Back to Forge"
                     ><mat-icon>arrow_back</mat-icon></a
                   >
